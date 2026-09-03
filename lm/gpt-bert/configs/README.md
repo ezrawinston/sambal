@@ -1,0 +1,1 @@
+This folder contains the configuration files for models. The base and small configurations from our paper is included here.
