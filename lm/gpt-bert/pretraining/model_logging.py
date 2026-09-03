@@ -3,7 +3,7 @@ import torch
 from utils import is_main_process
 
 
-if int(os.environ["SLURM_PROCID"]) == 0:
+if int(os.environ["RANK"]) == 0:
     import wandb
 
 

@@ -5,6 +5,7 @@
 from tokenizers import Tokenizer
 import json
 import argparse
+import sys
 import torch
 from tqdm import tqdm
 from pathlib import Path
@@ -15,8 +16,10 @@ def parse_args():
     parser.add_argument("--data_folder", type=Path, default="../data")
     parser.add_argument("--train_file", type=Path, default="train_100M.jsonl")
     parser.add_argument("--valid_file", type=Path, default=None)
-    parser.add_argument("--tokenizer_folder", type=Path, default="../tokenizers")
-    parser.add_argument("--tokenizer_file", type=Path, default="tokenizer_100M.json")
+    parser.add_argument("--tokenizer_folder", type=Path, default=None,
+                        help="folder holding the tokenizer json (default: the committed "
+                             "gpt-bert-babylm-small/, resolved relative to this script)")
+    parser.add_argument("--tokenizer_file", type=Path, default="tokenizer.json")
     parser.add_argument("--name", type=str, default=None)
     return parser.parse_args()
 
@@ -32,9 +35,9 @@ def tokenize_file(input_filename, output_filename, tokenizer):
     tokenized_documents = []
     n_subwords = 0
 
-    for i, line in enumerate(tqdm(input_filename.open('rt'))):
+    for i, line in enumerate(tqdm(input_filename.open('rt'), disable=not sys.stderr.isatty())):
         document = json.loads(line)
-        tokenized_document = tokenize_text(tokenizer, document)
+        tokenized_document = tokenize_text(tokenizer, document['text'])
         tokenized_documents.append(tokenized_document)
         n_subwords += len(tokenized_document)
 
@@ -54,8 +57,15 @@ if __name__ == "__main__":
 
     name = f"_{args.name}" if args.name is not None else ""
 
+    if args.tokenizer_folder is None:
+        args.tokenizer_folder = Path(__file__).resolve().parent.parent / "gpt-bert-babylm-small"
     tokenizer_path = args.tokenizer_folder / args.tokenizer_file
     input_train_path = args.data_folder / args.train_file
+
+    if not tokenizer_path.is_file():
+        sys.exit(f"Tokenizer file not found: {tokenizer_path} — set --tokenizer_folder / "
+                 f"--tokenizer_file (the committed tokenizer is "
+                 f"lm/gpt-bert/gpt-bert-babylm-small/tokenizer.json)")
 
     # load the tokenizer
     tokenizer = Tokenizer.from_file(str(tokenizer_path))

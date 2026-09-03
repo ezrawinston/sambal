@@ -1,5 +1,6 @@
 import torch
 import random
+from typing import Optional, List
 
 
 class SpanMaskingStrategy:
@@ -68,8 +69,22 @@ class RandomIndex:
         return index
 
 
+def _select_fraction_indices(num_segments: int, fraction: float, seed: int) -> Optional[List[int]]:
+    if fraction >= 1.0 or num_segments <= 0:
+        return None
+    n_keep = max(1, int(num_segments * fraction))
+    if n_keep >= num_segments:
+        return None
+    generator = torch.Generator()
+    generator.manual_seed(int(seed))
+    perm = torch.randperm(num_segments, generator=generator)
+    keep = perm[:n_keep].tolist()
+    keep.sort()
+    return keep
+
+
 class MaskedDataset(torch.utils.data.Dataset):
-    def __init__(self, input_file: str, tokenizer, args, seq_length, rank, world_size):
+    def __init__(self, input_file: str, tokenizer, args, seq_length, rank, world_size, subset_seed: Optional[int] = None):
         self.path = input_file
         self.seq_length = seq_length
         self.n_special_tokens = args.n_special_tokens
@@ -89,6 +104,12 @@ class MaskedDataset(torch.utils.data.Dataset):
             for offset in range(0, len(document), self.seq_length - 2)
             if len(document) > 0 and len(document) - offset > 1
         ]
+        # Apply data_fraction before rank sharding
+        data_fraction = getattr(args, 'data_fraction', 1.0)
+        subset_seed = subset_seed if subset_seed is not None else getattr(args, "seed", 0)
+        keep_indices = _select_fraction_indices(len(self.segments), data_fraction, subset_seed)
+        if keep_indices is not None:
+            self.segments = [self.segments[i] for i in keep_indices]
         if rank is not None:
             self.segments = self.segments[rank::world_size]
         self.counts = [
@@ -212,7 +233,7 @@ class MaskedDataset(torch.utils.data.Dataset):
 
 
 class CausalDataset(torch.utils.data.Dataset):
-    def __init__(self, input_file: str, tokenizer, args, seq_length, rank, world_size):
+    def __init__(self, input_file: str, tokenizer, args, seq_length, rank, world_size, subset_seed: Optional[int] = None):
         self.path = input_file
         self.seq_length = seq_length
         self.n_special_tokens = args.n_special_tokens
@@ -230,6 +251,12 @@ class CausalDataset(torch.utils.data.Dataset):
             for offset in range(0, len(document), self.seq_length - 2)
             if len(document) > 0 and len(document) - offset > 1
         ]
+        # Apply data_fraction before rank sharding
+        data_fraction = getattr(args, 'data_fraction', 1.0)
+        subset_seed = subset_seed if subset_seed is not None else getattr(args, "seed", 0)
+        keep_indices = _select_fraction_indices(len(self.segments), data_fraction, subset_seed)
+        if keep_indices is not None:
+            self.segments = [self.segments[i] for i in keep_indices]
         if rank is not None:
             self.segments = self.segments[rank::world_size]
         self.counts = [

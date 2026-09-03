@@ -23,8 +23,33 @@ from utils import cosine_schedule_with_warmup_cooldown, is_main_process, get_ran
 from dataset import MaskedDataset, CausalDataset, ValidationDataset
 from model_logging import ModelLogger
 
+def get_torchrun_dist_env():
+    """
+    Read distributed env assuming we are launched with torchrun / torch.distributed.run.
 
-if int(os.environ["SLURM_PROCID"]) == 0:
+    Required env vars (set by torchrun):
+        - RANK
+        - LOCAL_RANK
+        - WORLD_SIZE
+    """
+    try:
+        rank       = int(os.environ["RANK"])
+        local_rank = int(os.environ["LOCAL_RANK"])
+        world_size = int(os.environ["WORLD_SIZE"])
+    except KeyError as e:
+        raise RuntimeError(
+            f"Expected torchrun env variables RANK, LOCAL_RANK, WORLD_SIZE, but {e} is missing. "
+            "Make sure to launch with 'python -m torch.distributed.run ...' or 'torchrun ...'."
+        )
+
+    gpus_per_node = torch.cuda.device_count()
+    if gpus_per_node == 0:
+        raise RuntimeError("torchrun distributed mode requires at least one CUDA device per process.")
+
+    return rank, local_rank, world_size, gpus_per_node
+
+
+if int(os.environ["RANK"]) == 0:
     import wandb
 
 
@@ -68,6 +93,7 @@ def parse_arguments():
     parser.add_argument('--n_special_tokens', default=16, type=int, help="Number of special tokens.")
     parser.add_argument('--z_loss_weight', default=1e-4, type=float, help="Weight for the z loss.")
     parser.add_argument('--token_weighted_loss', default=False, action=argparse.BooleanOptionalAction, help="Use token weighted loss.")
+    parser.add_argument('--seq_ramp_60_80', default=False, action=argparse.BooleanOptionalAction, help="Step the sequence-length ramp (with its batch-size compensation) at 60 and 80 percent of training instead of the default 70 and 90. The 60/80 schedule follows the BabyLM 2025 GPT-BERT causal-focus baseline recipe (hf.co/BabyLM-community/babylm-baseline-10m-gpt-bert-causal-focus); the default matches the original GPT-BERT training code.")
     args = parser.parse_args()
 
     args.output_path = f"{args.output_dir}/{args.name}.bin"
@@ -79,9 +105,11 @@ def setup_training(args, tokenizer):
     assert torch.cuda.is_available()
     args.n_gpu = torch.cuda.device_count()
 
-    args.world_size = int(os.environ["WORLD_SIZE"])
-    args.rank = int(os.environ["SLURM_PROCID"])
-    args.gpus_per_node = int(os.environ["SLURM_GPUS_ON_NODE"])
+    rank, local_rank, world_size, gpus_per_node = get_torchrun_dist_env()
+    args.rank = rank
+    args.local_rank = local_rank
+    args.world_size = world_size
+    args.gpus_per_node = gpus_per_node
     assert args.gpus_per_node == torch.cuda.device_count()
     print(f"Hello from rank {args.rank} of {args.world_size} on {gethostname()} where there are {args.gpus_per_node} allocated GPUs per node.", flush=True)
 
@@ -116,8 +144,8 @@ def setup_training(args, tokenizer):
     if is_main_process():
         wandb.init(
             name=args.name,
-            project="BabyLM-v2",
-            entity="nor-ret"
+            project=os.environ.get("WANDB_PROJECT", "sambal"),
+            entity=os.environ.get("WANDB_ENTITY")
         )
 
 
@@ -210,7 +238,8 @@ def prepare_model_and_optimizer(args):
 
 
 def get_batch(dataloader, device, global_step):
-    dataloader._dataset.set_global_step(global_step)
+    if hasattr(dataloader._dataset, "set_global_step"):
+        dataloader._dataset.set_global_step(global_step)
     batch = next(dataloader)
     input_ids, target_ids, attention_mask, mask_p = [t.pin_memory().to(device, non_blocking=True) for t in batch]
     input_ids, target_ids = input_ids.t(), target_ids.t()
@@ -224,19 +253,36 @@ def training_epoch(model, ema_model, train_dataloader, valid_dataloader, optimiz
     optimizer.zero_grad(set_to_none=True)
 
     # calculate the number of steps to perform in this epoch
-    num_steps = min(len(train_dataloader), (args.max_steps - global_step) * args.accumulate_steps)
+    # num_steps = min(len(train_dataloader), (args.max_steps - global_step) * args.accumulate_steps)
+    # Compute local steps
+    local_steps = torch.tensor([len(train_dataloader)], device=args.device)
+
+    # Take the MIN across all ranks (safest)
+    torch.distributed.all_reduce(local_steps, op=torch.distributed.ReduceOp.MIN)
+
+    num_steps = min(
+        int(local_steps.item()),
+        (args.max_steps - global_step) * args.accumulate_steps
+    )
 
     # initialize the dataloader and the metrics
-    train_dataloader = iter(train_dataloader)
+    train_iter = iter(train_dataloader)
     total_loss, total_accuracy, total_z_loss, total_mask_p, total_grad_norm = 0.0, 0.0, 0.0, 0.0, 0.0
 
     # get the first batch
-    input_ids_, attention_mask_, target_ids_, mask_p_ = get_batch(train_dataloader, args.device, global_step)
+    input_ids_, attention_mask_, target_ids_, mask_p_ = get_batch(train_iter, args.device, global_step)
+
+    progress_bar = tqdm(
+        total=args.max_steps,
+        initial=global_step,
+        desc="Train step",
+        disable=not is_main_process(),
+    )
 
     # iterate over the steps
-    for local_step in tqdm(range(num_steps), desc="Train iteration", initial=global_step, total=args.max_steps, disable=not is_main_process()):
+    for local_step in range(num_steps):
         input_ids, attention_mask, target_ids, mask_p = input_ids_, attention_mask_, target_ids_, mask_p_
-
+        # print(f"[rank {args.rank}] before forward, local step {local_step} global step {global_step}", flush=True)
         # forward pass, do a more detailed check of the model every 100 steps
         with torch.cuda.amp.autocast(args.mixed_precision, dtype=torch.bfloat16):
             with ModelLogger(enable=global_step % 100 == 0, module=model):
@@ -244,7 +290,7 @@ def training_epoch(model, ema_model, train_dataloader, valid_dataloader, optimiz
 
         # get the next batch
         if local_step < num_steps - 1:
-            input_ids_, attention_mask_, target_ids_, mask_p_ = get_batch(train_dataloader, args.device, global_step)
+            input_ids_, attention_mask_, target_ids_, mask_p_ = get_batch(train_iter, args.device, global_step)
 
         # calculate the weight for the loss (either token-weighted or not)
         if args.token_weighted_loss:
@@ -253,10 +299,10 @@ def training_epoch(model, ema_model, train_dataloader, valid_dataloader, optimiz
             weight = args.world_size * num_tokens / total_tokens / args.accumulate_steps
         else:
             weight = 1.0 / args.accumulate_steps
-
+        # print(f"[rank {args.rank}] after forward, before backward, local step {local_step} global step {global_step}", flush=True)
         # backward pass through both losses
         ((loss + args.z_loss_weight * z_loss) * weight).backward()
-
+        # print(f"[rank {args.rank}] after backward, before optimizer step, local step {local_step} global step {global_step}", flush=True)
         # add the tracked metrics (for gradient accumulation)
         total_loss += loss.detach() * weight
         total_accuracy += accuracy * weight
@@ -273,6 +319,7 @@ def training_epoch(model, ema_model, train_dataloader, valid_dataloader, optimiz
         # optimizer step
         optimizer.step()
         scheduler.step()
+        # print(f"[rank {args.rank}] after optimizer step, local step {local_step} global step {global_step}", flush=True)
 
         with torch.no_grad():
 
@@ -333,13 +380,18 @@ def training_epoch(model, ema_model, train_dataloader, valid_dataloader, optimiz
         # log the stats and commit
         if is_main_process():
             wandb.log({"global_step": global_step}, commit=True)
+            progress_bar.update(1)
 
         global_step += 1
 
         # Exiting the training due to hitting max steps
         if global_step >= args.max_steps:
+            save(model, ema_model, optimizer, scheduler, global_step, epoch, args)
+            validation_epoch(model, valid_dataloader, epoch, args)
+            progress_bar.close()
             return global_step
 
+    progress_bar.close()
     return global_step
 
 
@@ -384,6 +436,7 @@ def validation_epoch(model, valid_dataloader, epoch, args, commit=False):
 def save(model, ema_model, optimizer, scheduler, global_step, epoch, args):
     if is_main_process():
         model_to_save = model.module if hasattr(model, 'module') else model  # Only save the model itself
+        os.makedirs(os.path.dirname(args.output_path), exist_ok=True)
         torch.save(model_to_save.state_dict(), args.output_path)
         torch.save(ema_model.state_dict(), args.output_path.replace(".bin", "_ema.bin"))
         torch.save(
@@ -402,10 +455,10 @@ def save(model, ema_model, optimizer, scheduler, global_step, epoch, args):
 def load_datasets(args, tokenizer, epoch, global_step, train_dataloader, valid_dataloader):
     train_seed = args.seed + get_rank() + epoch * get_world_size()
 
-    if (global_step + 1) / args.max_steps >= 0.9:
+    if (global_step + 1) / args.max_steps >= (0.8 if args.seq_ramp_60_80 else 0.9):
         seq_length = args.seq_length * 4
         global_batch_size = args.global_batch_size // 4
-    elif (global_step + 1) / args.max_steps >= 0.7:
+    elif (global_step + 1) / args.max_steps >= (0.6 if args.seq_ramp_60_80 else 0.7):
         seq_length = args.seq_length * 2
         global_batch_size = args.global_batch_size // 2
     else:
