@@ -1,0 +1,574 @@
+{
+  "meta": {
+    "name": "number_prep",
+    "metric": "sum",
+    "comment": "",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "intro",
+    "2": "np_sing",
+    "3": "prep",
+    "4": "the",
+    "5": "prep_np",
+    "6": "matrix_v",
+    "7": "continuation"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "((6;%match_sing%) < (6;%mismatch_sing%)) & ((6;%match_plural%) < (6;%mismatch_plural%))"
+    }
+  ],
+  "items": [
+    {
+      "item_number": 12,
+      "conditions": [
+        {
+          "condition_name": "match_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "clerk"
+            },
+            {
+              "region_number": 3,
+              "content": "across from"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "authors"
+            },
+            {
+              "region_number": 6,
+              "content": "is"
+            },
+            {
+              "region_number": 7,
+              "content": "good"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "clerk"
+            },
+            {
+              "region_number": 3,
+              "content": "across from"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "authors"
+            },
+            {
+              "region_number": 6,
+              "content": "are"
+            },
+            {
+              "region_number": 7,
+              "content": "good"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "clerks"
+            },
+            {
+              "region_number": 3,
+              "content": "across from"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "author"
+            },
+            {
+              "region_number": 6,
+              "content": "is"
+            },
+            {
+              "region_number": 7,
+              "content": "good"
+            }
+          ]
+        },
+        {
+          "condition_name": "match_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "clerks"
+            },
+            {
+              "region_number": 3,
+              "content": "across from"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "author"
+            },
+            {
+              "region_number": 6,
+              "content": "are"
+            },
+            {
+              "region_number": 7,
+              "content": "good"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 8,
+      "conditions": [
+        {
+          "condition_name": "match_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "teacher"
+            },
+            {
+              "region_number": 3,
+              "content": "behind"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "ministers"
+            },
+            {
+              "region_number": 6,
+              "content": "is"
+            },
+            {
+              "region_number": 7,
+              "content": "good"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "teacher"
+            },
+            {
+              "region_number": 3,
+              "content": "behind"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "ministers"
+            },
+            {
+              "region_number": 6,
+              "content": "are"
+            },
+            {
+              "region_number": 7,
+              "content": "good"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "teachers"
+            },
+            {
+              "region_number": 3,
+              "content": "behind"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "minister"
+            },
+            {
+              "region_number": 6,
+              "content": "is"
+            },
+            {
+              "region_number": 7,
+              "content": "good"
+            }
+          ]
+        },
+        {
+          "condition_name": "match_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "teachers"
+            },
+            {
+              "region_number": 3,
+              "content": "behind"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "minister"
+            },
+            {
+              "region_number": 6,
+              "content": "are"
+            },
+            {
+              "region_number": 7,
+              "content": "good"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 5,
+      "conditions": [
+        {
+          "condition_name": "match_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "manager"
+            },
+            {
+              "region_number": 3,
+              "content": "to the side of"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "architects"
+            },
+            {
+              "region_number": 6,
+              "content": "likes"
+            },
+            {
+              "region_number": 7,
+              "content": "to gamble"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "manager"
+            },
+            {
+              "region_number": 3,
+              "content": "to the side of"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "architects"
+            },
+            {
+              "region_number": 6,
+              "content": "like"
+            },
+            {
+              "region_number": 7,
+              "content": "to gamble"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "managers"
+            },
+            {
+              "region_number": 3,
+              "content": "to the side of"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "architect"
+            },
+            {
+              "region_number": 6,
+              "content": "likes"
+            },
+            {
+              "region_number": 7,
+              "content": "to gamble"
+            }
+          ]
+        },
+        {
+          "condition_name": "match_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "managers"
+            },
+            {
+              "region_number": 3,
+              "content": "to the side of"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "architect"
+            },
+            {
+              "region_number": 6,
+              "content": "like"
+            },
+            {
+              "region_number": 7,
+              "content": "to gamble"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 16,
+      "conditions": [
+        {
+          "condition_name": "match_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "minister"
+            },
+            {
+              "region_number": 3,
+              "content": "near"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "managers"
+            },
+            {
+              "region_number": 6,
+              "content": "knows"
+            },
+            {
+              "region_number": 7,
+              "content": "many people"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "minister"
+            },
+            {
+              "region_number": 3,
+              "content": "near"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "managers"
+            },
+            {
+              "region_number": 6,
+              "content": "know"
+            },
+            {
+              "region_number": 7,
+              "content": "many people"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "ministers"
+            },
+            {
+              "region_number": 3,
+              "content": "near"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "manager"
+            },
+            {
+              "region_number": 6,
+              "content": "knows"
+            },
+            {
+              "region_number": 7,
+              "content": "tennis"
+            }
+          ]
+        },
+        {
+          "condition_name": "match_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "ministers"
+            },
+            {
+              "region_number": 3,
+              "content": "near"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "manager"
+            },
+            {
+              "region_number": 6,
+              "content": "know"
+            },
+            {
+              "region_number": 7,
+              "content": "tennis"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

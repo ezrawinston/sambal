@@ -1,0 +1,28 @@
+{
+ "meta": {
+  "copy": "blimp_train_long",
+  "numpy": "1.26.4",
+  "platform": "macOS-15.7.9-x86_64-i386-64bit",
+  "python": "3.12.11",
+  "tiny_model_sha256": "cb5af179b88306082c1a9108bd9cfcd66cdc37b943c4f873aaadd215f5c873c3",
+  "torch": "2.2.2",
+  "written": "2026-09-03T06:08:55Z"
+ },
+ "values": {
+  "mlm_shift": {
+   "blimp/best_temp_avg_uid_accuracy": 45.0,
+   "blimp/best_temp_field_morphology": 40.0,
+   "blimp/best_temp_field_supplemental": 20.0,
+   "blimp/best_temp_field_syntax": 80.0,
+   "blimp/best_temperature": 9.99999997e-07,
+   "blimp/per_uid/agreement_subject_verb": 40.0,
+   "blimp/per_uid/anaphor_agreement": 80.0,
+   "blimp/per_uid/determiner_noun": 40.0,
+   "blimp/per_uid/reflexive_probe_tiny": 20.0,
+   "blimp/temp_1_avg_uid_accuracy": 45.0,
+   "blimp/temp_1_field_morphology": 40.0,
+   "blimp/temp_1_field_supplemental": 20.0,
+   "blimp/temp_1_field_syntax": 80.0
+  }
+ }
+}

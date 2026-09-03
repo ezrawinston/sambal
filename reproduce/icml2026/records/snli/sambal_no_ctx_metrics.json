@@ -1,0 +1,44 @@
+{
+  "task": "snli",
+  "probe": {
+    "family": "multinomial_logistic_regression",
+    "selected_C": 1.0,
+    "feature_spec": "[u_premise, u_hypothesis, abs(u_premise-u_hypothesis), u_premise*u_hypothesis, cos] where u is mean-pooled sentence representation",
+    "train_limit": 100000,
+    "dev_limit": 0,
+    "test_limit": 0
+  },
+  "train": {
+    "n_items": 100000,
+    "accuracy": 0.60026,
+    "macro_f1": 0.599361185717527,
+    "per_label_f1": {
+      "entailment": 0.6428200991125965,
+      "neutral": 0.576875692990021,
+      "contradiction": 0.5783877650499634
+    },
+    "mean_pair_cosine": 0.5774953667618521
+  },
+  "dev": {
+    "n_items": 9842,
+    "accuracy": 0.6020117862223126,
+    "macro_f1": 0.6012323135072569,
+    "per_label_f1": {
+      "entailment": 0.6388522910262041,
+      "neutral": 0.581151011447389,
+      "contradiction": 0.5836936380481778
+    },
+    "mean_pair_cosine": 0.5784327887922973
+  },
+  "test": {
+    "n_items": 9824,
+    "accuracy": 0.6015879478827362,
+    "macro_f1": 0.6001824491887153,
+    "per_label_f1": {
+      "entailment": 0.643348623853211,
+      "neutral": 0.5804516027159324,
+      "contradiction": 0.5767471209970026
+    },
+    "mean_pair_cosine": 0.5792642701348951
+  }
+}

@@ -1,0 +1,30 @@
+{
+ "final_blimp_best_temp_avg": {
+  "no_context_buckets": {
+   "seed0": 65.3179104477612,
+   "seed1": 66.95671641791047,
+   "seed2": 66.98955223880594
+  },
+  "no_gender": {
+   "seed0": 70.18955223880597,
+   "seed1": 70.77910447761192,
+   "seed2": 70.4328358208955
+  },
+  "no_humanness": {
+   "seed0": 70.4402985074627,
+   "seed1": 68.64328358208955,
+   "seed2": 70.49999999999999
+  },
+  "no_toinf": {
+   "seed0": 70.41343283582091,
+   "seed1": 71.06567164179104,
+   "seed2": 70.46716417910446
+  },
+  "no_ud_roundtrip": {
+   "seed0": 70.1820895522388,
+   "seed1": 69.99701492537312,
+   "seed2": 70.96417910447765
+  }
+ },
+ "note": "Pipeline-component ablations: short-regime training (3 seeds each) on corpus variants with one component disabled; final BLiMP accuracy at best temperature over the full 67,000-item BLiMP set (not the inline fast subset used during training)."
+}

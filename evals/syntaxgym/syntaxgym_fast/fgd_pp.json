@@ -1,0 +1,792 @@
+{
+  "meta": {
+    "name": "fgd_pp",
+    "metric": "sum",
+    "comment": "",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "prefix",
+    "2": "comp",
+    "3": "np1",
+    "4": "verb",
+    "5": "np2",
+    "6": "prep",
+    "7": "np3",
+    "8": "end"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "((7;%what_nogap%) > (7;%that_nogap%) ) & ((8;%what_gap%) < (8;%that_gap%) ) "
+    }
+  ],
+  "items": [
+    {
+      "item_number": 7,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "We all remember"
+            },
+            {
+              "region_number": 2,
+              "content": "what"
+            },
+            {
+              "region_number": 3,
+              "content": "the convict"
+            },
+            {
+              "region_number": 4,
+              "content": "brought"
+            },
+            {
+              "region_number": 5,
+              "content": "a gun"
+            },
+            {
+              "region_number": 6,
+              "content": "into"
+            },
+            {
+              "region_number": 7,
+              "content": "the prison"
+            },
+            {
+              "region_number": 8,
+              "content": "two weeks ago"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "We all remember"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the convict"
+            },
+            {
+              "region_number": 4,
+              "content": "brought"
+            },
+            {
+              "region_number": 5,
+              "content": "a gun"
+            },
+            {
+              "region_number": 6,
+              "content": "into"
+            },
+            {
+              "region_number": 7,
+              "content": "the prison"
+            },
+            {
+              "region_number": 8,
+              "content": "two weeks ago"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "We all remember"
+            },
+            {
+              "region_number": 2,
+              "content": "what"
+            },
+            {
+              "region_number": 3,
+              "content": "the convict"
+            },
+            {
+              "region_number": 4,
+              "content": "brought"
+            },
+            {
+              "region_number": 5,
+              "content": "a gun"
+            },
+            {
+              "region_number": 6,
+              "content": "into"
+            },
+            {
+              "region_number": 7,
+              "content": ""
+            },
+            {
+              "region_number": 8,
+              "content": "two weeks ago"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "We all remember"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the convict"
+            },
+            {
+              "region_number": 4,
+              "content": "brought"
+            },
+            {
+              "region_number": 5,
+              "content": "a gun"
+            },
+            {
+              "region_number": 6,
+              "content": "into"
+            },
+            {
+              "region_number": 7,
+              "content": ""
+            },
+            {
+              "region_number": 8,
+              "content": "two weeks ago"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 11,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The newspaper reported"
+            },
+            {
+              "region_number": 2,
+              "content": "what"
+            },
+            {
+              "region_number": 3,
+              "content": "the suspect"
+            },
+            {
+              "region_number": 4,
+              "content": "killed"
+            },
+            {
+              "region_number": 5,
+              "content": "the witness"
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": "a gun"
+            },
+            {
+              "region_number": 8,
+              "content": "in the middle of the night"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The newspaper reported"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the suspect"
+            },
+            {
+              "region_number": 4,
+              "content": "killed"
+            },
+            {
+              "region_number": 5,
+              "content": "the witness"
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": "a gun"
+            },
+            {
+              "region_number": 8,
+              "content": "in the middle of the night"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The newspaper reported"
+            },
+            {
+              "region_number": 2,
+              "content": "what"
+            },
+            {
+              "region_number": 3,
+              "content": "the suspect"
+            },
+            {
+              "region_number": 4,
+              "content": "killed"
+            },
+            {
+              "region_number": 5,
+              "content": "the witness"
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": ""
+            },
+            {
+              "region_number": 8,
+              "content": "in the middle of the night"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The newspaper reported"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the suspect"
+            },
+            {
+              "region_number": 4,
+              "content": "killed"
+            },
+            {
+              "region_number": 5,
+              "content": "the witness"
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": ""
+            },
+            {
+              "region_number": 8,
+              "content": "in the middle of the night"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 4,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "You remember"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": "the businessman"
+            },
+            {
+              "region_number": 4,
+              "content": "showed"
+            },
+            {
+              "region_number": 5,
+              "content": "the presentation"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": "the visitors"
+            },
+            {
+              "region_number": 8,
+              "content": "after lunch"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "You remember"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the businessman"
+            },
+            {
+              "region_number": 4,
+              "content": "showed"
+            },
+            {
+              "region_number": 5,
+              "content": "the presentation"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": "the visitors"
+            },
+            {
+              "region_number": 8,
+              "content": "after lunch"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "You remember"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": "the businessman"
+            },
+            {
+              "region_number": 4,
+              "content": "showed"
+            },
+            {
+              "region_number": 5,
+              "content": "the presentation"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": ""
+            },
+            {
+              "region_number": 8,
+              "content": "after lunch"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "You remember"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the businessman"
+            },
+            {
+              "region_number": 4,
+              "content": "showed"
+            },
+            {
+              "region_number": 5,
+              "content": "the presentation"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": ""
+            },
+            {
+              "region_number": 8,
+              "content": "after lunch"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 3,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I know"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": "the committee"
+            },
+            {
+              "region_number": 4,
+              "content": "delivered"
+            },
+            {
+              "region_number": 5,
+              "content": "the report"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": "the president"
+            },
+            {
+              "region_number": 8,
+              "content": "by the deadline"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I know"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the committee"
+            },
+            {
+              "region_number": 4,
+              "content": "delivered"
+            },
+            {
+              "region_number": 5,
+              "content": "the report"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": "the president"
+            },
+            {
+              "region_number": 8,
+              "content": "by the deadline"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I know"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": "the committee"
+            },
+            {
+              "region_number": 4,
+              "content": "delivered"
+            },
+            {
+              "region_number": 5,
+              "content": "the report"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": ""
+            },
+            {
+              "region_number": 8,
+              "content": "by the deadline"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I know"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the committee"
+            },
+            {
+              "region_number": 4,
+              "content": "delivered"
+            },
+            {
+              "region_number": 5,
+              "content": "the report"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": ""
+            },
+            {
+              "region_number": 8,
+              "content": "by the deadline"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 13,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I remember"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": "the nurse"
+            },
+            {
+              "region_number": 4,
+              "content": "should administer"
+            },
+            {
+              "region_number": 5,
+              "content": "the new medicine"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": "the sick patient"
+            },
+            {
+              "region_number": 8,
+              "content": "without any delay"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I remember"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the nurse"
+            },
+            {
+              "region_number": 4,
+              "content": "should administer"
+            },
+            {
+              "region_number": 5,
+              "content": "the new medicine"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": "the sick patient"
+            },
+            {
+              "region_number": 8,
+              "content": "without any delay"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I remember"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": "the nurse"
+            },
+            {
+              "region_number": 4,
+              "content": "should administer"
+            },
+            {
+              "region_number": 5,
+              "content": "the new medicine"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": ""
+            },
+            {
+              "region_number": 8,
+              "content": "without any delay"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I remember"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the nurse"
+            },
+            {
+              "region_number": 4,
+              "content": "should administer"
+            },
+            {
+              "region_number": 5,
+              "content": "the new medicine"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": ""
+            },
+            {
+              "region_number": 8,
+              "content": "without any delay"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

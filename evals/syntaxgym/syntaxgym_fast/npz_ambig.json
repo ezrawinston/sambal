@@ -1,0 +1,630 @@
+{
+  "meta": {
+    "name": "npz_ambig",
+    "metric": "sum",
+    "comment": "Below is a simple two-criterion GP prediction. #Prediction [(5;%ambig_nocomma%) > (5;%ambig_comma%) ] &  [(5;%ambig_nocomma%) > (5;%unambig_nocomma%) ]  Below is the more stringent prediction of the interaction. Below is Ethan's original prediction #Prediction [(5;%ambig_nocomma%) > (5;%ambig_comma%) ] & [(5;%unambig_nocomma%) = (5;%unambig_comma%) ] ",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "Start",
+    "2": "Transitive Verb",
+    "3": "Comma",
+    "4": "NP/Z",
+    "5": "Verb",
+    "6": "Continuation"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "((5;%ambig_nocomma%) > (5;%ambig_comma%) ) &  ((5;%ambig_nocomma%) > (5;%unambig_nocomma%) )  & (((5;%ambig_nocomma%) - (5;%ambig_comma%) ) > ((5;%unambig_nocomma%) - (5;%unambig_comma%) ))"
+    }
+  ],
+  "items": [
+    {
+      "item_number": 11,
+      "conditions": [
+        {
+          "condition_name": "ambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Because the manager"
+            },
+            {
+              "region_number": 2,
+              "content": "applauded"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the comedian"
+            },
+            {
+              "region_number": 5,
+              "content": "began"
+            },
+            {
+              "region_number": 6,
+              "content": "his act"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Because the manager"
+            },
+            {
+              "region_number": 2,
+              "content": "departed"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the comedian"
+            },
+            {
+              "region_number": 5,
+              "content": "began"
+            },
+            {
+              "region_number": 6,
+              "content": "his act"
+            }
+          ]
+        },
+        {
+          "condition_name": "ambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Because the manager"
+            },
+            {
+              "region_number": 2,
+              "content": "applauded"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the comedian"
+            },
+            {
+              "region_number": 5,
+              "content": "began"
+            },
+            {
+              "region_number": 6,
+              "content": "his act"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Because the manager"
+            },
+            {
+              "region_number": 2,
+              "content": "departed"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the comedian"
+            },
+            {
+              "region_number": 5,
+              "content": "began"
+            },
+            {
+              "region_number": 6,
+              "content": "his act"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 13,
+      "conditions": [
+        {
+          "condition_name": "ambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the guard"
+            },
+            {
+              "region_number": 2,
+              "content": "visited"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the children"
+            },
+            {
+              "region_number": 5,
+              "content": "jumped"
+            },
+            {
+              "region_number": 6,
+              "content": "into the pool"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the guard"
+            },
+            {
+              "region_number": 2,
+              "content": "departed"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the children"
+            },
+            {
+              "region_number": 5,
+              "content": "jumped"
+            },
+            {
+              "region_number": 6,
+              "content": "into the pool"
+            }
+          ]
+        },
+        {
+          "condition_name": "ambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the guard"
+            },
+            {
+              "region_number": 2,
+              "content": "visited"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the children"
+            },
+            {
+              "region_number": 5,
+              "content": "jumped"
+            },
+            {
+              "region_number": 6,
+              "content": "into the pool"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the guard"
+            },
+            {
+              "region_number": 2,
+              "content": "departed"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the children"
+            },
+            {
+              "region_number": 5,
+              "content": "jumped"
+            },
+            {
+              "region_number": 6,
+              "content": "into the pool"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 9,
+      "conditions": [
+        {
+          "condition_name": "ambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "When the professor"
+            },
+            {
+              "region_number": 2,
+              "content": "taught"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the visitors"
+            },
+            {
+              "region_number": 5,
+              "content": "lost"
+            },
+            {
+              "region_number": 6,
+              "content": "interest"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "When the professor"
+            },
+            {
+              "region_number": 2,
+              "content": "talked"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the visitors"
+            },
+            {
+              "region_number": 5,
+              "content": "lost"
+            },
+            {
+              "region_number": 6,
+              "content": "interest"
+            }
+          ]
+        },
+        {
+          "condition_name": "ambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "When the professor"
+            },
+            {
+              "region_number": 2,
+              "content": "taught"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the visitors"
+            },
+            {
+              "region_number": 5,
+              "content": "lost"
+            },
+            {
+              "region_number": 6,
+              "content": "interest"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "When the professor"
+            },
+            {
+              "region_number": 2,
+              "content": "talked"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the visitors"
+            },
+            {
+              "region_number": 5,
+              "content": "lost"
+            },
+            {
+              "region_number": 6,
+              "content": "interest"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 3,
+      "conditions": [
+        {
+          "condition_name": "ambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "As the ship"
+            },
+            {
+              "region_number": 2,
+              "content": "crossed"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the waters"
+            },
+            {
+              "region_number": 5,
+              "content": "remained"
+            },
+            {
+              "region_number": 6,
+              "content": "blue and calm"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "As the ship"
+            },
+            {
+              "region_number": 2,
+              "content": "drifted"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the waters"
+            },
+            {
+              "region_number": 5,
+              "content": "remained"
+            },
+            {
+              "region_number": 6,
+              "content": "blue and calm"
+            }
+          ]
+        },
+        {
+          "condition_name": "ambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "As the ship"
+            },
+            {
+              "region_number": 2,
+              "content": "crossed"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the waters"
+            },
+            {
+              "region_number": 5,
+              "content": "remained"
+            },
+            {
+              "region_number": 6,
+              "content": "blue and calm"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "As the ship"
+            },
+            {
+              "region_number": 2,
+              "content": "drifted"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the waters"
+            },
+            {
+              "region_number": 5,
+              "content": "remained"
+            },
+            {
+              "region_number": 6,
+              "content": "blue and calm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 7,
+      "conditions": [
+        {
+          "condition_name": "ambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the audience"
+            },
+            {
+              "region_number": 2,
+              "content": "cheered"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the actor"
+            },
+            {
+              "region_number": 5,
+              "content": "delivered"
+            },
+            {
+              "region_number": 6,
+              "content": "his speech"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the audience"
+            },
+            {
+              "region_number": 2,
+              "content": "arrived"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the actor"
+            },
+            {
+              "region_number": 5,
+              "content": "delivered"
+            },
+            {
+              "region_number": 6,
+              "content": "his speech"
+            }
+          ]
+        },
+        {
+          "condition_name": "ambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the audience"
+            },
+            {
+              "region_number": 2,
+              "content": "cheered"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the actor"
+            },
+            {
+              "region_number": 5,
+              "content": "delivered"
+            },
+            {
+              "region_number": 6,
+              "content": "his speech"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the audience"
+            },
+            {
+              "region_number": 2,
+              "content": "arrived"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the actor"
+            },
+            {
+              "region_number": 5,
+              "content": "delivered"
+            },
+            {
+              "region_number": 6,
+              "content": "his speech"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

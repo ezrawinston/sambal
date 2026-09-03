@@ -1,0 +1,176 @@
+{
+ "meta": {
+  "name": "number_prep",
+  "metric": "sum",
+  "comment": "tiny fixture",
+  "reference": "",
+  "author": ""
+ },
+ "region_meta": {},
+ "predictions": [
+  {
+   "type": "formula",
+   "formula": "(6;%match%) < (6;%mismatch%)"
+  }
+ ],
+ "items": [
+  {
+   "item_number": 1,
+   "conditions": [
+    {
+     "condition_name": "match",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "senator"
+      },
+      {
+       "region_number": 3,
+       "content": "that the"
+      },
+      {
+       "region_number": 4,
+       "content": "dancers"
+      },
+      {
+       "region_number": 5,
+       "content": "admired"
+      },
+      {
+       "region_number": 6,
+       "content": "leaves"
+      },
+      {
+       "region_number": 7,
+       "content": "quietly"
+      },
+      {
+       "region_number": 8,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "mismatch",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "senator"
+      },
+      {
+       "region_number": 3,
+       "content": "that the"
+      },
+      {
+       "region_number": 4,
+       "content": "dancers"
+      },
+      {
+       "region_number": 5,
+       "content": "admired"
+      },
+      {
+       "region_number": 6,
+       "content": "leave"
+      },
+      {
+       "region_number": 7,
+       "content": "quietly"
+      },
+      {
+       "region_number": 8,
+       "content": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item_number": 2,
+   "conditions": [
+    {
+     "condition_name": "match",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "dancer"
+      },
+      {
+       "region_number": 3,
+       "content": "that the"
+      },
+      {
+       "region_number": 4,
+       "content": "nurses"
+      },
+      {
+       "region_number": 5,
+       "content": "admired"
+      },
+      {
+       "region_number": 6,
+       "content": "leaves"
+      },
+      {
+       "region_number": 7,
+       "content": "quietly"
+      },
+      {
+       "region_number": 8,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "mismatch",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "dancer"
+      },
+      {
+       "region_number": 3,
+       "content": "that the"
+      },
+      {
+       "region_number": 4,
+       "content": "nurses"
+      },
+      {
+       "region_number": 5,
+       "content": "admired"
+      },
+      {
+       "region_number": 6,
+       "content": "leave"
+      },
+      {
+       "region_number": 7,
+       "content": "quietly"
+      },
+      {
+       "region_number": 8,
+       "content": "."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

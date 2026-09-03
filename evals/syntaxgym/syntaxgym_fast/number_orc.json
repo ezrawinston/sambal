@@ -1,0 +1,639 @@
+{
+  "meta": {
+    "name": "number_orc",
+    "metric": "sum",
+    "comment": "",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "intro",
+    "2": "np_sing",
+    "3": "that",
+    "4": "the",
+    "5": "embed_np",
+    "6": "embed_vp",
+    "7": "matrix_v",
+    "8": "continuation"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "((7;%match_sing%) < (7;%mismatch_sing%)) & ((7;%match_plural%) < (7;%mismatch_plural%))"
+    }
+  ],
+  "items": [
+    {
+      "item_number": 18,
+      "conditions": [
+        {
+          "condition_name": "match_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "secretary"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "officers"
+            },
+            {
+              "region_number": 6,
+              "content": "embarrassed"
+            },
+            {
+              "region_number": 7,
+              "content": "enjoys"
+            },
+            {
+              "region_number": 8,
+              "content": "playing tennis"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "secretary"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "officers"
+            },
+            {
+              "region_number": 6,
+              "content": "embarrassed"
+            },
+            {
+              "region_number": 7,
+              "content": "enjoy"
+            },
+            {
+              "region_number": 8,
+              "content": "playing tennis"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "secretaries"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "officer"
+            },
+            {
+              "region_number": 6,
+              "content": "embarrassed"
+            },
+            {
+              "region_number": 7,
+              "content": "enjoys"
+            },
+            {
+              "region_number": 8,
+              "content": "tennis"
+            }
+          ]
+        },
+        {
+          "condition_name": "match_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "secretaries"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "officer"
+            },
+            {
+              "region_number": 6,
+              "content": "embarrassed"
+            },
+            {
+              "region_number": 7,
+              "content": "enjoy"
+            },
+            {
+              "region_number": 8,
+              "content": "tennis"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 9,
+      "conditions": [
+        {
+          "condition_name": "match_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "senator"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "actors"
+            },
+            {
+              "region_number": 6,
+              "content": "injured"
+            },
+            {
+              "region_number": 7,
+              "content": "is"
+            },
+            {
+              "region_number": 8,
+              "content": "good"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "senator"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "actors"
+            },
+            {
+              "region_number": 6,
+              "content": "injured"
+            },
+            {
+              "region_number": 7,
+              "content": "are"
+            },
+            {
+              "region_number": 8,
+              "content": "good"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "senators"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "actor"
+            },
+            {
+              "region_number": 6,
+              "content": "injured"
+            },
+            {
+              "region_number": 7,
+              "content": "is"
+            },
+            {
+              "region_number": 8,
+              "content": "good"
+            }
+          ]
+        },
+        {
+          "condition_name": "match_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "senators"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "actor"
+            },
+            {
+              "region_number": 6,
+              "content": "injured"
+            },
+            {
+              "region_number": 7,
+              "content": "are"
+            },
+            {
+              "region_number": 8,
+              "content": "good"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 14,
+      "conditions": [
+        {
+          "condition_name": "match_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "athlete"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "doctors"
+            },
+            {
+              "region_number": 6,
+              "content": "admired"
+            },
+            {
+              "region_number": 7,
+              "content": "brings"
+            },
+            {
+              "region_number": 8,
+              "content": "good feelings"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "athlete"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "doctors"
+            },
+            {
+              "region_number": 6,
+              "content": "admired"
+            },
+            {
+              "region_number": 7,
+              "content": "bring"
+            },
+            {
+              "region_number": 8,
+              "content": "good feelings"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "athletes"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "doctor"
+            },
+            {
+              "region_number": 6,
+              "content": "admired"
+            },
+            {
+              "region_number": 7,
+              "content": "brings"
+            },
+            {
+              "region_number": 8,
+              "content": "good feelings"
+            }
+          ]
+        },
+        {
+          "condition_name": "match_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "athletes"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "doctor"
+            },
+            {
+              "region_number": 6,
+              "content": "admired"
+            },
+            {
+              "region_number": 7,
+              "content": "bring"
+            },
+            {
+              "region_number": 8,
+              "content": "good feelings"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 13,
+      "conditions": [
+        {
+          "condition_name": "match_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "architect"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "pilots"
+            },
+            {
+              "region_number": 6,
+              "content": "hated"
+            },
+            {
+              "region_number": 7,
+              "content": "is"
+            },
+            {
+              "region_number": 8,
+              "content": "good"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "architect"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "pilots"
+            },
+            {
+              "region_number": 6,
+              "content": "hated"
+            },
+            {
+              "region_number": 7,
+              "content": "are"
+            },
+            {
+              "region_number": 8,
+              "content": "good"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "architects"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "pilot"
+            },
+            {
+              "region_number": 6,
+              "content": "hated"
+            },
+            {
+              "region_number": 7,
+              "content": "is"
+            },
+            {
+              "region_number": 8,
+              "content": "good"
+            }
+          ]
+        },
+        {
+          "condition_name": "match_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "architects"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "pilot"
+            },
+            {
+              "region_number": 6,
+              "content": "hated"
+            },
+            {
+              "region_number": 7,
+              "content": "are"
+            },
+            {
+              "region_number": 8,
+              "content": "good"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

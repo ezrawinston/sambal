@@ -1,0 +1,848 @@
+{
+ "meta": {
+  "copy": "ewok_standalone",
+  "numpy": "1.26.4",
+  "platform": "macOS-15.7.9-x86_64-i386-64bit",
+  "python": "3.12.11",
+  "tiny_model_sha256": "cb5af179b88306082c1a9108bd9cfcd66cdc37b943c4f873aaadd215f5c873c3",
+  "torch": "2.2.2",
+  "written": "2026-09-03T06:08:55Z"
+ },
+ "values": {
+  "causal": {
+   "best_temperature_report.txt": "TEMPERATURE: 0.00\n\n### DOMAIN ACCURACY\nspatial-relations: 50.00\nsocial-relations: 50.00\nphysical-relations: 50.00\nmaterial-properties: 50.00\nagent-properties: 75.00\n\n### CONTEXT TYPE ACCURACY\ndirect: 50.00\nindirect: 66.67\n\n### CONTEXT CONTRAST ACCURACY\nantonym: 57.14\nvariable swap: 50.00\nconcept swap: 50.00\n\n### TARGET CONTRAST ACCURACY\nconcept swap: 55.00\n\n### AVERAGE ACCURACY\n55.00\n\n",
+   "predictions": {
+    "agent-properties": {
+     "predictions": [
+      {
+       "id": "agent-properties_16",
+       "pred": " Lee believes the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_17",
+       "pred": " Lee believes the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_18",
+       "pred": " Sam wants the sandwich."
+      },
+      {
+       "id": "agent-properties_19",
+       "pred": " Sam wants the sandwich."
+      }
+     ]
+    },
+    "material-properties": {
+     "predictions": [
+      {
+       "id": "material-properties_12",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_13",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_14",
+       "pred": " The towel stays folded."
+      },
+      {
+       "id": "material-properties_15",
+       "pred": " The towel stays folded."
+      }
+     ]
+    },
+    "physical-relations": {
+     "predictions": [
+      {
+       "id": "physical-relations_8",
+       "pred": " The stone floats on the pond."
+      },
+      {
+       "id": "physical-relations_9",
+       "pred": " The stone floats on the pond."
+      },
+      {
+       "id": "physical-relations_10",
+       "pred": " The soup is hot."
+      },
+      {
+       "id": "physical-relations_11",
+       "pred": " The soup is hot."
+      }
+     ]
+    },
+    "social-relations": {
+     "predictions": [
+      {
+       "id": "social-relations_4",
+       "pred": " Noah is kind to Mia."
+      },
+      {
+       "id": "social-relations_5",
+       "pred": " Noah is kind to Mia."
+      },
+      {
+       "id": "social-relations_6",
+       "pred": " Ben is the teacher."
+      },
+      {
+       "id": "social-relations_7",
+       "pred": " Ben is the teacher."
+      }
+     ]
+    },
+    "spatial-relations": {
+     "predictions": [
+      {
+       "id": "spatial-relations_0",
+       "pred": " The lamp sits under the desk."
+      },
+      {
+       "id": "spatial-relations_1",
+       "pred": " The lamp sits under the desk."
+      },
+      {
+       "id": "spatial-relations_2",
+       "pred": " The box is empty."
+      },
+      {
+       "id": "spatial-relations_3",
+       "pred": " The box is empty."
+      }
+     ]
+    }
+   },
+   "predictions_at_best_temperature": {
+    "agent-properties": {
+     "predictions": [
+      {
+       "id": "agent-properties_16",
+       "pred": " Lee believes the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_17",
+       "pred": " Lee believes the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_18",
+       "pred": " Sam wants the sandwich."
+      },
+      {
+       "id": "agent-properties_19",
+       "pred": " Sam avoids the sandwich."
+      }
+     ]
+    },
+    "material-properties": {
+     "predictions": [
+      {
+       "id": "material-properties_12",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_13",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_14",
+       "pred": " The towel drips on the floor."
+      },
+      {
+       "id": "material-properties_15",
+       "pred": " The towel drips on the floor."
+      }
+     ]
+    },
+    "physical-relations": {
+     "predictions": [
+      {
+       "id": "physical-relations_8",
+       "pred": " The stone floats on the pond."
+      },
+      {
+       "id": "physical-relations_9",
+       "pred": " The stone floats on the pond."
+      },
+      {
+       "id": "physical-relations_10",
+       "pred": " The soup is hot."
+      },
+      {
+       "id": "physical-relations_11",
+       "pred": " The soup is hot."
+      }
+     ]
+    },
+    "social-relations": {
+     "predictions": [
+      {
+       "id": "social-relations_4",
+       "pred": " Noah is kind to Mia."
+      },
+      {
+       "id": "social-relations_5",
+       "pred": " Noah is kind to Mia."
+      },
+      {
+       "id": "social-relations_6",
+       "pred": " Ben is the teacher."
+      },
+      {
+       "id": "social-relations_7",
+       "pred": " Ben is the teacher."
+      }
+     ]
+    },
+    "spatial-relations": {
+     "predictions": [
+      {
+       "id": "spatial-relations_0",
+       "pred": " The lamp sits under the desk."
+      },
+      {
+       "id": "spatial-relations_1",
+       "pred": " The lamp sits under the desk."
+      },
+      {
+       "id": "spatial-relations_2",
+       "pred": " The box is empty."
+      },
+      {
+       "id": "spatial-relations_3",
+       "pred": " The box is empty."
+      }
+     ]
+    }
+   },
+   "temperature_1_report.txt": "TEMPERATURE: 1.00\n\n### DOMAIN ACCURACY\nspatial-relations: 50.00\nsocial-relations: 50.00\nphysical-relations: 50.00\nmaterial-properties: 50.00\nagent-properties: 50.00\n\n### CONTEXT TYPE ACCURACY\ndirect: 50.00\nindirect: 50.00\n\n### CONTEXT CONTRAST ACCURACY\nantonym: 50.00\nvariable swap: 50.00\nconcept swap: 50.00\n\n### TARGET CONTRAST ACCURACY\nconcept swap: 50.00\n\n### AVERAGE ACCURACY\n50.00\n\n"
+  },
+  "fused": {
+   "unsupported": "RuntimeError: Could not infer dtype of NoneType"
+  },
+  "mlm": {
+   "best_temperature_report.txt": "TEMPERATURE: 0.15\n\n### DOMAIN ACCURACY\nspatial-relations: 75.00\nsocial-relations: 25.00\nphysical-relations: 50.00\nmaterial-properties: 50.00\nagent-properties: 50.00\n\n### CONTEXT TYPE ACCURACY\ndirect: 57.14\nindirect: 33.33\n\n### CONTEXT CONTRAST ACCURACY\nantonym: 57.14\nconcept swap: 50.00\n\n### TARGET CONTRAST ACCURACY\nconcept swap: 50.00\n\n### AVERAGE ACCURACY\n50.00\n\n",
+   "predictions": {
+    "agent-properties": {
+     "predictions": [
+      {
+       "id": "agent-properties_16",
+       "pred": " Lee doubts the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_17",
+       "pred": " Lee doubts the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_18",
+       "pred": " Sam wants the sandwich."
+      },
+      {
+       "id": "agent-properties_19",
+       "pred": " Sam wants the sandwich."
+      }
+     ]
+    },
+    "material-properties": {
+     "predictions": [
+      {
+       "id": "material-properties_12",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_13",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_14",
+       "pred": " The towel stays folded."
+      },
+      {
+       "id": "material-properties_15",
+       "pred": " The towel stays folded."
+      }
+     ]
+    },
+    "physical-relations": {
+     "predictions": [
+      {
+       "id": "physical-relations_8",
+       "pred": " The stone sinks in the pond."
+      },
+      {
+       "id": "physical-relations_9",
+       "pred": " The stone sinks in the pond."
+      },
+      {
+       "id": "physical-relations_10",
+       "pred": " The soup is cold."
+      },
+      {
+       "id": "physical-relations_11",
+       "pred": " The soup is cold."
+      }
+     ]
+    },
+    "social-relations": {
+     "predictions": [
+      {
+       "id": "social-relations_4",
+       "pred": " Noah is kind to Mia."
+      },
+      {
+       "id": "social-relations_5",
+       "pred": " Mia is kind to Noah."
+      },
+      {
+       "id": "social-relations_6",
+       "pred": " Ben is the teacher."
+      },
+      {
+       "id": "social-relations_7",
+       "pred": " Ben is the teacher."
+      }
+     ]
+    },
+    "spatial-relations": {
+     "predictions": [
+      {
+       "id": "spatial-relations_0",
+       "pred": " The lamp hangs over the desk."
+      },
+      {
+       "id": "spatial-relations_1",
+       "pred": " The lamp sits under the desk."
+      },
+      {
+       "id": "spatial-relations_2",
+       "pred": " The box is empty."
+      },
+      {
+       "id": "spatial-relations_3",
+       "pred": " The box is empty."
+      }
+     ]
+    }
+   },
+   "predictions_at_best_temperature": {
+    "agent-properties": {
+     "predictions": [
+      {
+       "id": "agent-properties_16",
+       "pred": " Lee believes the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_17",
+       "pred": " Lee believes the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_18",
+       "pred": " Sam wants the sandwich."
+      },
+      {
+       "id": "agent-properties_19",
+       "pred": " Sam wants the sandwich."
+      }
+     ]
+    },
+    "material-properties": {
+     "predictions": [
+      {
+       "id": "material-properties_12",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_13",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_14",
+       "pred": " The towel stays folded."
+      },
+      {
+       "id": "material-properties_15",
+       "pred": " The towel stays folded."
+      }
+     ]
+    },
+    "physical-relations": {
+     "predictions": [
+      {
+       "id": "physical-relations_8",
+       "pred": " The stone sinks in the pond."
+      },
+      {
+       "id": "physical-relations_9",
+       "pred": " The stone sinks in the pond."
+      },
+      {
+       "id": "physical-relations_10",
+       "pred": " The soup is cold."
+      },
+      {
+       "id": "physical-relations_11",
+       "pred": " The soup is cold."
+      }
+     ]
+    },
+    "social-relations": {
+     "predictions": [
+      {
+       "id": "social-relations_4",
+       "pred": " Noah is kind to Mia."
+      },
+      {
+       "id": "social-relations_5",
+       "pred": " Mia is kind to Noah."
+      },
+      {
+       "id": "social-relations_6",
+       "pred": " Ben is the teacher."
+      },
+      {
+       "id": "social-relations_7",
+       "pred": " Ben is the teacher."
+      }
+     ]
+    },
+    "spatial-relations": {
+     "predictions": [
+      {
+       "id": "spatial-relations_0",
+       "pred": " The lamp hangs over the desk."
+      },
+      {
+       "id": "spatial-relations_1",
+       "pred": " The lamp sits under the desk."
+      },
+      {
+       "id": "spatial-relations_2",
+       "pred": " The box is empty."
+      },
+      {
+       "id": "spatial-relations_3",
+       "pred": " The box is empty."
+      }
+     ]
+    }
+   },
+   "temperature_1_report.txt": "TEMPERATURE: 1.00\n\n### DOMAIN ACCURACY\nspatial-relations: 75.00\nsocial-relations: 25.00\nphysical-relations: 50.00\nmaterial-properties: 50.00\nagent-properties: 50.00\n\n### CONTEXT TYPE ACCURACY\ndirect: 57.14\nindirect: 33.33\n\n### CONTEXT CONTRAST ACCURACY\nantonym: 57.14\nconcept swap: 50.00\n\n### TARGET CONTRAST ACCURACY\nconcept swap: 50.00\n\n### AVERAGE ACCURACY\n50.00\n\n"
+  },
+  "mlm_shift": {
+   "best_temperature_report.txt": "TEMPERATURE: 0.00\n\n### DOMAIN ACCURACY\nspatial-relations: 50.00\nsocial-relations: 50.00\nphysical-relations: 25.00\nmaterial-properties: 75.00\nagent-properties: 50.00\n\n### CONTEXT TYPE ACCURACY\ndirect: 57.14\nindirect: 33.33\n\n### CONTEXT CONTRAST ACCURACY\nantonym: 50.00\nvariable swap: 50.00\nconcept swap: 50.00\n\n### TARGET CONTRAST ACCURACY\nconcept swap: 50.00\n\n### AVERAGE ACCURACY\n50.00\n\n",
+   "predictions": {
+    "agent-properties": {
+     "predictions": [
+      {
+       "id": "agent-properties_16",
+       "pred": " Lee believes the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_17",
+       "pred": " Lee believes the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_18",
+       "pred": " Sam wants the sandwich."
+      },
+      {
+       "id": "agent-properties_19",
+       "pred": " Sam wants the sandwich."
+      }
+     ]
+    },
+    "material-properties": {
+     "predictions": [
+      {
+       "id": "material-properties_12",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_13",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_14",
+       "pred": " The towel stays folded."
+      },
+      {
+       "id": "material-properties_15",
+       "pred": " The towel stays folded."
+      }
+     ]
+    },
+    "physical-relations": {
+     "predictions": [
+      {
+       "id": "physical-relations_8",
+       "pred": " The stone floats on the pond."
+      },
+      {
+       "id": "physical-relations_9",
+       "pred": " The stone floats on the pond."
+      },
+      {
+       "id": "physical-relations_10",
+       "pred": " The soup is cold."
+      },
+      {
+       "id": "physical-relations_11",
+       "pred": " The soup is hot."
+      }
+     ]
+    },
+    "social-relations": {
+     "predictions": [
+      {
+       "id": "social-relations_4",
+       "pred": " Noah is kind to Mia."
+      },
+      {
+       "id": "social-relations_5",
+       "pred": " Noah is kind to Mia."
+      },
+      {
+       "id": "social-relations_6",
+       "pred": " Ben is the teacher."
+      },
+      {
+       "id": "social-relations_7",
+       "pred": " Ben is the teacher."
+      }
+     ]
+    },
+    "spatial-relations": {
+     "predictions": [
+      {
+       "id": "spatial-relations_0",
+       "pred": " The lamp hangs over the desk."
+      },
+      {
+       "id": "spatial-relations_1",
+       "pred": " The lamp hangs over the desk."
+      },
+      {
+       "id": "spatial-relations_2",
+       "pred": " The box is empty."
+      },
+      {
+       "id": "spatial-relations_3",
+       "pred": " The box is empty."
+      }
+     ]
+    }
+   },
+   "predictions_at_best_temperature": {
+    "agent-properties": {
+     "predictions": [
+      {
+       "id": "agent-properties_16",
+       "pred": " Lee believes the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_17",
+       "pred": " Lee believes the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_18",
+       "pred": " Sam wants the sandwich."
+      },
+      {
+       "id": "agent-properties_19",
+       "pred": " Sam wants the sandwich."
+      }
+     ]
+    },
+    "material-properties": {
+     "predictions": [
+      {
+       "id": "material-properties_12",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_13",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_14",
+       "pred": " The towel drips on the floor."
+      },
+      {
+       "id": "material-properties_15",
+       "pred": " The towel stays folded."
+      }
+     ]
+    },
+    "physical-relations": {
+     "predictions": [
+      {
+       "id": "physical-relations_8",
+       "pred": " The stone floats on the pond."
+      },
+      {
+       "id": "physical-relations_9",
+       "pred": " The stone floats on the pond."
+      },
+      {
+       "id": "physical-relations_10",
+       "pred": " The soup is cold."
+      },
+      {
+       "id": "physical-relations_11",
+       "pred": " The soup is hot."
+      }
+     ]
+    },
+    "social-relations": {
+     "predictions": [
+      {
+       "id": "social-relations_4",
+       "pred": " Noah is kind to Mia."
+      },
+      {
+       "id": "social-relations_5",
+       "pred": " Noah is kind to Mia."
+      },
+      {
+       "id": "social-relations_6",
+       "pred": " Ben is the teacher."
+      },
+      {
+       "id": "social-relations_7",
+       "pred": " Ben is the teacher."
+      }
+     ]
+    },
+    "spatial-relations": {
+     "predictions": [
+      {
+       "id": "spatial-relations_0",
+       "pred": " The lamp hangs over the desk."
+      },
+      {
+       "id": "spatial-relations_1",
+       "pred": " The lamp hangs over the desk."
+      },
+      {
+       "id": "spatial-relations_2",
+       "pred": " The box is empty."
+      },
+      {
+       "id": "spatial-relations_3",
+       "pred": " The box is empty."
+      }
+     ]
+    }
+   },
+   "temperature_1_report.txt": "TEMPERATURE: 1.00\n\n### DOMAIN ACCURACY\nspatial-relations: 50.00\nsocial-relations: 50.00\nphysical-relations: 25.00\nmaterial-properties: 50.00\nagent-properties: 50.00\n\n### CONTEXT TYPE ACCURACY\ndirect: 50.00\nindirect: 33.33\n\n### CONTEXT CONTRAST ACCURACY\nantonym: 42.86\nvariable swap: 50.00\nconcept swap: 50.00\n\n### TARGET CONTRAST ACCURACY\nconcept swap: 45.00\n\n### AVERAGE ACCURACY\n45.00\n\n"
+  },
+  "prefix": {
+   "best_temperature_report.txt": "TEMPERATURE: 0.15\n\n### DOMAIN ACCURACY\nspatial-relations: 50.00\nsocial-relations: 50.00\nphysical-relations: 50.00\nmaterial-properties: 75.00\nagent-properties: 75.00\n\n### CONTEXT TYPE ACCURACY\ndirect: 57.14\nindirect: 66.67\n\n### CONTEXT CONTRAST ACCURACY\nantonym: 64.29\nvariable swap: 50.00\nconcept swap: 50.00\n\n### TARGET CONTRAST ACCURACY\nconcept swap: 60.00\n\n### AVERAGE ACCURACY\n60.00\n\n",
+   "predictions": {
+    "agent-properties": {
+     "predictions": [
+      {
+       "id": "agent-properties_16",
+       "pred": " Lee believes the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_17",
+       "pred": " Lee believes the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_18",
+       "pred": " Sam wants the sandwich."
+      },
+      {
+       "id": "agent-properties_19",
+       "pred": " Sam wants the sandwich."
+      }
+     ]
+    },
+    "material-properties": {
+     "predictions": [
+      {
+       "id": "material-properties_12",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_13",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_14",
+       "pred": " The towel stays folded."
+      },
+      {
+       "id": "material-properties_15",
+       "pred": " The towel stays folded."
+      }
+     ]
+    },
+    "physical-relations": {
+     "predictions": [
+      {
+       "id": "physical-relations_8",
+       "pred": " The stone floats on the pond."
+      },
+      {
+       "id": "physical-relations_9",
+       "pred": " The stone floats on the pond."
+      },
+      {
+       "id": "physical-relations_10",
+       "pred": " The soup is hot."
+      },
+      {
+       "id": "physical-relations_11",
+       "pred": " The soup is hot."
+      }
+     ]
+    },
+    "social-relations": {
+     "predictions": [
+      {
+       "id": "social-relations_4",
+       "pred": " Noah is kind to Mia."
+      },
+      {
+       "id": "social-relations_5",
+       "pred": " Noah is kind to Mia."
+      },
+      {
+       "id": "social-relations_6",
+       "pred": " Ben is the teacher."
+      },
+      {
+       "id": "social-relations_7",
+       "pred": " Ben is the teacher."
+      }
+     ]
+    },
+    "spatial-relations": {
+     "predictions": [
+      {
+       "id": "spatial-relations_0",
+       "pred": " The lamp sits under the desk."
+      },
+      {
+       "id": "spatial-relations_1",
+       "pred": " The lamp sits under the desk."
+      },
+      {
+       "id": "spatial-relations_2",
+       "pred": " The box is empty."
+      },
+      {
+       "id": "spatial-relations_3",
+       "pred": " The box is empty."
+      }
+     ]
+    }
+   },
+   "predictions_at_best_temperature": {
+    "agent-properties": {
+     "predictions": [
+      {
+       "id": "agent-properties_16",
+       "pred": " Lee believes the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_17",
+       "pred": " Lee believes the bird is on the roof."
+      },
+      {
+       "id": "agent-properties_18",
+       "pred": " Sam wants the sandwich."
+      },
+      {
+       "id": "agent-properties_19",
+       "pred": " Sam avoids the sandwich."
+      }
+     ]
+    },
+    "material-properties": {
+     "predictions": [
+      {
+       "id": "material-properties_12",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_13",
+       "pred": " The bowl can burn."
+      },
+      {
+       "id": "material-properties_14",
+       "pred": " The towel drips on the floor."
+      },
+      {
+       "id": "material-properties_15",
+       "pred": " The towel stays folded."
+      }
+     ]
+    },
+    "physical-relations": {
+     "predictions": [
+      {
+       "id": "physical-relations_8",
+       "pred": " The stone floats on the pond."
+      },
+      {
+       "id": "physical-relations_9",
+       "pred": " The stone floats on the pond."
+      },
+      {
+       "id": "physical-relations_10",
+       "pred": " The soup is hot."
+      },
+      {
+       "id": "physical-relations_11",
+       "pred": " The soup is hot."
+      }
+     ]
+    },
+    "social-relations": {
+     "predictions": [
+      {
+       "id": "social-relations_4",
+       "pred": " Noah is kind to Mia."
+      },
+      {
+       "id": "social-relations_5",
+       "pred": " Noah is kind to Mia."
+      },
+      {
+       "id": "social-relations_6",
+       "pred": " Ben is the teacher."
+      },
+      {
+       "id": "social-relations_7",
+       "pred": " Ben is the teacher."
+      }
+     ]
+    },
+    "spatial-relations": {
+     "predictions": [
+      {
+       "id": "spatial-relations_0",
+       "pred": " The lamp sits under the desk."
+      },
+      {
+       "id": "spatial-relations_1",
+       "pred": " The lamp sits under the desk."
+      },
+      {
+       "id": "spatial-relations_2",
+       "pred": " The box is empty."
+      },
+      {
+       "id": "spatial-relations_3",
+       "pred": " The box is empty."
+      }
+     ]
+    }
+   },
+   "temperature_1_report.txt": "TEMPERATURE: 1.00\n\n### DOMAIN ACCURACY\nspatial-relations: 50.00\nsocial-relations: 50.00\nphysical-relations: 50.00\nmaterial-properties: 50.00\nagent-properties: 50.00\n\n### CONTEXT TYPE ACCURACY\ndirect: 50.00\nindirect: 50.00\n\n### CONTEXT CONTRAST ACCURACY\nantonym: 50.00\nvariable swap: 50.00\nconcept swap: 50.00\n\n### TARGET CONTRAST ACCURACY\nconcept swap: 50.00\n\n### AVERAGE ACCURACY\n50.00\n\n"
+  }
+ }
+}

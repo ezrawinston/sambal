@@ -1,0 +1,176 @@
+{
+ "meta": {
+  "name": "npi_src_any",
+  "metric": "sum",
+  "comment": "tiny fixture",
+  "reference": "",
+  "author": ""
+ },
+ "region_meta": {},
+ "predictions": [
+  {
+   "type": "formula",
+   "formula": "(*;%good%) < (*;%bad%)"
+  }
+ ],
+ "items": [
+  {
+   "item_number": 1,
+   "conditions": [
+    {
+     "condition_name": "good",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "No"
+      },
+      {
+       "region_number": 2,
+       "content": "actor"
+      },
+      {
+       "region_number": 3,
+       "content": "that the"
+      },
+      {
+       "region_number": 4,
+       "content": "dancers"
+      },
+      {
+       "region_number": 5,
+       "content": "liked has"
+      },
+      {
+       "region_number": 6,
+       "content": "ever"
+      },
+      {
+       "region_number": 7,
+       "content": "left"
+      },
+      {
+       "region_number": 8,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "bad",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "actor"
+      },
+      {
+       "region_number": 3,
+       "content": "that the"
+      },
+      {
+       "region_number": 4,
+       "content": "dancers"
+      },
+      {
+       "region_number": 5,
+       "content": "liked has"
+      },
+      {
+       "region_number": 6,
+       "content": "ever"
+      },
+      {
+       "region_number": 7,
+       "content": "left"
+      },
+      {
+       "region_number": 8,
+       "content": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item_number": 2,
+   "conditions": [
+    {
+     "condition_name": "good",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "No"
+      },
+      {
+       "region_number": 2,
+       "content": "pilot"
+      },
+      {
+       "region_number": 3,
+       "content": "that the"
+      },
+      {
+       "region_number": 4,
+       "content": "actors"
+      },
+      {
+       "region_number": 5,
+       "content": "liked has"
+      },
+      {
+       "region_number": 6,
+       "content": "ever"
+      },
+      {
+       "region_number": 7,
+       "content": "left"
+      },
+      {
+       "region_number": 8,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "bad",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "pilot"
+      },
+      {
+       "region_number": 3,
+       "content": "that the"
+      },
+      {
+       "region_number": 4,
+       "content": "actors"
+      },
+      {
+       "region_number": 5,
+       "content": "liked has"
+      },
+      {
+       "region_number": 6,
+       "content": "ever"
+      },
+      {
+       "region_number": 7,
+       "content": "left"
+      },
+      {
+       "region_number": 8,
+       "content": "."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

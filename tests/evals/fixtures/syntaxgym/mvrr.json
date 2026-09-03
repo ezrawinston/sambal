@@ -1,0 +1,184 @@
+{
+ "meta": {
+  "name": "mvrr",
+  "metric": "sum",
+  "comment": "tiny fixture",
+  "reference": "",
+  "author": ""
+ },
+ "region_meta": {},
+ "predictions": [
+  {
+   "type": "formula",
+   "formula": "((6;%ambig%) > (6;%unambig%)) | ((7;%ambig%) > (7;%unambig%))"
+  }
+ ],
+ "items": [
+  {
+   "item_number": 1,
+   "conditions": [
+    {
+     "condition_name": "ambig",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "While the"
+      },
+      {
+       "region_number": 2,
+       "content": "farmer"
+      },
+      {
+       "region_number": 3,
+       "content": "hunted"
+      },
+      {
+       "region_number": 4,
+       "content": "the"
+      },
+      {
+       "region_number": 5,
+       "content": "pilot"
+      },
+      {
+       "region_number": 6,
+       "content": "ran"
+      },
+      {
+       "region_number": 7,
+       "content": "away"
+      },
+      {
+       "region_number": 8,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "unambig",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "While the"
+      },
+      {
+       "region_number": 2,
+       "content": "farmer"
+      },
+      {
+       "region_number": 3,
+       "content": "hunted"
+      },
+      {
+       "region_number": 4,
+       "content": ","
+      },
+      {
+       "region_number": 5,
+       "content": "the"
+      },
+      {
+       "region_number": 6,
+       "content": "pilot"
+      },
+      {
+       "region_number": 7,
+       "content": "ran"
+      },
+      {
+       "region_number": 8,
+       "content": "away"
+      },
+      {
+       "region_number": 9,
+       "content": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item_number": 2,
+   "conditions": [
+    {
+     "condition_name": "ambig",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "While the"
+      },
+      {
+       "region_number": 2,
+       "content": "senator"
+      },
+      {
+       "region_number": 3,
+       "content": "hunted"
+      },
+      {
+       "region_number": 4,
+       "content": "the"
+      },
+      {
+       "region_number": 5,
+       "content": "pilot"
+      },
+      {
+       "region_number": 6,
+       "content": "ran"
+      },
+      {
+       "region_number": 7,
+       "content": "away"
+      },
+      {
+       "region_number": 8,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "unambig",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "While the"
+      },
+      {
+       "region_number": 2,
+       "content": "senator"
+      },
+      {
+       "region_number": 3,
+       "content": "hunted"
+      },
+      {
+       "region_number": 4,
+       "content": ","
+      },
+      {
+       "region_number": 5,
+       "content": "the"
+      },
+      {
+       "region_number": 6,
+       "content": "pilot"
+      },
+      {
+       "region_number": 7,
+       "content": "ran"
+      },
+      {
+       "region_number": 8,
+       "content": "away"
+      },
+      {
+       "region_number": 9,
+       "content": "."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

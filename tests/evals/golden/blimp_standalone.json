@@ -1,0 +1,506 @@
+{
+ "meta": {
+  "copy": "blimp_standalone",
+  "note": "report texts stored parsed (order-insensitive values); causal/fused dropped as in blimp_train_v1",
+  "numpy": "1.26.4",
+  "platform": "macOS-15.7.9-x86_64-i386-64bit",
+  "python": "3.12.11",
+  "tiny_model_sha256": "cb5af179b88306082c1a9108bd9cfcd66cdc37b943c4f873aaadd215f5c873c3",
+  "torch": "2.2.2",
+  "written": "2026-09-03T06:08:55Z"
+ },
+ "values": {
+  "mlm": {
+   "best_temperature_report.txt": {
+    "average": 35.0,
+    "sections": {
+     "AVERAGE ACCURACY": {},
+     "FIELD ACCURACY": {
+      "morphology": 30.0,
+      "supplemental": 60.0,
+      "syntax": 20.0
+     },
+     "LINGUISTIC TERM ACCURACY": {
+      "anaphor_agreement": 20.0,
+      "determiner_noun_agreement": 40.0,
+      "subject_verb_agreement": 20.0,
+      "supplemental": 60.0
+     },
+     "UID ACCURACY": {
+      "agreement_subject_verb": 20.0,
+      "anaphor_agreement": 20.0,
+      "determiner_noun": 40.0,
+      "reflexive_probe_tiny": 60.0
+     }
+    },
+    "temperature": 0.4
+   },
+   "predictions": {
+    "agreement_subject_verb": {
+     "predictions": [
+      {
+       "id": "agreement_subject_verb_0",
+       "pred": " The dogs runs across the yard."
+      },
+      {
+       "id": "agreement_subject_verb_1",
+       "pred": " My sister bake bread on Sundays."
+      },
+      {
+       "id": "agreement_subject_verb_2",
+       "pred": " Those children wasn't listening."
+      },
+      {
+       "id": "agreement_subject_verb_3",
+       "pred": " The teacher who met the students smile."
+      },
+      {
+       "id": "agreement_subject_verb_4",
+       "pred": " Sam's cousins have arrived."
+      }
+     ]
+    },
+    "anaphor_agreement": {
+     "predictions": [
+      {
+       "id": "anaphor_agreement_0",
+       "pred": " The girl saw himself in the mirror."
+      },
+      {
+       "id": "anaphor_agreement_1",
+       "pred": " The boys can't help himself."
+      },
+      {
+       "id": "anaphor_agreement_2",
+       "pred": " Maria bought themselves a coat."
+      },
+      {
+       "id": "anaphor_agreement_3",
+       "pred": " The men praised themselves loudly."
+      },
+      {
+       "id": "anaphor_agreement_4",
+       "pred": " Our neighbor hurt themselves yesterday."
+      }
+     ]
+    },
+    "determiner_noun": {
+     "predictions": [
+      {
+       "id": "determiner_noun_0",
+       "pred": " These books are new."
+      },
+      {
+       "id": "determiner_noun_1",
+       "pred": " That apple looks ripe."
+      },
+      {
+       "id": "determiner_noun_2",
+       "pred": " I read these letter twice."
+      },
+      {
+       "id": "determiner_noun_3",
+       "pred": " Kim lost that keys again."
+      },
+      {
+       "id": "determiner_noun_4",
+       "pred": " Every guests brought a gift."
+      }
+     ]
+    },
+    "reflexive_probe_tiny": {
+     "predictions": [
+      {
+       "id": "reflexive_probe_tiny_0",
+       "pred": " The manager who visited the students congratulated himself."
+      },
+      {
+       "id": "reflexive_probe_tiny_1",
+       "pred": " The nurses that helped the doctor trusted themselves."
+      },
+      {
+       "id": "reflexive_probe_tiny_2",
+       "pred": " The pilot near the passengers blamed themselves."
+      },
+      {
+       "id": "reflexive_probe_tiny_3",
+       "pred": " The authors who thanked the editor described themselves."
+      },
+      {
+       "id": "reflexive_probe_tiny_4",
+       "pred": " The child beside the parents amused themselves."
+      }
+     ]
+    }
+   },
+   "predictions_at_best_temperature": {
+    "agreement_subject_verb": {
+     "predictions": [
+      {
+       "id": "agreement_subject_verb_0",
+       "pred": " The dogs runs across the yard."
+      },
+      {
+       "id": "agreement_subject_verb_1",
+       "pred": " My sister bake bread on Sundays."
+      },
+      {
+       "id": "agreement_subject_verb_2",
+       "pred": " Those children wasn't listening."
+      },
+      {
+       "id": "agreement_subject_verb_3",
+       "pred": " The teacher who met the students smile."
+      },
+      {
+       "id": "agreement_subject_verb_4",
+       "pred": " Sam's cousins have arrived."
+      }
+     ]
+    },
+    "anaphor_agreement": {
+     "predictions": [
+      {
+       "id": "anaphor_agreement_0",
+       "pred": " The girl saw himself in the mirror."
+      },
+      {
+       "id": "anaphor_agreement_1",
+       "pred": " The boys can't help himself."
+      },
+      {
+       "id": "anaphor_agreement_2",
+       "pred": " Maria bought themselves a coat."
+      },
+      {
+       "id": "anaphor_agreement_3",
+       "pred": " The men praised themselves loudly."
+      },
+      {
+       "id": "anaphor_agreement_4",
+       "pred": " Our neighbor hurt themselves yesterday."
+      }
+     ]
+    },
+    "determiner_noun": {
+     "predictions": [
+      {
+       "id": "determiner_noun_0",
+       "pred": " These books are new."
+      },
+      {
+       "id": "determiner_noun_1",
+       "pred": " That apple looks ripe."
+      },
+      {
+       "id": "determiner_noun_2",
+       "pred": " I read these letter twice."
+      },
+      {
+       "id": "determiner_noun_3",
+       "pred": " Kim lost that keys again."
+      },
+      {
+       "id": "determiner_noun_4",
+       "pred": " Every guests brought a gift."
+      }
+     ]
+    },
+    "reflexive_probe_tiny": {
+     "predictions": [
+      {
+       "id": "reflexive_probe_tiny_0",
+       "pred": " The manager who visited the students congratulated himself."
+      },
+      {
+       "id": "reflexive_probe_tiny_1",
+       "pred": " The nurses that helped the doctor trusted themselves."
+      },
+      {
+       "id": "reflexive_probe_tiny_2",
+       "pred": " The pilot near the passengers blamed themselves."
+      },
+      {
+       "id": "reflexive_probe_tiny_3",
+       "pred": " The authors who thanked the editor described themselves."
+      },
+      {
+       "id": "reflexive_probe_tiny_4",
+       "pred": " The child beside the parents amused themselves."
+      }
+     ]
+    }
+   },
+   "temperature_1_report.txt": {
+    "average": 35.0,
+    "sections": {
+     "AVERAGE ACCURACY": {},
+     "FIELD ACCURACY": {
+      "morphology": 30.0,
+      "supplemental": 60.0,
+      "syntax": 20.0
+     },
+     "LINGUISTIC TERM ACCURACY": {
+      "anaphor_agreement": 20.0,
+      "determiner_noun_agreement": 40.0,
+      "subject_verb_agreement": 20.0,
+      "supplemental": 60.0
+     },
+     "UID ACCURACY": {
+      "agreement_subject_verb": 20.0,
+      "anaphor_agreement": 20.0,
+      "determiner_noun": 40.0,
+      "reflexive_probe_tiny": 60.0
+     }
+    },
+    "temperature": 1.0
+   }
+  },
+  "mlm_shift": {
+   "best_temperature_report.txt": {
+    "average": 45.0,
+    "sections": {
+     "AVERAGE ACCURACY": {},
+     "FIELD ACCURACY": {
+      "morphology": 40.0,
+      "supplemental": 20.0,
+      "syntax": 80.0
+     },
+     "LINGUISTIC TERM ACCURACY": {
+      "anaphor_agreement": 80.0,
+      "determiner_noun_agreement": 40.0,
+      "subject_verb_agreement": 40.0,
+      "supplemental": 20.0
+     },
+     "UID ACCURACY": {
+      "agreement_subject_verb": 40.0,
+      "anaphor_agreement": 80.0,
+      "determiner_noun": 40.0,
+      "reflexive_probe_tiny": 20.0
+     }
+    },
+    "temperature": 0.0
+   },
+   "predictions": {
+    "agreement_subject_verb": {
+     "predictions": [
+      {
+       "id": "agreement_subject_verb_0",
+       "pred": " The dogs runs across the yard."
+      },
+      {
+       "id": "agreement_subject_verb_1",
+       "pred": " My sister bakes bread on Sundays."
+      },
+      {
+       "id": "agreement_subject_verb_2",
+       "pred": " Those children weren't listening."
+      },
+      {
+       "id": "agreement_subject_verb_3",
+       "pred": " The teacher who met the students smile."
+      },
+      {
+       "id": "agreement_subject_verb_4",
+       "pred": " Sam's cousins has arrived."
+      }
+     ]
+    },
+    "anaphor_agreement": {
+     "predictions": [
+      {
+       "id": "anaphor_agreement_0",
+       "pred": " The girl saw himself in the mirror."
+      },
+      {
+       "id": "anaphor_agreement_1",
+       "pred": " The boys can't help themselves."
+      },
+      {
+       "id": "anaphor_agreement_2",
+       "pred": " Maria bought herself a coat."
+      },
+      {
+       "id": "anaphor_agreement_3",
+       "pred": " The men praised themselves loudly."
+      },
+      {
+       "id": "anaphor_agreement_4",
+       "pred": " Our neighbor hurt himself yesterday."
+      }
+     ]
+    },
+    "determiner_noun": {
+     "predictions": [
+      {
+       "id": "determiner_noun_0",
+       "pred": " This books are new."
+      },
+      {
+       "id": "determiner_noun_1",
+       "pred": " That apple looks ripe."
+      },
+      {
+       "id": "determiner_noun_2",
+       "pred": " I read these letter twice."
+      },
+      {
+       "id": "determiner_noun_3",
+       "pred": " Kim lost those keys again."
+      },
+      {
+       "id": "determiner_noun_4",
+       "pred": " Every guests brought a gift."
+      }
+     ]
+    },
+    "reflexive_probe_tiny": {
+     "predictions": [
+      {
+       "id": "reflexive_probe_tiny_0",
+       "pred": " The manager who visited the students congratulated themselves."
+      },
+      {
+       "id": "reflexive_probe_tiny_1",
+       "pred": " The nurses that helped the doctor trusted themselves."
+      },
+      {
+       "id": "reflexive_probe_tiny_2",
+       "pred": " The pilot near the passengers blamed themselves."
+      },
+      {
+       "id": "reflexive_probe_tiny_3",
+       "pred": " The authors who thanked the editor described himself."
+      },
+      {
+       "id": "reflexive_probe_tiny_4",
+       "pred": " The child beside the parents amused themselves."
+      }
+     ]
+    }
+   },
+   "predictions_at_best_temperature": {
+    "agreement_subject_verb": {
+     "predictions": [
+      {
+       "id": "agreement_subject_verb_0",
+       "pred": " The dogs runs across the yard."
+      },
+      {
+       "id": "agreement_subject_verb_1",
+       "pred": " My sister bakes bread on Sundays."
+      },
+      {
+       "id": "agreement_subject_verb_2",
+       "pred": " Those children weren't listening."
+      },
+      {
+       "id": "agreement_subject_verb_3",
+       "pred": " The teacher who met the students smile."
+      },
+      {
+       "id": "agreement_subject_verb_4",
+       "pred": " Sam's cousins has arrived."
+      }
+     ]
+    },
+    "anaphor_agreement": {
+     "predictions": [
+      {
+       "id": "anaphor_agreement_0",
+       "pred": " The girl saw himself in the mirror."
+      },
+      {
+       "id": "anaphor_agreement_1",
+       "pred": " The boys can't help themselves."
+      },
+      {
+       "id": "anaphor_agreement_2",
+       "pred": " Maria bought herself a coat."
+      },
+      {
+       "id": "anaphor_agreement_3",
+       "pred": " The men praised themselves loudly."
+      },
+      {
+       "id": "anaphor_agreement_4",
+       "pred": " Our neighbor hurt himself yesterday."
+      }
+     ]
+    },
+    "determiner_noun": {
+     "predictions": [
+      {
+       "id": "determiner_noun_0",
+       "pred": " This books are new."
+      },
+      {
+       "id": "determiner_noun_1",
+       "pred": " That apple looks ripe."
+      },
+      {
+       "id": "determiner_noun_2",
+       "pred": " I read these letter twice."
+      },
+      {
+       "id": "determiner_noun_3",
+       "pred": " Kim lost those keys again."
+      },
+      {
+       "id": "determiner_noun_4",
+       "pred": " Every guests brought a gift."
+      }
+     ]
+    },
+    "reflexive_probe_tiny": {
+     "predictions": [
+      {
+       "id": "reflexive_probe_tiny_0",
+       "pred": " The manager who visited the students congratulated themselves."
+      },
+      {
+       "id": "reflexive_probe_tiny_1",
+       "pred": " The nurses that helped the doctor trusted themselves."
+      },
+      {
+       "id": "reflexive_probe_tiny_2",
+       "pred": " The pilot near the passengers blamed themselves."
+      },
+      {
+       "id": "reflexive_probe_tiny_3",
+       "pred": " The authors who thanked the editor described himself."
+      },
+      {
+       "id": "reflexive_probe_tiny_4",
+       "pred": " The child beside the parents amused themselves."
+      }
+     ]
+    }
+   },
+   "temperature_1_report.txt": {
+    "average": 45.0,
+    "sections": {
+     "AVERAGE ACCURACY": {},
+     "FIELD ACCURACY": {
+      "morphology": 40.0,
+      "supplemental": 20.0,
+      "syntax": 80.0
+     },
+     "LINGUISTIC TERM ACCURACY": {
+      "anaphor_agreement": 80.0,
+      "determiner_noun_agreement": 40.0,
+      "subject_verb_agreement": 40.0,
+      "supplemental": 20.0
+     },
+     "UID ACCURACY": {
+      "agreement_subject_verb": 40.0,
+      "anaphor_agreement": 80.0,
+      "determiner_noun": 40.0,
+      "reflexive_probe_tiny": 20.0
+     }
+    },
+    "temperature": 1.0
+   }
+  }
+ }
+}

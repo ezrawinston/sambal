@@ -1,0 +1,792 @@
+{
+  "meta": {
+    "name": "fgd_subject",
+    "metric": "sum",
+    "comment": "",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "prefix",
+    "2": "comp",
+    "3": "np1",
+    "4": "verb",
+    "5": "np2",
+    "6": "prep",
+    "7": "np3",
+    "8": "end"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "((3;%what_nogap%) > (3;%that_nogap%) ) & ((4;%what_gap%) < (4;%that_gap%) ) "
+    }
+  ],
+  "items": [
+    {
+      "item_number": 4,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "You remember"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": "the businessman"
+            },
+            {
+              "region_number": 4,
+              "content": "showed"
+            },
+            {
+              "region_number": 5,
+              "content": "the presentation"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": "the visitors"
+            },
+            {
+              "region_number": 8,
+              "content": "after lunch"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "You remember"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the businessman"
+            },
+            {
+              "region_number": 4,
+              "content": "showed"
+            },
+            {
+              "region_number": 5,
+              "content": "the presentation"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": "the visitors"
+            },
+            {
+              "region_number": 8,
+              "content": "after lunch"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "You remember"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "showed"
+            },
+            {
+              "region_number": 5,
+              "content": "the presentation"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": "the visitors"
+            },
+            {
+              "region_number": 8,
+              "content": "after lunch"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "You remember"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "showed"
+            },
+            {
+              "region_number": 5,
+              "content": "the presentation"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": "the visitors"
+            },
+            {
+              "region_number": 8,
+              "content": "after lunch"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 12,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "We recall"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": "the man"
+            },
+            {
+              "region_number": 4,
+              "content": "placed"
+            },
+            {
+              "region_number": 5,
+              "content": "a delicate plate"
+            },
+            {
+              "region_number": 6,
+              "content": "next to"
+            },
+            {
+              "region_number": 7,
+              "content": "the open fire"
+            },
+            {
+              "region_number": 8,
+              "content": "over an hour ago"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "We recall"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the man"
+            },
+            {
+              "region_number": 4,
+              "content": "placed"
+            },
+            {
+              "region_number": 5,
+              "content": "a delicate plate"
+            },
+            {
+              "region_number": 6,
+              "content": "next to"
+            },
+            {
+              "region_number": 7,
+              "content": "the open fire"
+            },
+            {
+              "region_number": 8,
+              "content": "over an hour ago"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "We recall"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "placed"
+            },
+            {
+              "region_number": 5,
+              "content": "a delicate plate"
+            },
+            {
+              "region_number": 6,
+              "content": "next to"
+            },
+            {
+              "region_number": 7,
+              "content": "the open fire"
+            },
+            {
+              "region_number": 8,
+              "content": "over an hour ago"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "We recall"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "placed"
+            },
+            {
+              "region_number": 5,
+              "content": "a delicate plate"
+            },
+            {
+              "region_number": 6,
+              "content": "next to"
+            },
+            {
+              "region_number": 7,
+              "content": "the open fire"
+            },
+            {
+              "region_number": 8,
+              "content": "over an hour ago"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 20,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "She can not believe"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": "my good friend"
+            },
+            {
+              "region_number": 4,
+              "content": "stole"
+            },
+            {
+              "region_number": 5,
+              "content": "a candy bar"
+            },
+            {
+              "region_number": 6,
+              "content": "from"
+            },
+            {
+              "region_number": 7,
+              "content": "the store"
+            },
+            {
+              "region_number": 8,
+              "content": "when he was young"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "She can not believe"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "my good friend"
+            },
+            {
+              "region_number": 4,
+              "content": "stole"
+            },
+            {
+              "region_number": 5,
+              "content": "a candy bar"
+            },
+            {
+              "region_number": 6,
+              "content": "from"
+            },
+            {
+              "region_number": 7,
+              "content": "the store"
+            },
+            {
+              "region_number": 8,
+              "content": "when he was young"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "She can not believe"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "stole"
+            },
+            {
+              "region_number": 5,
+              "content": "a candy bar"
+            },
+            {
+              "region_number": 6,
+              "content": "from"
+            },
+            {
+              "region_number": 7,
+              "content": "the store"
+            },
+            {
+              "region_number": 8,
+              "content": "when he was young"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "She can not believe"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "stole"
+            },
+            {
+              "region_number": 5,
+              "content": "a candy bar"
+            },
+            {
+              "region_number": 6,
+              "content": "from"
+            },
+            {
+              "region_number": 7,
+              "content": "the store"
+            },
+            {
+              "region_number": 8,
+              "content": "when he was young"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 9,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I do not know"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": "her rival"
+            },
+            {
+              "region_number": 4,
+              "content": "derailed"
+            },
+            {
+              "region_number": 5,
+              "content": "the performance"
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": "a cruel plan"
+            },
+            {
+              "region_number": 8,
+              "content": "last week"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I do not know"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "her rival"
+            },
+            {
+              "region_number": 4,
+              "content": "derailed"
+            },
+            {
+              "region_number": 5,
+              "content": "the performance"
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": "a cruel plan"
+            },
+            {
+              "region_number": 8,
+              "content": "last week"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I do not know"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "derailed"
+            },
+            {
+              "region_number": 5,
+              "content": "the performance"
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": "a cruel plan"
+            },
+            {
+              "region_number": 8,
+              "content": "last week"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I do not know"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "derailed"
+            },
+            {
+              "region_number": 5,
+              "content": "the performance"
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": "a cruel plan"
+            },
+            {
+              "region_number": 8,
+              "content": "last week"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 2,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "My neighbor told me"
+            },
+            {
+              "region_number": 2,
+              "content": "what"
+            },
+            {
+              "region_number": 3,
+              "content": "the dog"
+            },
+            {
+              "region_number": 4,
+              "content": "caught"
+            },
+            {
+              "region_number": 5,
+              "content": "the mouse"
+            },
+            {
+              "region_number": 6,
+              "content": "in full view of"
+            },
+            {
+              "region_number": 7,
+              "content": "the neighbors"
+            },
+            {
+              "region_number": 8,
+              "content": "yesterday"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "My neighbor told me"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the dog"
+            },
+            {
+              "region_number": 4,
+              "content": "caught"
+            },
+            {
+              "region_number": 5,
+              "content": "the mouse"
+            },
+            {
+              "region_number": 6,
+              "content": "in full view of"
+            },
+            {
+              "region_number": 7,
+              "content": "the neighbors"
+            },
+            {
+              "region_number": 8,
+              "content": "yesterday"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "My neighbor told me"
+            },
+            {
+              "region_number": 2,
+              "content": "what"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "caught"
+            },
+            {
+              "region_number": 5,
+              "content": "the mouse"
+            },
+            {
+              "region_number": 6,
+              "content": "in full view of"
+            },
+            {
+              "region_number": 7,
+              "content": "the neighbors"
+            },
+            {
+              "region_number": 8,
+              "content": "yesterday"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "My neighbor told me"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "caught"
+            },
+            {
+              "region_number": 5,
+              "content": "the mouse"
+            },
+            {
+              "region_number": 6,
+              "content": "in full view of"
+            },
+            {
+              "region_number": 7,
+              "content": "the neighbors"
+            },
+            {
+              "region_number": 8,
+              "content": "yesterday"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

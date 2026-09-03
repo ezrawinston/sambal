@@ -1,0 +1,45 @@
+{
+ "note": "LoRA fine-tuning runs (finetune_lora.py): pre/post fine-tuning domain test perplexity and full-BLiMP best-temperature accuracy. Bases: post_ft_test_ppl is the final state after the last epoch; post_ft_blimp_test_best_temp_avg is evaluated after restoring the best-validation-perplexity checkpoint (best_dev_epoch/best_dev_ppl), which is also the state saved in the released adapter files — that checkpoint's test perplexity is printed in the training log as the 'with best val_ppl model' line.",
+ "runs": {
+  "lotr_baseline": {
+   "best_dev_epoch": 8,
+   "best_dev_ppl": 31.39510442235459,
+   "post_ft_blimp_test_best_temp_avg": 72.35522388059702,
+   "post_ft_test_ppl": 29.15,
+   "pre_ft_blimp_test_best_temp_avg": 79.24029850746271,
+   "pre_ft_test_ppl": 64.6
+  },
+  "lotr_sambal": {
+   "best_dev_epoch": 10,
+   "best_dev_ppl": 37.6007198016633,
+   "post_ft_blimp_test_best_temp_avg": 71.48358208955224,
+   "post_ft_test_ppl": 36.29,
+   "pre_ft_blimp_test_best_temp_avg": 79.33582089552237,
+   "pre_ft_test_ppl": 190.36
+  },
+  "lotr_sambal_blimpvocab_flat": {
+   "best_dev_epoch": 10,
+   "best_dev_ppl": 38.88852186772008,
+   "post_ft_blimp_test_best_temp_avg": 74.50597014925373,
+   "post_ft_test_ppl": 37.3,
+   "pre_ft_blimp_test_best_temp_avg": 79.12238805970146,
+   "pre_ft_test_ppl": 460.78
+  },
+  "pubmed_baseline": {
+   "best_dev_epoch": 4,
+   "best_dev_ppl": 23.926861169620608,
+   "post_ft_blimp_test_best_temp_avg": 72.11791044776118,
+   "post_ft_test_ppl": 23.23,
+   "pre_ft_blimp_test_best_temp_avg": 79.24029850746271,
+   "pre_ft_test_ppl": 40.51
+  },
+  "pubmed_sambal": {
+   "best_dev_epoch": 7,
+   "best_dev_ppl": 33.82188702302122,
+   "post_ft_blimp_test_best_temp_avg": 70.96865671641791,
+   "post_ft_test_ppl": 32.28,
+   "pre_ft_blimp_test_best_temp_avg": 79.33582089552237,
+   "pre_ft_test_ppl": 255.39
+  }
+ }
+}

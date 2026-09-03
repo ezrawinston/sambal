@@ -1,0 +1,260 @@
+{
+ "meta": {
+  "name": "cleft",
+  "metric": "sum",
+  "comment": "tiny fixture",
+  "reference": "",
+  "author": ""
+ },
+ "region_meta": {},
+ "predictions": [
+  {
+   "type": "formula",
+   "formula": "((5;%np_match%) < (5;%np_mismatch%)) & ((5;%vp_match%) < (5;%vp_mismatch%))"
+  }
+ ],
+ "items": [
+  {
+   "item_number": 1,
+   "conditions": [
+    {
+     "condition_name": "np_match",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "What the"
+      },
+      {
+       "region_number": 2,
+       "content": "pilot"
+      },
+      {
+       "region_number": 3,
+       "content": "saw"
+      },
+      {
+       "region_number": 4,
+       "content": "was"
+      },
+      {
+       "region_number": 5,
+       "content": "a bird"
+      },
+      {
+       "region_number": 6,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "np_mismatch",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "What the"
+      },
+      {
+       "region_number": 2,
+       "content": "pilot"
+      },
+      {
+       "region_number": 3,
+       "content": "did"
+      },
+      {
+       "region_number": 4,
+       "content": "was"
+      },
+      {
+       "region_number": 5,
+       "content": "a bird"
+      },
+      {
+       "region_number": 6,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "vp_match",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "What the"
+      },
+      {
+       "region_number": 2,
+       "content": "pilot"
+      },
+      {
+       "region_number": 3,
+       "content": "did"
+      },
+      {
+       "region_number": 4,
+       "content": "was"
+      },
+      {
+       "region_number": 5,
+       "content": "see a bird"
+      },
+      {
+       "region_number": 6,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "vp_mismatch",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "What the"
+      },
+      {
+       "region_number": 2,
+       "content": "pilot"
+      },
+      {
+       "region_number": 3,
+       "content": "saw"
+      },
+      {
+       "region_number": 4,
+       "content": "was"
+      },
+      {
+       "region_number": 5,
+       "content": "see a bird"
+      },
+      {
+       "region_number": 6,
+       "content": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item_number": 2,
+   "conditions": [
+    {
+     "condition_name": "np_match",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "What the"
+      },
+      {
+       "region_number": 2,
+       "content": "farmer"
+      },
+      {
+       "region_number": 3,
+       "content": "saw"
+      },
+      {
+       "region_number": 4,
+       "content": "was"
+      },
+      {
+       "region_number": 5,
+       "content": "a bird"
+      },
+      {
+       "region_number": 6,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "np_mismatch",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "What the"
+      },
+      {
+       "region_number": 2,
+       "content": "farmer"
+      },
+      {
+       "region_number": 3,
+       "content": "did"
+      },
+      {
+       "region_number": 4,
+       "content": "was"
+      },
+      {
+       "region_number": 5,
+       "content": "a bird"
+      },
+      {
+       "region_number": 6,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "vp_match",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "What the"
+      },
+      {
+       "region_number": 2,
+       "content": "farmer"
+      },
+      {
+       "region_number": 3,
+       "content": "did"
+      },
+      {
+       "region_number": 4,
+       "content": "was"
+      },
+      {
+       "region_number": 5,
+       "content": "see a bird"
+      },
+      {
+       "region_number": 6,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "vp_mismatch",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "What the"
+      },
+      {
+       "region_number": 2,
+       "content": "farmer"
+      },
+      {
+       "region_number": 3,
+       "content": "saw"
+      },
+      {
+       "region_number": 4,
+       "content": "was"
+      },
+      {
+       "region_number": 5,
+       "content": "see a bird"
+      },
+      {
+       "region_number": 6,
+       "content": "."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,549 @@
+{
+  "meta": {
+    "name": "subordination_orc-orc",
+    "metric": "sum",
+    "comment": "Below is the prediction of an interaction (a lower bar). #Prediction [(5;%sub_no-matrix%) - (5;%no-sub_no-matrix%) ] - [(5;%sub_matrix%) - (5;%no-sub_matrix%) ] > 0 Below is Ethan's original prediction -- a higher bar.",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "Subordinate clause 1",
+    "2": "subj_modifier",
+    "3": "Subordinate clause 2",
+    "4": "obj_modifier",
+    "5": "Main clause"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "((5;%sub_no-matrix%) > (5;%no-sub_no-matrix%) ) & ((5;%sub_matrix%) < (5;%no-sub_matrix%) )"
+    }
+  ],
+  "items": [
+    {
+      "item_number": 5,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the trainer"
+            },
+            {
+              "region_number": 2,
+              "content": "who the dog feared"
+            },
+            {
+              "region_number": 3,
+              "content": "delivered the newspaper"
+            },
+            {
+              "region_number": 4,
+              "content": "that the resident had ordered"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The trainer"
+            },
+            {
+              "region_number": 2,
+              "content": "who the dog feared"
+            },
+            {
+              "region_number": 3,
+              "content": "delivered the newspaper"
+            },
+            {
+              "region_number": 4,
+              "content": "that the resident had ordered"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the trainer"
+            },
+            {
+              "region_number": 2,
+              "content": "who the dog feared"
+            },
+            {
+              "region_number": 3,
+              "content": "delivered the newspaper"
+            },
+            {
+              "region_number": 4,
+              "content": "that the resident had ordered"
+            },
+            {
+              "region_number": 5,
+              "content": ", the dog looked at the door ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The trainer"
+            },
+            {
+              "region_number": 2,
+              "content": "who the dog feared"
+            },
+            {
+              "region_number": 3,
+              "content": "delivered the newspaper"
+            },
+            {
+              "region_number": 4,
+              "content": "that the resident had ordered"
+            },
+            {
+              "region_number": 5,
+              "content": ", the dog looked at the door ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 12,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Before the actor"
+            },
+            {
+              "region_number": 2,
+              "content": "who the director praised openly"
+            },
+            {
+              "region_number": 3,
+              "content": "delivered the speech"
+            },
+            {
+              "region_number": 4,
+              "content": "that the author had written yesterday"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The actor"
+            },
+            {
+              "region_number": 2,
+              "content": "who the director praised openly"
+            },
+            {
+              "region_number": 3,
+              "content": "delivered the speech"
+            },
+            {
+              "region_number": 4,
+              "content": "that the author had written yesterday"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Before the actor"
+            },
+            {
+              "region_number": 2,
+              "content": "who the director praised openly"
+            },
+            {
+              "region_number": 3,
+              "content": "delivered the speech"
+            },
+            {
+              "region_number": 4,
+              "content": "that the author had written yesterday"
+            },
+            {
+              "region_number": 5,
+              "content": ", she took a deep breath ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The actor"
+            },
+            {
+              "region_number": 2,
+              "content": "who the director praised openly"
+            },
+            {
+              "region_number": 3,
+              "content": "delivered the speech"
+            },
+            {
+              "region_number": 4,
+              "content": "that the author had written yesterday"
+            },
+            {
+              "region_number": 5,
+              "content": ", she took a deep breath ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 6,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the lawyers"
+            },
+            {
+              "region_number": 2,
+              "content": "who the client had hired"
+            },
+            {
+              "region_number": 3,
+              "content": "printed the documents"
+            },
+            {
+              "region_number": 4,
+              "content": "that the client never requested"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The lawyers"
+            },
+            {
+              "region_number": 2,
+              "content": "who the client had hired"
+            },
+            {
+              "region_number": 3,
+              "content": "printed the documents"
+            },
+            {
+              "region_number": 4,
+              "content": "that the client never requested"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the lawyers"
+            },
+            {
+              "region_number": 2,
+              "content": "who the client had hired"
+            },
+            {
+              "region_number": 3,
+              "content": "printed the documents"
+            },
+            {
+              "region_number": 4,
+              "content": "that the client never requested"
+            },
+            {
+              "region_number": 5,
+              "content": ", the aids made coffee ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The lawyers"
+            },
+            {
+              "region_number": 2,
+              "content": "who the client had hired"
+            },
+            {
+              "region_number": 3,
+              "content": "printed the documents"
+            },
+            {
+              "region_number": 4,
+              "content": "that the client never requested"
+            },
+            {
+              "region_number": 5,
+              "content": ", the aids made coffee ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 18,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the officials"
+            },
+            {
+              "region_number": 2,
+              "content": "who the coaches had bribed handsomely"
+            },
+            {
+              "region_number": 3,
+              "content": "reviewed the contract"
+            },
+            {
+              "region_number": 4,
+              "content": "that the lawyers had written"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The officials"
+            },
+            {
+              "region_number": 2,
+              "content": "who the coaches had bribed handsomely"
+            },
+            {
+              "region_number": 3,
+              "content": "reviewed the contract"
+            },
+            {
+              "region_number": 4,
+              "content": "that the lawyers had written"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the officials"
+            },
+            {
+              "region_number": 2,
+              "content": "who the coaches had bribed handsomely"
+            },
+            {
+              "region_number": 3,
+              "content": "reviewed the contract"
+            },
+            {
+              "region_number": 4,
+              "content": "that the lawyers had written"
+            },
+            {
+              "region_number": 5,
+              "content": ", the players waited nervously ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The officials"
+            },
+            {
+              "region_number": 2,
+              "content": "who the coaches had bribed handsomely"
+            },
+            {
+              "region_number": 3,
+              "content": "reviewed the contract"
+            },
+            {
+              "region_number": 4,
+              "content": "that the lawyers had written"
+            },
+            {
+              "region_number": 5,
+              "content": ", the players waited nervously ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 17,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the diplomat"
+            },
+            {
+              "region_number": 2,
+              "content": "who the spy had contacted repeatedly"
+            },
+            {
+              "region_number": 3,
+              "content": "presented the file"
+            },
+            {
+              "region_number": 4,
+              "content": "that the assistant had written"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The diplomat"
+            },
+            {
+              "region_number": 2,
+              "content": "who the spy had contacted repeatedly"
+            },
+            {
+              "region_number": 3,
+              "content": "presented the file"
+            },
+            {
+              "region_number": 4,
+              "content": "that the assistant had written"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the diplomat"
+            },
+            {
+              "region_number": 2,
+              "content": "who the spy had contacted repeatedly"
+            },
+            {
+              "region_number": 3,
+              "content": "presented the file"
+            },
+            {
+              "region_number": 4,
+              "content": "that the assistant had written"
+            },
+            {
+              "region_number": 5,
+              "content": ", the ambassador gave a speech ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The diplomat"
+            },
+            {
+              "region_number": 2,
+              "content": "who the spy had contacted repeatedly"
+            },
+            {
+              "region_number": 3,
+              "content": "presented the file"
+            },
+            {
+              "region_number": 4,
+              "content": "that the assistant had written"
+            },
+            {
+              "region_number": 5,
+              "content": ", the ambassador gave a speech ."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

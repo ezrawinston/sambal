@@ -1,0 +1,874 @@
+{
+ "Baseline": {
+  "30m": {
+   "1.0": [
+    {
+     "seed": 1,
+     "syntaxgym": 52.46,
+     "blimp": 70.32
+    },
+    {
+     "seed": 2,
+     "syntaxgym": 69.15,
+     "blimp": 71.73,
+     "corrected": "2026-08-31"
+    },
+    {
+     "seed": 3,
+     "syntaxgym": 56.04,
+     "blimp": 71.42
+    }
+   ],
+   "0.1": [
+    {
+     "seed": 456,
+     "syntaxgym": 34.75,
+     "blimp": 59.72
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 41.68,
+     "blimp": 60.16
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 34.87,
+     "blimp": 58.89
+    }
+   ],
+   "0.5": [
+    {
+     "seed": 42,
+     "syntaxgym": 55.16,
+     "blimp": 70.2
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 54.56,
+     "blimp": 70.23
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 49.57,
+     "blimp": 69.93
+    }
+   ]
+  },
+  "14m": {
+   "0.05": [
+    {
+     "seed": 42,
+     "syntaxgym": 35.97,
+     "blimp": 53.04
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 25.88,
+     "blimp": 53.41
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 29.4,
+     "blimp": 54.21
+    }
+   ],
+   "0.15": [
+    {
+     "seed": 42,
+     "syntaxgym": 41.56,
+     "blimp": 62.77
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 39.25,
+     "blimp": 61.43
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 43.99,
+     "blimp": 61.84
+    }
+   ],
+   "0.3": [
+    {
+     "seed": 456,
+     "syntaxgym": 48.48,
+     "blimp": 65.36
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 49.09,
+     "blimp": 65.78
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 46.05,
+     "blimp": 66.99
+    }
+   ],
+   "0.5": [
+    {
+     "seed": 456,
+     "syntaxgym": 57.84,
+     "blimp": 68.85
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 51.88,
+     "blimp": 68.04
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 45.44,
+     "blimp": 68.91
+    }
+   ],
+   "1.0": [
+    {
+     "seed": 456,
+     "syntaxgym": 58.08,
+     "blimp": 70.57
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 55.77,
+     "blimp": 70.72
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 55.89,
+     "blimp": 71.1
+    }
+   ],
+   "0.1": [
+    {
+     "seed": 123,
+     "syntaxgym": 38.4,
+     "blimp": 59.1
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 36.45,
+     "blimp": 58.93
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 37.67,
+     "blimp": 58.14
+    }
+   ],
+   "0.2": [
+    {
+     "seed": 456,
+     "syntaxgym": 52.86,
+     "blimp": 64.94
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 43.74,
+     "blimp": 64.64
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 50.79,
+     "blimp": 63.81
+    }
+   ],
+   "0.25": [
+    {
+     "seed": 123,
+     "syntaxgym": 48.24,
+     "blimp": 65.12
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 51.15,
+     "blimp": 65.18
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 46.29,
+     "blimp": 66.4
+    }
+   ]
+  },
+  "5m": {
+   "0.15": [
+    {
+     "seed": 42,
+     "syntaxgym": 40.7,
+     "blimp": 61.46
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 43.74,
+     "blimp": 60.99
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 34.99,
+     "blimp": 60.86
+    }
+   ],
+   "0.05": [
+    {
+     "seed": 456,
+     "syntaxgym": 30.74,
+     "blimp": 53.34
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 30.86,
+     "blimp": 52.82
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 28.68,
+     "blimp": 54.05
+    }
+   ],
+   "1.0": [
+    {
+     "seed": 42,
+     "syntaxgym": 47.02,
+     "blimp": 66.86
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 60.27,
+     "blimp": 69.13
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 51.4,
+     "blimp": 69.05
+    }
+   ],
+   "0.5": [
+    {
+     "seed": 42,
+     "syntaxgym": 47.75,
+     "blimp": 65.19
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 50.55,
+     "blimp": 66.49
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 54.56,
+     "blimp": 66.05
+    }
+   ],
+   "0.3": [
+    {
+     "seed": 456,
+     "syntaxgym": 44.11,
+     "blimp": 62.54
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 47.02,
+     "blimp": 64.07
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 48.36,
+     "blimp": 65.4
+    }
+   ],
+   "0.2": [
+    {
+     "seed": 42,
+     "syntaxgym": 37.18,
+     "blimp": 63.01
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 39.49,
+     "blimp": 62.54
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 48.85,
+     "blimp": 63.35
+    }
+   ],
+   "0.1": [
+    {
+     "seed": 123,
+     "syntaxgym": 41.07,
+     "blimp": 57.75
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 34.99,
+     "blimp": 57.82
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 34.39,
+     "blimp": 58.31
+    }
+   ],
+   "0.25": [
+    {
+     "seed": 456,
+     "syntaxgym": 48.0,
+     "blimp": 63.12
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 46.78,
+     "blimp": 62.69
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 47.51,
+     "blimp": 63.19
+    }
+   ]
+  },
+  "10m": {
+   "0.15": [
+    {
+     "seed": 42,
+     "syntaxgym": 39.61,
+     "blimp": 61.63
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 48.72,
+     "blimp": 62.07
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 46.78,
+     "blimp": 61.14
+    }
+   ],
+   "0.25": [
+    {
+     "seed": 123,
+     "syntaxgym": 42.28,
+     "blimp": 64.1
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 42.28,
+     "blimp": 65.65
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 48.6,
+     "blimp": 65.22
+    }
+   ],
+   "0.2": [
+    {
+     "seed": 123,
+     "syntaxgym": 46.78,
+     "blimp": 64.45
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 50.67,
+     "blimp": 63.81
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 49.82,
+     "blimp": 63.22
+    }
+   ],
+   "0.05": [
+    {
+     "seed": 123,
+     "syntaxgym": 20.05,
+     "blimp": 54.09
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 30.98,
+     "blimp": 53.56
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 29.53,
+     "blimp": 54.1
+    }
+   ],
+   "0.1": [
+    {
+     "seed": 42,
+     "syntaxgym": 43.01,
+     "blimp": 58.74
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 38.27,
+     "blimp": 58.75
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 35.36,
+     "blimp": 58.97
+    }
+   ],
+   "0.3": [
+    {
+     "seed": 42,
+     "syntaxgym": 45.57,
+     "blimp": 66.45
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 53.71,
+     "blimp": 64.05
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 47.14,
+     "blimp": 66.64
+    }
+   ]
+  }
+ },
+ "SAMBAL": {
+  "30m": {
+   "1.0": [
+    {
+     "seed": 1,
+     "syntaxgym": 51.56,
+     "blimp": 72.03
+    },
+    {
+     "seed": 2,
+     "syntaxgym": 43.37,
+     "blimp": 70.97
+    },
+    {
+     "seed": 3,
+     "syntaxgym": 44.86,
+     "blimp": 70.57
+    }
+   ],
+   "0.1": [
+    {
+     "seed": 42,
+     "syntaxgym": 45.93,
+     "blimp": 61.66
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 37.3,
+     "blimp": 61.28
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 31.71,
+     "blimp": 61.93
+    }
+   ],
+   "0.5": [
+    {
+     "seed": 123,
+     "syntaxgym": 47.63,
+     "blimp": 70.41
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 47.63,
+     "blimp": 70.44
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 47.63,
+     "blimp": 69.41
+    }
+   ]
+  },
+  "5m": {
+   "0.2": [
+    {
+     "seed": 123,
+     "syntaxgym": 44.23,
+     "blimp": 65.07
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 43.99,
+     "blimp": 64.35
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 38.03,
+     "blimp": 65.93
+    }
+   ],
+   "0.15": [
+    {
+     "seed": 123,
+     "syntaxgym": 40.7,
+     "blimp": 63.39
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 35.48,
+     "blimp": 62.88
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 44.11,
+     "blimp": 64.95
+    }
+   ],
+   "0.1": [
+    {
+     "seed": 456,
+     "syntaxgym": 39.98,
+     "blimp": 60.16
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 37.06,
+     "blimp": 62.14
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 37.91,
+     "blimp": 59.61
+    }
+   ],
+   "0.5": [
+    {
+     "seed": 456,
+     "syntaxgym": 52.13,
+     "blimp": 67.96
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 41.8,
+     "blimp": 67.51
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 48.97,
+     "blimp": 68.07
+    }
+   ],
+   "0.3": [
+    {
+     "seed": 42,
+     "syntaxgym": 49.7,
+     "blimp": 66.44
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 45.32,
+     "blimp": 67.61
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 49.94,
+     "blimp": 67.37
+    }
+   ],
+   "1.0": [
+    {
+     "seed": 456,
+     "syntaxgym": 45.69,
+     "blimp": 69.39
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 46.29,
+     "blimp": 69.68
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 49.7,
+     "blimp": 71.1
+    }
+   ],
+   "0.05": [
+    {
+     "seed": 42,
+     "syntaxgym": 29.77,
+     "blimp": 54.13
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 30.5,
+     "blimp": 54.55
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 33.17,
+     "blimp": 55.4
+    }
+   ],
+   "0.25": [
+    {
+     "seed": 456,
+     "syntaxgym": 44.47,
+     "blimp": 65.84
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 49.57,
+     "blimp": 66.86
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 39.25,
+     "blimp": 64.24
+    }
+   ]
+  },
+  "10m": {
+   "0.25": [
+    {
+     "seed": 456,
+     "syntaxgym": 43.74,
+     "blimp": 67.07
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 50.79,
+     "blimp": 68.19
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 48.12,
+     "blimp": 68.34
+    }
+   ],
+   "0.2": [
+    {
+     "seed": 42,
+     "syntaxgym": 51.64,
+     "blimp": 65.92
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 41.56,
+     "blimp": 65.5
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 38.03,
+     "blimp": 64.86
+    }
+   ],
+   "0.05": [
+    {
+     "seed": 123,
+     "syntaxgym": 31.23,
+     "blimp": 55.04
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 26.49,
+     "blimp": 55.1
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 31.59,
+     "blimp": 54.49
+    }
+   ],
+   "0.1": [
+    {
+     "seed": 123,
+     "syntaxgym": 34.26,
+     "blimp": 60.84
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 36.82,
+     "blimp": 61.76
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 43.5,
+     "blimp": 60.48
+    }
+   ],
+   "0.3": [
+    {
+     "seed": 123,
+     "syntaxgym": 42.77,
+     "blimp": 66.41
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 47.75,
+     "blimp": 67.52
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 44.96,
+     "blimp": 66.99
+    }
+   ],
+   "0.15": [
+    {
+     "seed": 123,
+     "syntaxgym": 41.07,
+     "blimp": 64.72
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 50.55,
+     "blimp": 64.17
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 47.14,
+     "blimp": 63.87
+    }
+   ]
+  },
+  "14m": {
+   "0.05": [
+    {
+     "seed": 123,
+     "syntaxgym": 31.23,
+     "blimp": 55.06
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 28.19,
+     "blimp": 56.16
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 29.89,
+     "blimp": 54.51
+    }
+   ],
+   "0.25": [
+    {
+     "seed": 456,
+     "syntaxgym": 45.93,
+     "blimp": 66.69
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 46.78,
+     "blimp": 66.96
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 46.42,
+     "blimp": 68.04
+    }
+   ],
+   "1.0": [
+    {
+     "seed": 456,
+     "syntaxgym": 49.45,
+     "blimp": 69.82
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 47.51,
+     "blimp": 71.26
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 46.9,
+     "blimp": 70.57
+    }
+   ],
+   "0.15": [
+    {
+     "seed": 42,
+     "syntaxgym": 48.0,
+     "blimp": 64.55
+    },
+    {
+     "seed": 123,
+     "syntaxgym": 38.64,
+     "blimp": 64.04,
+     "backfill": "2026-08-31"
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 40.95,
+     "blimp": 64.75
+    }
+   ],
+   "0.3": [
+    {
+     "seed": 123,
+     "syntaxgym": 43.5,
+     "blimp": 67.21
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 43.5,
+     "blimp": 67.17
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 45.57,
+     "blimp": 67.4
+    }
+   ],
+   "0.2": [
+    {
+     "seed": 123,
+     "syntaxgym": 54.31,
+     "blimp": 66.2
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 45.08,
+     "blimp": 65.6
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 41.92,
+     "blimp": 66.04
+    }
+   ],
+   "0.1": [
+    {
+     "seed": 123,
+     "syntaxgym": 31.35,
+     "blimp": 60.75
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 38.64,
+     "blimp": 60.75
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 35.72,
+     "blimp": 62.44
+    }
+   ],
+   "0.5": [
+    {
+     "seed": 123,
+     "syntaxgym": 50.06,
+     "blimp": 67.67
+    },
+    {
+     "seed": 456,
+     "syntaxgym": 49.94,
+     "blimp": 69.42
+    },
+    {
+     "seed": 42,
+     "syntaxgym": 47.02,
+     "blimp": 69.04
+    }
+   ]
+  }
+ }
+}

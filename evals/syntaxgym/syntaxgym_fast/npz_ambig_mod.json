@@ -1,0 +1,711 @@
+{
+  "meta": {
+    "name": "npz_ambig_mod",
+    "metric": "sum",
+    "comment": "Below is a simple two-criterion GP prediction. #Prediction [(6;%ambig_nocomma%) > (6;%ambig_comma%) ] &  [(6;%ambig_nocomma%) > (6;%unambig_nocomma%) ]  Below is the more stringent prediction of the interaction. Below is Ethan's original prediction #Prediction [(6;%ambig_nocomma%) > (6;%ambig_comma%) ] & [(6;%unambig_nocomma%) = (6;%unambig_comma%) ] ",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "Start",
+    "2": "Transitive Verb",
+    "3": "Comma",
+    "4": "NP/Z",
+    "5": "Extension",
+    "6": "Verb",
+    "7": "Continuation"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "((6;%ambig_nocomma%) > (6;%ambig_comma%) ) &  ((6;%ambig_nocomma%) > (6;%unambig_nocomma%) )  & (((6;%ambig_nocomma%) - (6;%ambig_comma%) ) > ((6;%unambig_nocomma%) - (6;%unambig_comma%) ))"
+    }
+  ],
+  "items": [
+    {
+      "item_number": 19,
+      "conditions": [
+        {
+          "condition_name": "ambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the prisoners"
+            },
+            {
+              "region_number": 2,
+              "content": "watched"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the guards"
+            },
+            {
+              "region_number": 5,
+              "content": "who were in charge"
+            },
+            {
+              "region_number": 6,
+              "content": "refused"
+            },
+            {
+              "region_number": 7,
+              "content": "to negotiate"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the prisoners"
+            },
+            {
+              "region_number": 2,
+              "content": "looked"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the guards"
+            },
+            {
+              "region_number": 5,
+              "content": "who were in charge"
+            },
+            {
+              "region_number": 6,
+              "content": "refused"
+            },
+            {
+              "region_number": 7,
+              "content": "to negotiate"
+            }
+          ]
+        },
+        {
+          "condition_name": "ambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the prisoners"
+            },
+            {
+              "region_number": 2,
+              "content": "watched"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the guards"
+            },
+            {
+              "region_number": 5,
+              "content": "who were in charge"
+            },
+            {
+              "region_number": 6,
+              "content": "refused"
+            },
+            {
+              "region_number": 7,
+              "content": "to negotiate"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the prisoners"
+            },
+            {
+              "region_number": 2,
+              "content": "looked"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the guards"
+            },
+            {
+              "region_number": 5,
+              "content": "who were in charge"
+            },
+            {
+              "region_number": 6,
+              "content": "refused"
+            },
+            {
+              "region_number": 7,
+              "content": "to negotiate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 23,
+      "conditions": [
+        {
+          "condition_name": "ambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the soldier"
+            },
+            {
+              "region_number": 2,
+              "content": "signaled"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the doctor"
+            },
+            {
+              "region_number": 5,
+              "content": "attending the exercise"
+            },
+            {
+              "region_number": 6,
+              "content": "ordered"
+            },
+            {
+              "region_number": 7,
+              "content": "it to stop"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the soldier"
+            },
+            {
+              "region_number": 2,
+              "content": "complained"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the doctor"
+            },
+            {
+              "region_number": 5,
+              "content": "attending the exercise"
+            },
+            {
+              "region_number": 6,
+              "content": "ordered"
+            },
+            {
+              "region_number": 7,
+              "content": "it to stop"
+            }
+          ]
+        },
+        {
+          "condition_name": "ambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the soldier"
+            },
+            {
+              "region_number": 2,
+              "content": "signaled"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the doctor"
+            },
+            {
+              "region_number": 5,
+              "content": "attending the exercise"
+            },
+            {
+              "region_number": 6,
+              "content": "ordered"
+            },
+            {
+              "region_number": 7,
+              "content": "it to stop"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the soldier"
+            },
+            {
+              "region_number": 2,
+              "content": "complained"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the doctor"
+            },
+            {
+              "region_number": 5,
+              "content": "attending the exercise"
+            },
+            {
+              "region_number": 6,
+              "content": "ordered"
+            },
+            {
+              "region_number": 7,
+              "content": "it to stop"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 11,
+      "conditions": [
+        {
+          "condition_name": "ambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Because the manager"
+            },
+            {
+              "region_number": 2,
+              "content": "applauded"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the comedian"
+            },
+            {
+              "region_number": 5,
+              "content": "who told bad jokes"
+            },
+            {
+              "region_number": 6,
+              "content": "began"
+            },
+            {
+              "region_number": 7,
+              "content": "his act"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Because the manager"
+            },
+            {
+              "region_number": 2,
+              "content": "departed"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the comedian"
+            },
+            {
+              "region_number": 5,
+              "content": "who told bad jokes"
+            },
+            {
+              "region_number": 6,
+              "content": "began"
+            },
+            {
+              "region_number": 7,
+              "content": "his act"
+            }
+          ]
+        },
+        {
+          "condition_name": "ambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Because the manager"
+            },
+            {
+              "region_number": 2,
+              "content": "applauded"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the comedian"
+            },
+            {
+              "region_number": 5,
+              "content": "who told bad jokes"
+            },
+            {
+              "region_number": 6,
+              "content": "began"
+            },
+            {
+              "region_number": 7,
+              "content": "his act"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Because the manager"
+            },
+            {
+              "region_number": 2,
+              "content": "departed"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the comedian"
+            },
+            {
+              "region_number": 5,
+              "content": "who told bad jokes"
+            },
+            {
+              "region_number": 6,
+              "content": "began"
+            },
+            {
+              "region_number": 7,
+              "content": "his act"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 7,
+      "conditions": [
+        {
+          "condition_name": "ambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the audience"
+            },
+            {
+              "region_number": 2,
+              "content": "cheered"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the actor"
+            },
+            {
+              "region_number": 5,
+              "content": "in the elegant dress"
+            },
+            {
+              "region_number": 6,
+              "content": "delivered"
+            },
+            {
+              "region_number": 7,
+              "content": "his speech"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the audience"
+            },
+            {
+              "region_number": 2,
+              "content": "arrived"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the actor"
+            },
+            {
+              "region_number": 5,
+              "content": "in the elegant dress"
+            },
+            {
+              "region_number": 6,
+              "content": "delivered"
+            },
+            {
+              "region_number": 7,
+              "content": "his speech"
+            }
+          ]
+        },
+        {
+          "condition_name": "ambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the audience"
+            },
+            {
+              "region_number": 2,
+              "content": "cheered"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the actor"
+            },
+            {
+              "region_number": 5,
+              "content": "in the elegant dress"
+            },
+            {
+              "region_number": 6,
+              "content": "delivered"
+            },
+            {
+              "region_number": 7,
+              "content": "his speech"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the audience"
+            },
+            {
+              "region_number": 2,
+              "content": "arrived"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the actor"
+            },
+            {
+              "region_number": 5,
+              "content": "in the elegant dress"
+            },
+            {
+              "region_number": 6,
+              "content": "delivered"
+            },
+            {
+              "region_number": 7,
+              "content": "his speech"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 21,
+      "conditions": [
+        {
+          "condition_name": "ambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the host"
+            },
+            {
+              "region_number": 2,
+              "content": "interrupted"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the discussion"
+            },
+            {
+              "region_number": 5,
+              "content": "of the issue"
+            },
+            {
+              "region_number": 6,
+              "content": "became"
+            },
+            {
+              "region_number": 7,
+              "content": "more interesting"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_nocomma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the host"
+            },
+            {
+              "region_number": 2,
+              "content": "yelled"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the discussion"
+            },
+            {
+              "region_number": 5,
+              "content": "of the issue"
+            },
+            {
+              "region_number": 6,
+              "content": "became"
+            },
+            {
+              "region_number": 7,
+              "content": "more interesting"
+            }
+          ]
+        },
+        {
+          "condition_name": "ambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the host"
+            },
+            {
+              "region_number": 2,
+              "content": "interrupted"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the discussion"
+            },
+            {
+              "region_number": 5,
+              "content": "of the issue"
+            },
+            {
+              "region_number": 6,
+              "content": "became"
+            },
+            {
+              "region_number": 7,
+              "content": "more interesting"
+            }
+          ]
+        },
+        {
+          "condition_name": "unambig_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the host"
+            },
+            {
+              "region_number": 2,
+              "content": "yelled"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the discussion"
+            },
+            {
+              "region_number": 5,
+              "content": "of the issue"
+            },
+            {
+              "region_number": 6,
+              "content": "became"
+            },
+            {
+              "region_number": 7,
+              "content": "more interesting"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

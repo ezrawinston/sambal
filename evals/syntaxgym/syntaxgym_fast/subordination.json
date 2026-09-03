@@ -1,0 +1,387 @@
+{
+  "meta": {
+    "name": "subordination",
+    "metric": "sum",
+    "comment": "Below is the prediction of an interaction (a lower bar). #Prediction [(3;%sub_no-matrix%) - (3;%no-sub_no-matrix%) ] - [(3;%sub_matrix%) - (3;%no-sub_matrix%) ] > 0 Below is Ethan's original prediction -- a higher bar.",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "Subordinate clause 1",
+    "2": "Subordinate clause 2",
+    "3": "Main clause"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "((3;%sub_no-matrix%) > (3;%no-sub_no-matrix%) ) & ((3;%sub_matrix%) < (3;%no-sub_matrix%) )"
+    }
+  ],
+  "items": [
+    {
+      "item_number": 21,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "When the politicians"
+            },
+            {
+              "region_number": 2,
+              "content": "passed the new law"
+            },
+            {
+              "region_number": 3,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The politicians"
+            },
+            {
+              "region_number": 2,
+              "content": "passed the new law"
+            },
+            {
+              "region_number": 3,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "When the politicians"
+            },
+            {
+              "region_number": 2,
+              "content": "passed the new law"
+            },
+            {
+              "region_number": 3,
+              "content": ", the protestors blocked traffic outside ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The politicians"
+            },
+            {
+              "region_number": 2,
+              "content": "passed the new law"
+            },
+            {
+              "region_number": 3,
+              "content": ", the protestors blocked traffic outside ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 10,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the minister"
+            },
+            {
+              "region_number": 2,
+              "content": "praised the new building"
+            },
+            {
+              "region_number": 3,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The minister"
+            },
+            {
+              "region_number": 2,
+              "content": "praised the new building"
+            },
+            {
+              "region_number": 3,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the minister"
+            },
+            {
+              "region_number": 2,
+              "content": "praised the new building"
+            },
+            {
+              "region_number": 3,
+              "content": ", it started to rain ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The minister"
+            },
+            {
+              "region_number": 2,
+              "content": "praised the new building"
+            },
+            {
+              "region_number": 3,
+              "content": ", it started to rain ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 17,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the diplomat"
+            },
+            {
+              "region_number": 2,
+              "content": "presented the file"
+            },
+            {
+              "region_number": 3,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The diplomat"
+            },
+            {
+              "region_number": 2,
+              "content": "presented the file"
+            },
+            {
+              "region_number": 3,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the diplomat"
+            },
+            {
+              "region_number": 2,
+              "content": "presented the file"
+            },
+            {
+              "region_number": 3,
+              "content": ", the ambassador gave a speech ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The diplomat"
+            },
+            {
+              "region_number": 2,
+              "content": "presented the file"
+            },
+            {
+              "region_number": 3,
+              "content": ", the ambassador gave a speech ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 20,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the tourists"
+            },
+            {
+              "region_number": 2,
+              "content": "read the guide"
+            },
+            {
+              "region_number": 3,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The tourists"
+            },
+            {
+              "region_number": 2,
+              "content": "read the guide"
+            },
+            {
+              "region_number": 3,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the tourists"
+            },
+            {
+              "region_number": 2,
+              "content": "read the guide"
+            },
+            {
+              "region_number": 3,
+              "content": ", the children played in the sand ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The tourists"
+            },
+            {
+              "region_number": 2,
+              "content": "read the guide"
+            },
+            {
+              "region_number": 3,
+              "content": ", the children played in the sand ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 7,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Because the editor"
+            },
+            {
+              "region_number": 2,
+              "content": "liked the draft"
+            },
+            {
+              "region_number": 3,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The editor"
+            },
+            {
+              "region_number": 2,
+              "content": "liked the draft"
+            },
+            {
+              "region_number": 3,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Because the editor"
+            },
+            {
+              "region_number": 2,
+              "content": "liked the draft"
+            },
+            {
+              "region_number": 3,
+              "content": ", he published it the next month ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The editor"
+            },
+            {
+              "region_number": 2,
+              "content": "liked the draft"
+            },
+            {
+              "region_number": 3,
+              "content": ", he published it the next month ."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

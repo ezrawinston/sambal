@@ -1,0 +1,1287 @@
+{
+  "meta": {
+    "name": "fgd_hierarchy",
+    "metric": "sum",
+    "comment": "",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "prefix",
+    "2": "subj_subj",
+    "3": "subj_wh",
+    "4": "subj_embed",
+    "5": "subject_gap",
+    "6": "filler",
+    "7": "matrix_verb",
+    "8": "matrix_gap",
+    "9": "continuation"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "((6;%what_nogap%) >  (6;%that_nogap%)) & ((6;%what_subjgap%) <  (6;%that_subjgap%))"
+    },
+    {
+      "type": "formula",
+      "formula": "((9;%what_nogap%) =  (9;%that_nogap%))& ((6;%what_subjgap%) =  (6;%that_subjgap%)) "
+    }
+  ],
+  "items": [
+    {
+      "item_number": 15,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "the banker found out"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "the senator will nominate"
+            },
+            {
+              "region_number": 5,
+              "content": "his son"
+            },
+            {
+              "region_number": 6,
+              "content": "tomorrow"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": "the stock trader"
+            },
+            {
+              "region_number": 9,
+              "content": "when he found out about it"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "the banker found out"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the senator will nominate"
+            },
+            {
+              "region_number": 5,
+              "content": "his son"
+            },
+            {
+              "region_number": 6,
+              "content": "tomorrow"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": "the stock trader"
+            },
+            {
+              "region_number": 9,
+              "content": "when he found out about it"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_subjgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "the banker found out"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "the senator will nominate"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "tomorrow"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": "the stock trader"
+            },
+            {
+              "region_number": 9,
+              "content": "when he found out about it"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_subjgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "the banker found out"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the senator will nominate"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "tomorrow"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": "the stock trader"
+            },
+            {
+              "region_number": 9,
+              "content": "when he found out about it"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_matrixgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "the banker found out"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "the senator will nominate"
+            },
+            {
+              "region_number": 5,
+              "content": "his son"
+            },
+            {
+              "region_number": 6,
+              "content": "tomorrow"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": ""
+            },
+            {
+              "region_number": 9,
+              "content": "when he found out about it"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_matrixgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "the banker found out"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the senator will nominate"
+            },
+            {
+              "region_number": 5,
+              "content": "his son"
+            },
+            {
+              "region_number": 6,
+              "content": "tomorrow"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": ""
+            },
+            {
+              "region_number": 9,
+              "content": "when he found out about it"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 19,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "our father knew"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "my brother would wed"
+            },
+            {
+              "region_number": 5,
+              "content": "his high school girlfriend"
+            },
+            {
+              "region_number": 6,
+              "content": "two years ago"
+            },
+            {
+              "region_number": 7,
+              "content": "worried"
+            },
+            {
+              "region_number": 8,
+              "content": "his relatives"
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "our father knew"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "my brother would wed"
+            },
+            {
+              "region_number": 5,
+              "content": "his high school girlfriend"
+            },
+            {
+              "region_number": 6,
+              "content": "two years ago"
+            },
+            {
+              "region_number": 7,
+              "content": "worried"
+            },
+            {
+              "region_number": 8,
+              "content": "his relatives"
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_subjgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "our father knew"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "my brother would wed"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "two years ago"
+            },
+            {
+              "region_number": 7,
+              "content": "worried"
+            },
+            {
+              "region_number": 8,
+              "content": "his relatives"
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_subjgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "our father knew"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "my brother would wed"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "two years ago"
+            },
+            {
+              "region_number": 7,
+              "content": "worried"
+            },
+            {
+              "region_number": 8,
+              "content": "his relatives"
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_matrixgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "our father knew"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "my brother would wed"
+            },
+            {
+              "region_number": 5,
+              "content": "his high school girlfriend"
+            },
+            {
+              "region_number": 6,
+              "content": "two years ago"
+            },
+            {
+              "region_number": 7,
+              "content": "worried"
+            },
+            {
+              "region_number": 8,
+              "content": ""
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_matrixgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "our father knew"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "my brother would wed"
+            },
+            {
+              "region_number": 5,
+              "content": "his high school girlfriend"
+            },
+            {
+              "region_number": 6,
+              "content": "two years ago"
+            },
+            {
+              "region_number": 7,
+              "content": "worried"
+            },
+            {
+              "region_number": 8,
+              "content": ""
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 9,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "the journalist disclosed"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "the mayor talked with"
+            },
+            {
+              "region_number": 5,
+              "content": "his rival"
+            },
+            {
+              "region_number": 6,
+              "content": "last night"
+            },
+            {
+              "region_number": 7,
+              "content": "shocked"
+            },
+            {
+              "region_number": 8,
+              "content": "the donors"
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "the journalist disclosed"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the mayor talked with"
+            },
+            {
+              "region_number": 5,
+              "content": "his rival"
+            },
+            {
+              "region_number": 6,
+              "content": "last night"
+            },
+            {
+              "region_number": 7,
+              "content": "shocked"
+            },
+            {
+              "region_number": 8,
+              "content": "the donors"
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_subjgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "the journalist disclosed"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "the mayor talked with"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "last night"
+            },
+            {
+              "region_number": 7,
+              "content": "shocked"
+            },
+            {
+              "region_number": 8,
+              "content": "the donors"
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_subjgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "the journalist disclosed"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the mayor talked with"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "last night"
+            },
+            {
+              "region_number": 7,
+              "content": "shocked"
+            },
+            {
+              "region_number": 8,
+              "content": "the donors"
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_matrixgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "the journalist disclosed"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "the mayor talked with"
+            },
+            {
+              "region_number": 5,
+              "content": "his rival"
+            },
+            {
+              "region_number": 6,
+              "content": "last night"
+            },
+            {
+              "region_number": 7,
+              "content": "shocked"
+            },
+            {
+              "region_number": 8,
+              "content": ""
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_matrixgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "the journalist disclosed"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the mayor talked with"
+            },
+            {
+              "region_number": 5,
+              "content": "his rival"
+            },
+            {
+              "region_number": 6,
+              "content": "last night"
+            },
+            {
+              "region_number": 7,
+              "content": "shocked"
+            },
+            {
+              "region_number": 8,
+              "content": ""
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 1,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "my brother said"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "his friend trusted"
+            },
+            {
+              "region_number": 5,
+              "content": "our uncle"
+            },
+            {
+              "region_number": 6,
+              "content": "at the party"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": "my daughter"
+            },
+            {
+              "region_number": 9,
+              "content": "yesterday afternoon"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "my brother said"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "his friend trusted"
+            },
+            {
+              "region_number": 5,
+              "content": "our uncle"
+            },
+            {
+              "region_number": 6,
+              "content": "at the party"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": "my daughter"
+            },
+            {
+              "region_number": 9,
+              "content": "yesterday afternoon"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_subjgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "my brother said"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "his friend trusted"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "at the party"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": "my daughter"
+            },
+            {
+              "region_number": 9,
+              "content": "yesterday afternoon"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_subjgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "my brother said"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "his friend trusted"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "at the party"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": "my daughter"
+            },
+            {
+              "region_number": 9,
+              "content": "yesterday afternoon"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_matrixgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "my brother said"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "his friend trusted"
+            },
+            {
+              "region_number": 5,
+              "content": "our uncle"
+            },
+            {
+              "region_number": 6,
+              "content": "at the party"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": ""
+            },
+            {
+              "region_number": 9,
+              "content": "yesterday afternoon"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_matrixgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "my brother said"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "his friend trusted"
+            },
+            {
+              "region_number": 5,
+              "content": "our uncle"
+            },
+            {
+              "region_number": 6,
+              "content": "at the party"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": ""
+            },
+            {
+              "region_number": 9,
+              "content": "yesterday afternoon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 6,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "our mother does not know"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "her friend trusts"
+            },
+            {
+              "region_number": 5,
+              "content": "her sister"
+            },
+            {
+              "region_number": 6,
+              "content": "with her will"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": "us"
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "our mother does not know"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "her friend trusts"
+            },
+            {
+              "region_number": 5,
+              "content": "her sister"
+            },
+            {
+              "region_number": 6,
+              "content": "with her will"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": "us"
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_subjgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "our mother does not know"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "her friend trusts"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "with her will"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": "us"
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_subjgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "our mother does not know"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "her friend trusts"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "with her will"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": "us"
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_matrixgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "our mother does not know"
+            },
+            {
+              "region_number": 3,
+              "content": "who"
+            },
+            {
+              "region_number": 4,
+              "content": "her friend trusts"
+            },
+            {
+              "region_number": 5,
+              "content": "her sister"
+            },
+            {
+              "region_number": 6,
+              "content": "with her will"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": ""
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_matrixgap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The fact that"
+            },
+            {
+              "region_number": 2,
+              "content": "our mother does not know"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "her friend trusts"
+            },
+            {
+              "region_number": 5,
+              "content": "her sister"
+            },
+            {
+              "region_number": 6,
+              "content": "with her will"
+            },
+            {
+              "region_number": 7,
+              "content": "surprised"
+            },
+            {
+              "region_number": 8,
+              "content": ""
+            },
+            {
+              "region_number": 9,
+              "content": "when they found out"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

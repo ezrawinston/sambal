@@ -1,0 +1,630 @@
+{
+  "meta": {
+    "name": "npz_obj",
+    "metric": "sum",
+    "comment": "Below is a simple two-criterion GP prediction. #Prediction [(5;%no-obj_no-comma%) > (5;%no-obj_comma%) ] &  [(5;%no-obj_no-comma%) > (5;%obj_no-comma%) ] Below is the more stringent prediction of the interaction. Below is Ethan's original prediction #Prediction [(5;%no-obj_no-comma%) > (5;%no-obj_comma%) ] & [(5;%no-obj_comma%) = (5;%obj_comma%) ]",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "Start",
+    "2": "Transitive Verb",
+    "3": "Comma",
+    "4": "NP/Z",
+    "5": "Verb",
+    "6": "Continuation"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "((5;%no-obj_no-comma%) > (5;%no-obj_comma%) ) &  ((5;%no-obj_no-comma%) > (5;%obj_no-comma%) ) & (((5;%no-obj_no-comma%) - (5;%no-obj_comma%) ) > ((5;%obj_no-comma%) - (5;%obj_comma%) ))"
+    }
+  ],
+  "items": [
+    {
+      "item_number": 16,
+      "conditions": [
+        {
+          "condition_name": "no-obj_no-comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the woman"
+            },
+            {
+              "region_number": 2,
+              "content": "decorated"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the pot"
+            },
+            {
+              "region_number": 5,
+              "content": "sat"
+            },
+            {
+              "region_number": 6,
+              "content": "on the counter"
+            }
+          ]
+        },
+        {
+          "condition_name": "obj_no-comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the woman"
+            },
+            {
+              "region_number": 2,
+              "content": "decorated the kitchen"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the pot"
+            },
+            {
+              "region_number": 5,
+              "content": "sat"
+            },
+            {
+              "region_number": 6,
+              "content": "on the counter"
+            }
+          ]
+        },
+        {
+          "condition_name": "no-obj_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the woman"
+            },
+            {
+              "region_number": 2,
+              "content": "decorated"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the pot"
+            },
+            {
+              "region_number": 5,
+              "content": "sat"
+            },
+            {
+              "region_number": 6,
+              "content": "on the counter"
+            }
+          ]
+        },
+        {
+          "condition_name": "obj_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the woman"
+            },
+            {
+              "region_number": 2,
+              "content": "decorated the kitchen"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the pot"
+            },
+            {
+              "region_number": 5,
+              "content": "sat"
+            },
+            {
+              "region_number": 6,
+              "content": "on the counter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 13,
+      "conditions": [
+        {
+          "condition_name": "no-obj_no-comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the guard"
+            },
+            {
+              "region_number": 2,
+              "content": "visited"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the children"
+            },
+            {
+              "region_number": 5,
+              "content": "jumped"
+            },
+            {
+              "region_number": 6,
+              "content": "into the pool"
+            }
+          ]
+        },
+        {
+          "condition_name": "obj_no-comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the guard"
+            },
+            {
+              "region_number": 2,
+              "content": "visited the children"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the children"
+            },
+            {
+              "region_number": 5,
+              "content": "jumped"
+            },
+            {
+              "region_number": 6,
+              "content": "into the pool"
+            }
+          ]
+        },
+        {
+          "condition_name": "no-obj_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the guard"
+            },
+            {
+              "region_number": 2,
+              "content": "visited"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the children"
+            },
+            {
+              "region_number": 5,
+              "content": "jumped"
+            },
+            {
+              "region_number": 6,
+              "content": "into the pool"
+            }
+          ]
+        },
+        {
+          "condition_name": "obj_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the guard"
+            },
+            {
+              "region_number": 2,
+              "content": "visited the children"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the children"
+            },
+            {
+              "region_number": 5,
+              "content": "jumped"
+            },
+            {
+              "region_number": 6,
+              "content": "into the pool"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 21,
+      "conditions": [
+        {
+          "condition_name": "no-obj_no-comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the host"
+            },
+            {
+              "region_number": 2,
+              "content": "interrupted"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the discussion"
+            },
+            {
+              "region_number": 5,
+              "content": "became"
+            },
+            {
+              "region_number": 6,
+              "content": "more interesting"
+            }
+          ]
+        },
+        {
+          "condition_name": "obj_no-comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the host"
+            },
+            {
+              "region_number": 2,
+              "content": "interrupted the speaker"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the discussion"
+            },
+            {
+              "region_number": 5,
+              "content": "became"
+            },
+            {
+              "region_number": 6,
+              "content": "more interesting"
+            }
+          ]
+        },
+        {
+          "condition_name": "no-obj_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the host"
+            },
+            {
+              "region_number": 2,
+              "content": "interrupted"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the discussion"
+            },
+            {
+              "region_number": 5,
+              "content": "became"
+            },
+            {
+              "region_number": 6,
+              "content": "more interesting"
+            }
+          ]
+        },
+        {
+          "condition_name": "obj_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the host"
+            },
+            {
+              "region_number": 2,
+              "content": "interrupted the speaker"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the discussion"
+            },
+            {
+              "region_number": 5,
+              "content": "became"
+            },
+            {
+              "region_number": 6,
+              "content": "more interesting"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 15,
+      "conditions": [
+        {
+          "condition_name": "no-obj_no-comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "As the class"
+            },
+            {
+              "region_number": 2,
+              "content": "considered"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the teacher"
+            },
+            {
+              "region_number": 5,
+              "content": "asked"
+            },
+            {
+              "region_number": 6,
+              "content": "a question"
+            }
+          ]
+        },
+        {
+          "condition_name": "obj_no-comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "As the class"
+            },
+            {
+              "region_number": 2,
+              "content": "considered the problem"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the teacher"
+            },
+            {
+              "region_number": 5,
+              "content": "asked"
+            },
+            {
+              "region_number": 6,
+              "content": "a question"
+            }
+          ]
+        },
+        {
+          "condition_name": "no-obj_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "As the class"
+            },
+            {
+              "region_number": 2,
+              "content": "considered"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the teacher"
+            },
+            {
+              "region_number": 5,
+              "content": "asked"
+            },
+            {
+              "region_number": 6,
+              "content": "a question"
+            }
+          ]
+        },
+        {
+          "condition_name": "obj_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "As the class"
+            },
+            {
+              "region_number": 2,
+              "content": "considered the problem"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the teacher"
+            },
+            {
+              "region_number": 5,
+              "content": "asked"
+            },
+            {
+              "region_number": 6,
+              "content": "a question"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 5,
+      "conditions": [
+        {
+          "condition_name": "no-obj_no-comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Though the athlete"
+            },
+            {
+              "region_number": 2,
+              "content": "telephoned"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the coach"
+            },
+            {
+              "region_number": 5,
+              "content": "refused"
+            },
+            {
+              "region_number": 6,
+              "content": "to praise him"
+            }
+          ]
+        },
+        {
+          "condition_name": "obj_no-comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Though the athlete"
+            },
+            {
+              "region_number": 2,
+              "content": "telephoned his manager"
+            },
+            {
+              "region_number": 3,
+              "content": ""
+            },
+            {
+              "region_number": 4,
+              "content": "the coach"
+            },
+            {
+              "region_number": 5,
+              "content": "refused"
+            },
+            {
+              "region_number": 6,
+              "content": "to praise him"
+            }
+          ]
+        },
+        {
+          "condition_name": "no-obj_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Though the athlete"
+            },
+            {
+              "region_number": 2,
+              "content": "telephoned"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the coach"
+            },
+            {
+              "region_number": 5,
+              "content": "refused"
+            },
+            {
+              "region_number": 6,
+              "content": "to praise him"
+            }
+          ]
+        },
+        {
+          "condition_name": "obj_comma",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Though the athlete"
+            },
+            {
+              "region_number": 2,
+              "content": "telephoned his manager"
+            },
+            {
+              "region_number": 3,
+              "content": ","
+            },
+            {
+              "region_number": 4,
+              "content": "the coach"
+            },
+            {
+              "region_number": 5,
+              "content": "refused"
+            },
+            {
+              "region_number": 6,
+              "content": "to praise him"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

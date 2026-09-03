@@ -1,0 +1,549 @@
+{
+  "meta": {
+    "name": "subordination_src-src",
+    "metric": "sum",
+    "comment": "Below is the prediction of an interaction (a lower bar). #Prediction [(5;%sub_no-matrix%) - (5;%no-sub_no-matrix%) ] - [(5;%sub_matrix%) - (5;%no-sub_matrix%) ] > 0 Below is Ethan's original prediction -- a higher bar.",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "Subordinate clause 1",
+    "2": "subj_modifier",
+    "3": "Subordinate clause 2",
+    "4": "obj_modifier",
+    "5": "Main clause"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "((5;%sub_no-matrix%) > (5;%no-sub_no-matrix%) ) & ((5;%sub_matrix%) < (5;%no-sub_matrix%) )"
+    }
+  ],
+  "items": [
+    {
+      "item_number": 12,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Before the actor"
+            },
+            {
+              "region_number": 2,
+              "content": "who had a loud voice"
+            },
+            {
+              "region_number": 3,
+              "content": "delivered the speech"
+            },
+            {
+              "region_number": 4,
+              "content": "that questioned the meaning of life"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The actor"
+            },
+            {
+              "region_number": 2,
+              "content": "who had a loud voice"
+            },
+            {
+              "region_number": 3,
+              "content": "delivered the speech"
+            },
+            {
+              "region_number": 4,
+              "content": "that questioned the meaning of life"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Before the actor"
+            },
+            {
+              "region_number": 2,
+              "content": "who had a loud voice"
+            },
+            {
+              "region_number": 3,
+              "content": "delivered the speech"
+            },
+            {
+              "region_number": 4,
+              "content": "that questioned the meaning of life"
+            },
+            {
+              "region_number": 5,
+              "content": ", she took a deep breath ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The actor"
+            },
+            {
+              "region_number": 2,
+              "content": "who had a loud voice"
+            },
+            {
+              "region_number": 3,
+              "content": "delivered the speech"
+            },
+            {
+              "region_number": 4,
+              "content": "that questioned the meaning of life"
+            },
+            {
+              "region_number": 5,
+              "content": ", she took a deep breath ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 10,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the minister"
+            },
+            {
+              "region_number": 2,
+              "content": "who wore a black suit"
+            },
+            {
+              "region_number": 3,
+              "content": "praised the new building"
+            },
+            {
+              "region_number": 4,
+              "content": "that was built by the square"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The minister"
+            },
+            {
+              "region_number": 2,
+              "content": "who wore a black suit"
+            },
+            {
+              "region_number": 3,
+              "content": "praised the new building"
+            },
+            {
+              "region_number": 4,
+              "content": "that was built by the square"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the minister"
+            },
+            {
+              "region_number": 2,
+              "content": "who wore a black suit"
+            },
+            {
+              "region_number": 3,
+              "content": "praised the new building"
+            },
+            {
+              "region_number": 4,
+              "content": "that was built by the square"
+            },
+            {
+              "region_number": 5,
+              "content": ", it started to rain ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The minister"
+            },
+            {
+              "region_number": 2,
+              "content": "who wore a black suit"
+            },
+            {
+              "region_number": 3,
+              "content": "praised the new building"
+            },
+            {
+              "region_number": 4,
+              "content": "that was built by the square"
+            },
+            {
+              "region_number": 5,
+              "content": ", it started to rain ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 8,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Since the nurse"
+            },
+            {
+              "region_number": 2,
+              "content": "who were from the neighboring research hospital"
+            },
+            {
+              "region_number": 3,
+              "content": "lost her documents"
+            },
+            {
+              "region_number": 4,
+              "content": "that were purchased from the expensive jewelry store"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The nurse"
+            },
+            {
+              "region_number": 2,
+              "content": "who were from the neighboring research hospital"
+            },
+            {
+              "region_number": 3,
+              "content": "lost her documents"
+            },
+            {
+              "region_number": 4,
+              "content": "that were purchased from the expensive jewelry store"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Since the nurse"
+            },
+            {
+              "region_number": 2,
+              "content": "who were from the neighboring research hospital"
+            },
+            {
+              "region_number": 3,
+              "content": "lost her documents"
+            },
+            {
+              "region_number": 4,
+              "content": "that were purchased from the expensive jewelry store"
+            },
+            {
+              "region_number": 5,
+              "content": ", she administered the wrong medicine ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The nurse"
+            },
+            {
+              "region_number": 2,
+              "content": "who were from the neighboring research hospital"
+            },
+            {
+              "region_number": 3,
+              "content": "lost her documents"
+            },
+            {
+              "region_number": 4,
+              "content": "that were purchased from the expensive jewelry store"
+            },
+            {
+              "region_number": 5,
+              "content": ", she administered the wrong medicine ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 2,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the man"
+            },
+            {
+              "region_number": 2,
+              "content": "who was carrying a gun"
+            },
+            {
+              "region_number": 3,
+              "content": "shot the bird"
+            },
+            {
+              "region_number": 4,
+              "content": "that was running away from him"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The man"
+            },
+            {
+              "region_number": 2,
+              "content": "who was carrying a gun"
+            },
+            {
+              "region_number": 3,
+              "content": "shot the bird"
+            },
+            {
+              "region_number": 4,
+              "content": "that was running away from him"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "After the man"
+            },
+            {
+              "region_number": 2,
+              "content": "who was carrying a gun"
+            },
+            {
+              "region_number": 3,
+              "content": "shot the bird"
+            },
+            {
+              "region_number": 4,
+              "content": "that was running away from him"
+            },
+            {
+              "region_number": 5,
+              "content": ", he loaded his gun ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The man"
+            },
+            {
+              "region_number": 2,
+              "content": "who was carrying a gun"
+            },
+            {
+              "region_number": 3,
+              "content": "shot the bird"
+            },
+            {
+              "region_number": 4,
+              "content": "that was running away from him"
+            },
+            {
+              "region_number": 5,
+              "content": ", he loaded his gun ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 19,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Because the clerk"
+            },
+            {
+              "region_number": 2,
+              "content": "who were from the town"
+            },
+            {
+              "region_number": 3,
+              "content": "lost the plans"
+            },
+            {
+              "region_number": 4,
+              "content": "that outlined the old water system"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The clerk"
+            },
+            {
+              "region_number": 2,
+              "content": "who were from the town"
+            },
+            {
+              "region_number": 3,
+              "content": "lost the plans"
+            },
+            {
+              "region_number": 4,
+              "content": "that outlined the old water system"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Because the clerk"
+            },
+            {
+              "region_number": 2,
+              "content": "who were from the town"
+            },
+            {
+              "region_number": 3,
+              "content": "lost the plans"
+            },
+            {
+              "region_number": 4,
+              "content": "that outlined the old water system"
+            },
+            {
+              "region_number": 5,
+              "content": ", the detective looked elsewhere ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The clerk"
+            },
+            {
+              "region_number": 2,
+              "content": "who were from the town"
+            },
+            {
+              "region_number": 3,
+              "content": "lost the plans"
+            },
+            {
+              "region_number": 4,
+              "content": "that outlined the old water system"
+            },
+            {
+              "region_number": 5,
+              "content": ", the detective looked elsewhere ."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

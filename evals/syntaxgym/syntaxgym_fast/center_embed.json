@@ -1,0 +1,452 @@
+{
+  "meta": {
+    "name": "center_embed",
+    "metric": "sum",
+    "comment": "",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "intro",
+    "2": "np_1",
+    "3": "that",
+    "4": "det_2",
+    "5": "np_2",
+    "6": "verb1",
+    "7": "verb2"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "( (6;%plaus%) + (7;%plaus%) ) < ( (6;%implaus%) + (7;%implaus%) )"
+    }
+  ],
+  "items": [
+    {
+      "item_number": 21,
+      "conditions": [
+        {
+          "condition_name": "plaus",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "glass"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "athlete"
+            },
+            {
+              "region_number": 6,
+              "content": "hit"
+            },
+            {
+              "region_number": 7,
+              "content": "cracked"
+            }
+          ]
+        },
+        {
+          "condition_name": "implaus",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "glass"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "athlete"
+            },
+            {
+              "region_number": 6,
+              "content": "cracked"
+            },
+            {
+              "region_number": 7,
+              "content": "hit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 4,
+      "conditions": [
+        {
+          "condition_name": "plaus",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "baby"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "woman"
+            },
+            {
+              "region_number": 6,
+              "content": "held"
+            },
+            {
+              "region_number": 7,
+              "content": "yelled"
+            }
+          ]
+        },
+        {
+          "condition_name": "implaus",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "baby"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "woman"
+            },
+            {
+              "region_number": 6,
+              "content": "yelled"
+            },
+            {
+              "region_number": 7,
+              "content": "held"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 1,
+      "conditions": [
+        {
+          "condition_name": "plaus",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "painting"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "artist"
+            },
+            {
+              "region_number": 6,
+              "content": "painted"
+            },
+            {
+              "region_number": 7,
+              "content": "deteriorated"
+            }
+          ]
+        },
+        {
+          "condition_name": "implaus",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "painting"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "artist"
+            },
+            {
+              "region_number": 6,
+              "content": "deteriorated"
+            },
+            {
+              "region_number": 7,
+              "content": "painted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 24,
+      "conditions": [
+        {
+          "condition_name": "plaus",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "sugar"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "visitor"
+            },
+            {
+              "region_number": 6,
+              "content": "bought"
+            },
+            {
+              "region_number": 7,
+              "content": "dissolved"
+            }
+          ]
+        },
+        {
+          "condition_name": "implaus",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "sugar"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "visitor"
+            },
+            {
+              "region_number": 6,
+              "content": "dissolved"
+            },
+            {
+              "region_number": 7,
+              "content": "bought"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 9,
+      "conditions": [
+        {
+          "condition_name": "plaus",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "floor"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "maid"
+            },
+            {
+              "region_number": 6,
+              "content": "swept"
+            },
+            {
+              "region_number": 7,
+              "content": "cracked"
+            }
+          ]
+        },
+        {
+          "condition_name": "implaus",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "floor"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "maid"
+            },
+            {
+              "region_number": 6,
+              "content": "cracked"
+            },
+            {
+              "region_number": 7,
+              "content": "swept"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 8,
+      "conditions": [
+        {
+          "condition_name": "plaus",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "computer"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "secretary"
+            },
+            {
+              "region_number": 6,
+              "content": "bought"
+            },
+            {
+              "region_number": 7,
+              "content": "crashed"
+            }
+          ]
+        },
+        {
+          "condition_name": "implaus",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "computer"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "secretary"
+            },
+            {
+              "region_number": 6,
+              "content": "crashed"
+            },
+            {
+              "region_number": 7,
+              "content": "bought"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

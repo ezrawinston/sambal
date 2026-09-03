@@ -1,0 +1,20 @@
+{
+ "final_full_blimp_best_temp_avg": {
+  "14M": {
+   "seed0": 59.75373134328359,
+   "seed1": 60.29850746268657,
+   "seed2": 60.198507462686585
+  },
+  "30M": {
+   "seed0": 60.02388059701492,
+   "seed1": 61.53283582089552,
+   "seed2": 60.782089552238816
+  },
+  "5M": {
+   "seed0": 58.41044776119401,
+   "seed1": 59.685074626865685,
+   "seed2": 59.583582089552245
+  }
+ },
+ "note": "Vocab-filtered control: short-regime training on the original text filtered to the top-25k replacement vocabulary at the 10% token budget (as-ran data fraction 0.202 of the filtered corpus), 3 seeds per model size. Values are each run's end-of-training full-BLiMP (1000 pairs per paradigm) best-temperature accuracy evaluated on the EMA weights (the trainer's final test-evaluation block)."
+}

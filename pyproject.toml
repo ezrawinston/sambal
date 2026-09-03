@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sambal"
+version = "0.1.0"
+description = "Constrained relexicalization for controlled corpus ablation"
+requires-python = ">=3.10"
+dependencies = [
+    "spacy>=3.7",
+    "wordfreq==3.1.1",  # frequency data ships in-package; the top25k control corpus depends on it
+    "inflect",
+    "lemminflect",
+    "pydelphin>=1.10,<2",  # ACE/ERG bridge for the to-infinitive lexicon generator
+    "nltk<3.10",  # sent_tokenize behavior changed in 3.10, breaking top25k regeneration
+    "requests",      # resource-generation fetches (sambal/resources/generation)
+    "conllu",        # UD treebank parsing in the resource generators
+    "pyarrow",
+    "huggingface_hub",
+    "numpy",
+    "matplotlib",
+    # The lm/gpt-bert training stack is a named group so other model stacks
+    # can get their own, but it installs with the default install.
+    "sambal[gpt-bert]",
+]
+
+[project.optional-dependencies]
+gpt-bert = [
+    "torch",
+    "tokenizers",
+    "tqdm",
+    "wandb",
+    "scikit-learn<1.7",  # representation probes; snli_probe passes multi_class (removed in 1.7)
+    "datasets",      # PubMed corpus fetch (data/pubmed/get_pubmed.py)
+    "zstandard",     # ...whose source file is .jsonl.zst (datasets streaming decompression)
+]
+
+[tool.setuptools.packages.find]
+include = ["sambal*", "evals*"]
+
+[tool.setuptools.package-data]
+sambal = ["resources/*", "profiles/*"]

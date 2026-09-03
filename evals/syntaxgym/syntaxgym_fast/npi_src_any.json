@@ -1,0 +1,1380 @@
+{
+  "meta": {
+    "name": "npi_src_any",
+    "metric": "sum",
+    "comment": "",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "Licensor",
+    "2": "np",
+    "3": "compl",
+    "4": "rc_verb",
+    "5": "rc_dp",
+    "6": "rc_obj",
+    "7": "matrix_v",
+    "8": "npi",
+    "9": "continuation"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "( (8;%neg_pos%) < (8;%pos_pos%) ) & ( (8;%neg_neg%) < (8;%pos_neg%) ) & ( (8;%neg_pos%) < (8;%pos_neg%) )"
+    }
+  ],
+  "items": [
+    {
+      "item_number": 14,
+      "conditions": [
+        {
+          "condition_name": "neg_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "athlete"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "helped"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "doctors"
+            },
+            {
+              "region_number": 7,
+              "content": "has broken"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "equipment"
+            }
+          ]
+        },
+        {
+          "condition_name": "neg_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "athlete"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "helped"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "doctors"
+            },
+            {
+              "region_number": 7,
+              "content": "has broken"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "equipment"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "athlete"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "helped"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "doctors"
+            },
+            {
+              "region_number": 7,
+              "content": "has broken"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "equipment"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "athlete"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "helped"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "doctors"
+            },
+            {
+              "region_number": 7,
+              "content": "has broken"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "equipment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 18,
+      "conditions": [
+        {
+          "condition_name": "neg_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "assistant"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "hated"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "officers"
+            },
+            {
+              "region_number": 7,
+              "content": "has missed"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "phone calls"
+            }
+          ]
+        },
+        {
+          "condition_name": "neg_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "assistant"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "hated"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "officers"
+            },
+            {
+              "region_number": 7,
+              "content": "has missed"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "phone calls"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "assistant"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "hated"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "officers"
+            },
+            {
+              "region_number": 7,
+              "content": "has missed"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "phone calls"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "assistant"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "hated"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "officers"
+            },
+            {
+              "region_number": 7,
+              "content": "has missed"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "phone calls"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 5,
+      "conditions": [
+        {
+          "condition_name": "neg_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "manager"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "loved"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "architects"
+            },
+            {
+              "region_number": 7,
+              "content": "has completed"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "project"
+            }
+          ]
+        },
+        {
+          "condition_name": "neg_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "manager"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "loved"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "architects"
+            },
+            {
+              "region_number": 7,
+              "content": "has completed"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "project"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "manager"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "loved"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "architects"
+            },
+            {
+              "region_number": 7,
+              "content": "has completed"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "project"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "manager"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "loved"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "architects"
+            },
+            {
+              "region_number": 7,
+              "content": "has completed"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "project"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 11,
+      "conditions": [
+        {
+          "condition_name": "neg_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "guard"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "liked"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "executives"
+            },
+            {
+              "region_number": 7,
+              "content": "has seen"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "crimes"
+            }
+          ]
+        },
+        {
+          "condition_name": "neg_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "guard"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "liked"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "executives"
+            },
+            {
+              "region_number": 7,
+              "content": "has seen"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "crimes"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "guard"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "liked"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "executives"
+            },
+            {
+              "region_number": 7,
+              "content": "has seen"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "crimes"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "guard"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "liked"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "executives"
+            },
+            {
+              "region_number": 7,
+              "content": "has seen"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "crimes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 16,
+      "conditions": [
+        {
+          "condition_name": "neg_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "minister"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "liked"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "managers"
+            },
+            {
+              "region_number": 7,
+              "content": "has missed"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "services"
+            }
+          ]
+        },
+        {
+          "condition_name": "neg_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "minister"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "liked"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "managers"
+            },
+            {
+              "region_number": 7,
+              "content": "has missed"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "services"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "minister"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "liked"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "managers"
+            },
+            {
+              "region_number": 7,
+              "content": "has missed"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "services"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "minister"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "liked"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "managers"
+            },
+            {
+              "region_number": 7,
+              "content": "has missed"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "services"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 35,
+      "conditions": [
+        {
+          "condition_name": "neg_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "ministers"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "loved"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "farmer"
+            },
+            {
+              "region_number": 7,
+              "content": "have advocated"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "evil"
+            }
+          ]
+        },
+        {
+          "condition_name": "neg_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "ministers"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "loved"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "farmer"
+            },
+            {
+              "region_number": 7,
+              "content": "have advocated"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "evil"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "ministers"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "loved"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "farmer"
+            },
+            {
+              "region_number": 7,
+              "content": "have advocated"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "evil"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "ministers"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "loved"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "farmer"
+            },
+            {
+              "region_number": 7,
+              "content": "have advocated"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "evil"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 30,
+      "conditions": [
+        {
+          "condition_name": "neg_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "guards"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "loved"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "taxi driver"
+            },
+            {
+              "region_number": 7,
+              "content": "have caught"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "thieves"
+            }
+          ]
+        },
+        {
+          "condition_name": "neg_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "guards"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "loved"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "taxi driver"
+            },
+            {
+              "region_number": 7,
+              "content": "have caught"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "thieves"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "guards"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "loved"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "taxi driver"
+            },
+            {
+              "region_number": 7,
+              "content": "have caught"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "thieves"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "guards"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "loved"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "taxi driver"
+            },
+            {
+              "region_number": 7,
+              "content": "have caught"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "thieves"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 13,
+      "conditions": [
+        {
+          "condition_name": "neg_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "architect"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "hated"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "pilots"
+            },
+            {
+              "region_number": 7,
+              "content": "has had"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "fame"
+            }
+          ]
+        },
+        {
+          "condition_name": "neg_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "No"
+            },
+            {
+              "region_number": 2,
+              "content": "architect"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "hated"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "pilots"
+            },
+            {
+              "region_number": 7,
+              "content": "has had"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "fame"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_pos",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "architect"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "hated"
+            },
+            {
+              "region_number": 5,
+              "content": "the"
+            },
+            {
+              "region_number": 6,
+              "content": "pilots"
+            },
+            {
+              "region_number": 7,
+              "content": "has had"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "fame"
+            }
+          ]
+        },
+        {
+          "condition_name": "pos_neg",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "architect"
+            },
+            {
+              "region_number": 3,
+              "content": "that"
+            },
+            {
+              "region_number": 4,
+              "content": "hated"
+            },
+            {
+              "region_number": 5,
+              "content": "no"
+            },
+            {
+              "region_number": 6,
+              "content": "pilots"
+            },
+            {
+              "region_number": 7,
+              "content": "has had"
+            },
+            {
+              "region_number": 8,
+              "content": "any"
+            },
+            {
+              "region_number": 9,
+              "content": "fame"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

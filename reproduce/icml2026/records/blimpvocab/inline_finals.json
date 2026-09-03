@@ -1,0 +1,85 @@
+{
+  "checkpoints": {
+    "flat_lr0.0035_seed13": {
+      "blimp": {
+        "best_temp_avg_uid_accuracy": 71.76865671641791,
+        "best_temperature": 1.850000023841858
+      },
+      "syntaxgym": {
+        "best_temp_avg_accuracy": 48.62903279642905,
+        "best_temperature": 2.9000000953674316
+      }
+    },
+    "flat_lr0.0035_seed42": {
+      "blimp": {
+        "best_temp_avg_uid_accuracy": 73.08955223880596,
+        "best_temperature": 1.850000023841858
+      },
+      "syntaxgym": {
+        "best_temp_avg_accuracy": 41.02150595957233,
+        "best_temperature": 0.8500000238418579
+      }
+    },
+    "flat_lr0.007_seed13": {
+      "blimp": {
+        "best_temp_avg_uid_accuracy": 70.95522388059702,
+        "best_temperature": 1.8000000715255737
+      },
+      "syntaxgym": {
+        "best_temp_avg_accuracy": 40.18817224329518,
+        "best_temperature": 0.75
+      }
+    },
+    "flat_lr0.007_seed42": {
+      "blimp": {
+        "best_temp_avg_uid_accuracy": 73.64179104477611,
+        "best_temperature": 2.200000047683716
+      },
+      "syntaxgym": {
+        "best_temp_avg_accuracy": 47.41935523286943,
+        "best_temperature": 1.350000023841858
+      }
+    },
+    "sambal_lr0.0035_seed13": {
+      "blimp": {
+        "best_temp_avg_uid_accuracy": 71.17164179104478,
+        "best_temperature": 0.8500000238418579
+      },
+      "syntaxgym": {
+        "best_temp_avg_accuracy": 48.65591451525688,
+        "best_temperature": 1.5500000715255737
+      }
+    },
+    "sambal_lr0.0035_seed42": {
+      "blimp": {
+        "best_temp_avg_uid_accuracy": 69.73880597014926,
+        "best_temperature": 0.8500000238418579
+      },
+      "syntaxgym": {
+        "best_temp_avg_accuracy": 50.29569936375464,
+        "best_temperature": 0.75
+      }
+    },
+    "sambal_lr0.007_seed13": {
+      "blimp": {
+        "best_temp_avg_uid_accuracy": 70.77611940298507,
+        "best_temperature": 1.3000000715255737
+      },
+      "syntaxgym": {
+        "best_temp_avg_accuracy": 50.349462729307916,
+        "best_temperature": 1.399999976158142
+      }
+    },
+    "sambal_lr0.007_seed42": {
+      "blimp": {
+        "best_temp_avg_uid_accuracy": 71.92537313432835,
+        "best_temperature": 1.25
+      },
+      "syntaxgym": {
+        "best_temp_avg_accuracy": 45.53763477071639,
+        "best_temperature": 0.5
+      }
+    }
+  },
+  "note": "Benchmark-vocabulary corpus variant (the Discussion's restricted-replacement-vocabulary sentence): short-regime training (10 epochs, seeds 13/42, lrs 0.0035 and 0.007) on an ablation corpus whose replacement sampling was restricted to sambal/resources/blimpvocab.txt with uniform sampling within the context bucket (corpus knobs in reproduce/icml2026/corpus/README.md), beside matched runs on the paper's SAMBAL corpus at the same lrs/seeds. Values are each run's last-epoch inline evaluation on the frozen fast subsets at best temperature (BLiMP 200 pairs/task; SyntaxGym fast suites). These runs back Discussion prose only (no table), and their seeds/lrs differ from the paper's headline short-regime protocol (lr 0.007, seeds 0/1/2)."
+}

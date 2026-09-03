@@ -1,0 +1,191 @@
+{
+ "meta": {
+  "copy": "conflict_build_suite",
+  "numpy": "1.26.4",
+  "platform": "macOS-15.7.9-x86_64-i386-64bit",
+  "python": "3.12.11",
+  "tiny_model_sha256": "cb5af179b88306082c1a9108bd9cfcd66cdc37b943c4f873aaadd215f5c873c3",
+  "torch": "2.2.2",
+  "written": "2026-09-03T06:08:55Z"
+ },
+ "values": {
+  "conflicts": [
+   {
+    "UID": "rr_sva_role_reversal_000000",
+    "field": "syntax_semantics",
+    "linguistics_term": "sva_role_reversal",
+    "metadata": {
+     "A_pl": "workers",
+     "B_sg": "truck",
+     "baseline": {
+      "delta_conf": -2.29566574,
+      "delta_ctrl": 6.59884644,
+      "score_bad": -61.562149,
+      "score_control_good": -54.9633026,
+      "score_good": -63.8578148
+     },
+     "control_good": "The workers drive the truck.",
+     "family": "sva_role_reversal",
+     "frame": "drive_vehicle",
+     "other_model": {
+      "delta_conf": -2.29566574,
+      "delta_ctrl": 6.59884644,
+      "score_bad": -61.562149,
+      "score_control_good": -54.9633026,
+      "score_good": -63.8578148
+     },
+     "swap_indices": [1, 4],
+     "swap_only": true,
+     "swap_tokens": ["truck", "workers"],
+     "verb_pl": "drive",
+     "verb_sg3": "drives"
+    },
+    "sentence_bad": "The workers drives the truck.",
+    "sentence_good": "The truck drives the workers."
+   },
+   {
+    "UID": "rr_sva_role_reversal_000001",
+    "field": "syntax_semantics",
+    "linguistics_term": "sva_role_reversal",
+    "metadata": {
+     "A_pl": "workers",
+     "B_sg": "fence",
+     "baseline": {
+      "delta_conf": -1.91783905,
+      "delta_ctrl": 8.13857269,
+      "score_bad": -74.2852707,
+      "score_control_good": -66.146698,
+      "score_good": -76.2031097
+     },
+     "control_good": "The workers paint the fence.",
+     "family": "sva_role_reversal",
+     "frame": "paint_surface",
+     "other_model": {
+      "delta_conf": -1.91783905,
+      "delta_ctrl": 8.13857269,
+      "score_bad": -74.2852707,
+      "score_control_good": -66.146698,
+      "score_good": -76.2031097
+     },
+     "swap_indices": [1, 4],
+     "swap_only": true,
+     "swap_tokens": ["fence", "workers"],
+     "verb_pl": "paint",
+     "verb_sg3": "paints"
+    },
+    "sentence_bad": "The workers paints the fence.",
+    "sentence_good": "The fence paints the workers."
+   },
+   {
+    "UID": "rr_sva_role_reversal_000002",
+    "field": "syntax_semantics",
+    "linguistics_term": "sva_role_reversal",
+    "metadata": {
+     "A_pl": "people",
+     "B_sg": "chair",
+     "baseline": {
+      "delta_conf": -1.20367813,
+      "delta_ctrl": 8.23001862,
+      "score_bad": -63.2779732,
+      "score_control_good": -55.0479546,
+      "score_good": -64.4816513
+     },
+     "control_good": "The people carry the chair.",
+     "family": "sva_role_reversal",
+     "frame": "carry_object",
+     "other_model": {
+      "delta_conf": -1.20367813,
+      "delta_ctrl": 8.23001862,
+      "score_bad": -63.2779732,
+      "score_control_good": -55.0479546,
+      "score_good": -64.4816513
+     },
+     "swap_indices": [1, 4],
+     "swap_only": true,
+     "swap_tokens": ["chair", "people"],
+     "verb_pl": "carry",
+     "verb_sg3": "carries"
+    },
+    "sentence_bad": "The people carries the chair.",
+    "sentence_good": "The chair carries the people."
+   }
+  ],
+  "controls": [
+   {
+    "UID": "rr_ctrl_sva_role_reversal_000000",
+    "field": "control",
+    "linguistics_term": "sva_role_reversal_control",
+    "metadata": {
+     "A_pl": "people",
+     "B_sg": "chair",
+     "baseline": {
+      "delta": 8.23001862,
+      "score_bad": -63.2779732,
+      "score_good": -55.0479546
+     },
+     "family": "sva_role_reversal",
+     "frame": "carry_object",
+     "other_model": {
+      "delta": 8.23001862,
+      "score_bad": -63.2779732,
+      "score_good": -55.0479546
+     },
+     "verb_pl": "carry",
+     "verb_sg3": "carries"
+    },
+    "sentence_bad": "The people carries the chair.",
+    "sentence_good": "The people carry the chair."
+   },
+   {
+    "UID": "rr_ctrl_sva_role_reversal_000001",
+    "field": "control",
+    "linguistics_term": "sva_role_reversal_control",
+    "metadata": {
+     "A_pl": "workers",
+     "B_sg": "fence",
+     "baseline": {
+      "delta": 8.13857269,
+      "score_bad": -74.2852707,
+      "score_good": -66.146698
+     },
+     "family": "sva_role_reversal",
+     "frame": "paint_surface",
+     "other_model": {
+      "delta": 8.13857269,
+      "score_bad": -74.2852707,
+      "score_good": -66.146698
+     },
+     "verb_pl": "paint",
+     "verb_sg3": "paints"
+    },
+    "sentence_bad": "The workers paints the fence.",
+    "sentence_good": "The workers paint the fence."
+   },
+   {
+    "UID": "rr_ctrl_sva_role_reversal_000002",
+    "field": "control",
+    "linguistics_term": "sva_role_reversal_control",
+    "metadata": {
+     "A_pl": "workers",
+     "B_sg": "truck",
+     "baseline": {
+      "delta": 6.59884644,
+      "score_bad": -61.562149,
+      "score_good": -54.9633026
+     },
+     "family": "sva_role_reversal",
+     "frame": "drive_vehicle",
+     "other_model": {
+      "delta": 6.59884644,
+      "score_bad": -61.562149,
+      "score_good": -54.9633026
+     },
+     "verb_pl": "drive",
+     "verb_sg3": "drives"
+    },
+    "sentence_bad": "The workers drives the truck.",
+    "sentence_good": "The workers drive the truck."
+   }
+  ]
+ }
+}

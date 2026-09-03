@@ -1,0 +1,12 @@
+{"annotator_labels": ["entailment"], "captionID": "cap000", "gold_label": "entailment", "pairID": "dev000e", "sentence1": "Workers are repairing the roof of a house.", "sentence2": "People are working on a building."}
+{"annotator_labels": ["neutral"], "captionID": "cap000", "gold_label": "neutral", "pairID": "dev000n", "sentence1": "Workers are repairing the roof of a house.", "sentence2": "The roof was damaged by a storm."}
+{"annotator_labels": ["contradiction"], "captionID": "cap000", "gold_label": "contradiction", "pairID": "dev000c", "sentence1": "Workers are repairing the roof of a house.", "sentence2": "The house has no roof."}
+{"annotator_labels": ["entailment"], "captionID": "cap001", "gold_label": "entailment", "pairID": "dev001e", "sentence1": "A couple dances at a wedding.", "sentence2": "Two people are dancing."}
+{"annotator_labels": ["neutral"], "captionID": "cap001", "gold_label": "neutral", "pairID": "dev001n", "sentence1": "A couple dances at a wedding.", "sentence2": "The couple just got married."}
+{"annotator_labels": ["contradiction"], "captionID": "cap001", "gold_label": "contradiction", "pairID": "dev001c", "sentence1": "A couple dances at a wedding.", "sentence2": "Everyone at the wedding is seated."}
+{"annotator_labels": ["entailment"], "captionID": "cap002", "gold_label": "entailment", "pairID": "dev002e", "sentence1": "A student writes notes in a library.", "sentence2": "Someone is writing."}
+{"annotator_labels": ["neutral"], "captionID": "cap002", "gold_label": "neutral", "pairID": "dev002n", "sentence1": "A student writes notes in a library.", "sentence2": "The student is studying for an exam."}
+{"annotator_labels": ["contradiction"], "captionID": "cap002", "gold_label": "contradiction", "pairID": "dev002c", "sentence1": "A student writes notes in a library.", "sentence2": "The library is closed."}
+{"annotator_labels": ["entailment"], "captionID": "cap003", "gold_label": "entailment", "pairID": "dev003e", "sentence1": "A farmer feeds the chickens at dawn.", "sentence2": "Animals are being fed."}
+{"annotator_labels": ["neutral"], "captionID": "cap003", "gold_label": "neutral", "pairID": "dev003n", "sentence1": "A farmer feeds the chickens at dawn.", "sentence2": "The farmer owns many chickens."}
+{"annotator_labels": ["contradiction"], "captionID": "cap003", "gold_label": "contradiction", "pairID": "dev003c", "sentence1": "A farmer feeds the chickens at dawn.", "sentence2": "The chickens are being sold."}

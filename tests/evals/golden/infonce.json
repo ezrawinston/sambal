@@ -1,0 +1,22 @@
+{
+ "meta": {
+  "copy": "infonce",
+  "note": "feature=logits (output head applied to intermediate layers) dropped with the model copy; it is not on the LanguageModel interface and no reported number used it; the record keys 'feature' and 'mlm_shift' went with it",
+  "numpy": "1.26.4",
+  "platform": "macOS-15.7.9-x86_64-i386-64bit",
+  "python": "3.12.11",
+  "tiny_model_sha256": "cb5af179b88306082c1a9108bd9cfcd66cdc37b943c4f873aaadd215f5c873c3",
+  "torch": "2.2.2",
+  "written": "2026-09-03T06:08:55Z"
+ },
+ "values": {
+  "hidden_mean": {
+   "N_tokens": [49, 49, 49, 49],
+   "infonce_lex": [-0.252866936, -0.119661856, -0.0469435215, -0.00750446071],
+   "infonce_upos": [-0.761491004, -0.638835339, -0.620074577, -0.629057215],
+   "layers": [-1, -2, -3, -4],
+   "pool": "mean",
+   "tau": 0.1
+  }
+ }
+}

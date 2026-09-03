@@ -1,0 +1,12 @@
+{"annotator_labels": ["entailment"], "captionID": "cap000", "gold_label": "entailment", "pairID": "test000e", "sentence1": "Snow covers the quiet mountain village.", "sentence2": "The village is snowy."}
+{"annotator_labels": ["neutral"], "captionID": "cap000", "gold_label": "neutral", "pairID": "test000n", "sentence1": "Snow covers the quiet mountain village.", "sentence2": "The villagers are skiing."}
+{"annotator_labels": ["contradiction"], "captionID": "cap000", "gold_label": "contradiction", "pairID": "test000c", "sentence1": "Snow covers the quiet mountain village.", "sentence2": "The village is hot and sunny."}
+{"annotator_labels": ["entailment"], "captionID": "cap001", "gold_label": "entailment", "pairID": "test001e", "sentence1": "A pilot inspects the plane before takeoff.", "sentence2": "A person checks an aircraft."}
+{"annotator_labels": ["neutral"], "captionID": "cap001", "gold_label": "neutral", "pairID": "test001n", "sentence1": "A pilot inspects the plane before takeoff.", "sentence2": "The flight is going overseas."}
+{"annotator_labels": ["contradiction"], "captionID": "cap001", "gold_label": "contradiction", "pairID": "test001c", "sentence1": "A pilot inspects the plane before takeoff.", "sentence2": "The plane has already landed."}
+{"annotator_labels": ["entailment"], "captionID": "cap002", "gold_label": "entailment", "pairID": "test002e", "sentence1": "A baker sells bread at the market.", "sentence2": "Bread is for sale."}
+{"annotator_labels": ["neutral"], "captionID": "cap002", "gold_label": "neutral", "pairID": "test002n", "sentence1": "A baker sells bread at the market.", "sentence2": "The bread is freshly baked."}
+{"annotator_labels": ["contradiction"], "captionID": "cap002", "gold_label": "contradiction", "pairID": "test002c", "sentence1": "A baker sells bread at the market.", "sentence2": "The market is empty of food."}
+{"annotator_labels": ["entailment"], "captionID": "cap003", "gold_label": "entailment", "pairID": "test003e", "sentence1": "Two friends share an umbrella in the rain.", "sentence2": "It is raining."}
+{"annotator_labels": ["neutral"], "captionID": "cap003", "gold_label": "neutral", "pairID": "test003n", "sentence1": "Two friends share an umbrella in the rain.", "sentence2": "The friends are going to a movie."}
+{"annotator_labels": ["contradiction"], "captionID": "cap003", "gold_label": "contradiction", "pairID": "test003c", "sentence1": "Two friends share an umbrella in the rain.", "sentence2": "The sun is shining brightly."}

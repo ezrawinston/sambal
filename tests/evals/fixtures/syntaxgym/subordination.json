@@ -1,0 +1,324 @@
+{
+ "meta": {
+  "name": "subordination",
+  "metric": "sum",
+  "comment": "tiny fixture",
+  "reference": "",
+  "author": ""
+ },
+ "region_meta": {},
+ "predictions": [
+  {
+   "type": "formula",
+   "formula": "((7;%sub_yes%) - (7;%sub_no%)) < ((7;%no_sub_yes%) - (7;%no_sub_no%))"
+  }
+ ],
+ "items": [
+  {
+   "item_number": 1,
+   "conditions": [
+    {
+     "condition_name": "sub_no",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": ""
+      },
+      {
+       "region_number": 2,
+       "content": "The"
+      },
+      {
+       "region_number": 3,
+       "content": "farmer"
+      },
+      {
+       "region_number": 4,
+       "content": "saw the"
+      },
+      {
+       "region_number": 5,
+       "content": "author"
+      },
+      {
+       "region_number": 6,
+       "content": ","
+      },
+      {
+       "region_number": 7,
+       "content": "the play began"
+      },
+      {
+       "region_number": 8,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "sub_yes",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "After"
+      },
+      {
+       "region_number": 2,
+       "content": "the"
+      },
+      {
+       "region_number": 3,
+       "content": "farmer"
+      },
+      {
+       "region_number": 4,
+       "content": "saw the"
+      },
+      {
+       "region_number": 5,
+       "content": "author"
+      },
+      {
+       "region_number": 6,
+       "content": ","
+      },
+      {
+       "region_number": 7,
+       "content": "the play began"
+      },
+      {
+       "region_number": 8,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "no_sub_no",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": ""
+      },
+      {
+       "region_number": 2,
+       "content": "The"
+      },
+      {
+       "region_number": 3,
+       "content": "farmer"
+      },
+      {
+       "region_number": 4,
+       "content": "saw the"
+      },
+      {
+       "region_number": 5,
+       "content": "author"
+      },
+      {
+       "region_number": 6,
+       "content": "."
+      },
+      {
+       "region_number": 7,
+       "content": ""
+      },
+      {
+       "region_number": 8,
+       "content": ""
+      }
+     ]
+    },
+    {
+     "condition_name": "no_sub_yes",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "After"
+      },
+      {
+       "region_number": 2,
+       "content": "the"
+      },
+      {
+       "region_number": 3,
+       "content": "farmer"
+      },
+      {
+       "region_number": 4,
+       "content": "saw the"
+      },
+      {
+       "region_number": 5,
+       "content": "author"
+      },
+      {
+       "region_number": 6,
+       "content": "."
+      },
+      {
+       "region_number": 7,
+       "content": ""
+      },
+      {
+       "region_number": 8,
+       "content": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item_number": 2,
+   "conditions": [
+    {
+     "condition_name": "sub_no",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": ""
+      },
+      {
+       "region_number": 2,
+       "content": "The"
+      },
+      {
+       "region_number": 3,
+       "content": "author"
+      },
+      {
+       "region_number": 4,
+       "content": "saw the"
+      },
+      {
+       "region_number": 5,
+       "content": "pilot"
+      },
+      {
+       "region_number": 6,
+       "content": ","
+      },
+      {
+       "region_number": 7,
+       "content": "the play began"
+      },
+      {
+       "region_number": 8,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "sub_yes",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "After"
+      },
+      {
+       "region_number": 2,
+       "content": "the"
+      },
+      {
+       "region_number": 3,
+       "content": "author"
+      },
+      {
+       "region_number": 4,
+       "content": "saw the"
+      },
+      {
+       "region_number": 5,
+       "content": "pilot"
+      },
+      {
+       "region_number": 6,
+       "content": ","
+      },
+      {
+       "region_number": 7,
+       "content": "the play began"
+      },
+      {
+       "region_number": 8,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "no_sub_no",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": ""
+      },
+      {
+       "region_number": 2,
+       "content": "The"
+      },
+      {
+       "region_number": 3,
+       "content": "author"
+      },
+      {
+       "region_number": 4,
+       "content": "saw the"
+      },
+      {
+       "region_number": 5,
+       "content": "pilot"
+      },
+      {
+       "region_number": 6,
+       "content": "."
+      },
+      {
+       "region_number": 7,
+       "content": ""
+      },
+      {
+       "region_number": 8,
+       "content": ""
+      }
+     ]
+    },
+    {
+     "condition_name": "no_sub_yes",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "After"
+      },
+      {
+       "region_number": 2,
+       "content": "the"
+      },
+      {
+       "region_number": 3,
+       "content": "author"
+      },
+      {
+       "region_number": 4,
+       "content": "saw the"
+      },
+      {
+       "region_number": 5,
+       "content": "pilot"
+      },
+      {
+       "region_number": 6,
+       "content": "."
+      },
+      {
+       "region_number": 7,
+       "content": ""
+      },
+      {
+       "region_number": 8,
+       "content": ""
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

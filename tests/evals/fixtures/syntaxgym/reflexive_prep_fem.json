@@ -1,0 +1,292 @@
+{
+ "meta": {
+  "name": "reflexive_prep_fem",
+  "metric": "sum",
+  "comment": "tiny fixture",
+  "reference": "",
+  "author": ""
+ },
+ "region_meta": {},
+ "predictions": [
+  {
+   "type": "formula",
+   "formula": "((6;%match_sg%) < (6;%mismatch_sg%)) & ((6;%match_pl%) < (6;%mismatch_pl%))"
+  }
+ ],
+ "items": [
+  {
+   "item_number": 1,
+   "conditions": [
+    {
+     "condition_name": "match_sg",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "senator"
+      },
+      {
+       "region_number": 3,
+       "content": "near the"
+      },
+      {
+       "region_number": 4,
+       "content": "authors"
+      },
+      {
+       "region_number": 5,
+       "content": "praised"
+      },
+      {
+       "region_number": 6,
+       "content": "herself"
+      },
+      {
+       "region_number": 7,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "mismatch_sg",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "senator"
+      },
+      {
+       "region_number": 3,
+       "content": "near the"
+      },
+      {
+       "region_number": 4,
+       "content": "authors"
+      },
+      {
+       "region_number": 5,
+       "content": "praised"
+      },
+      {
+       "region_number": 6,
+       "content": "themselves"
+      },
+      {
+       "region_number": 7,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "match_pl",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "senators"
+      },
+      {
+       "region_number": 3,
+       "content": "near the"
+      },
+      {
+       "region_number": 4,
+       "content": "author"
+      },
+      {
+       "region_number": 5,
+       "content": "praised"
+      },
+      {
+       "region_number": 6,
+       "content": "themselves"
+      },
+      {
+       "region_number": 7,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "mismatch_pl",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "senators"
+      },
+      {
+       "region_number": 3,
+       "content": "near the"
+      },
+      {
+       "region_number": 4,
+       "content": "author"
+      },
+      {
+       "region_number": 5,
+       "content": "praised"
+      },
+      {
+       "region_number": 6,
+       "content": "herself"
+      },
+      {
+       "region_number": 7,
+       "content": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item_number": 2,
+   "conditions": [
+    {
+     "condition_name": "match_sg",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "teacher"
+      },
+      {
+       "region_number": 3,
+       "content": "near the"
+      },
+      {
+       "region_number": 4,
+       "content": "senators"
+      },
+      {
+       "region_number": 5,
+       "content": "praised"
+      },
+      {
+       "region_number": 6,
+       "content": "herself"
+      },
+      {
+       "region_number": 7,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "mismatch_sg",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "teacher"
+      },
+      {
+       "region_number": 3,
+       "content": "near the"
+      },
+      {
+       "region_number": 4,
+       "content": "senators"
+      },
+      {
+       "region_number": 5,
+       "content": "praised"
+      },
+      {
+       "region_number": 6,
+       "content": "themselves"
+      },
+      {
+       "region_number": 7,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "match_pl",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "teachers"
+      },
+      {
+       "region_number": 3,
+       "content": "near the"
+      },
+      {
+       "region_number": 4,
+       "content": "senator"
+      },
+      {
+       "region_number": 5,
+       "content": "praised"
+      },
+      {
+       "region_number": 6,
+       "content": "themselves"
+      },
+      {
+       "region_number": 7,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "mismatch_pl",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "teachers"
+      },
+      {
+       "region_number": 3,
+       "content": "near the"
+      },
+      {
+       "region_number": 4,
+       "content": "senator"
+      },
+      {
+       "region_number": 5,
+       "content": "praised"
+      },
+      {
+       "region_number": 6,
+       "content": "herself"
+      },
+      {
+       "region_number": 7,
+       "content": "."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,67 @@
+# sent_id = tiny-1
+# text = The cat sleeps on the mat.
+1	The	the	DET	DT	_	2	det	_	_
+2	cat	cat	NOUN	NN	_	3	nsubj	_	_
+3	sleeps	sleep	VERB	VBZ	_	0	root	_	_
+4	on	on	ADP	IN	_	6	case	_	_
+5	the	the	DET	DT	_	6	det	_	_
+6	mat	mat	NOUN	NN	_	3	obl	_	_
+7	.	.	PUNCT	.	_	3	punct	_	_
+
+# sent_id = tiny-2
+# text = The dog chased the cat quickly.
+1	The	the	DET	DT	_	2	det	_	_
+2	dog	dog	NOUN	NN	_	3	nsubj	_	_
+3	chased	chase	VERB	VBD	_	0	root	_	_
+4	the	the	DET	DT	_	5	det	_	_
+5	cat	cat	NOUN	NN	_	3	obj	_	_
+6	quickly	quickly	ADV	RB	_	3	advmod	_	_
+7	.	.	PUNCT	.	_	3	punct	_	_
+
+# sent_id = tiny-3
+# text = The dogs don't like the rain.
+1	The	the	DET	DT	_	2	det	_	_
+2	dogs	dog	NOUN	NNS	_	5	nsubj	_	_
+3-4	don't	_	_	_	_	_	_	_	_
+3	do	do	AUX	VBP	_	5	aux	_	_
+4	n't	not	PART	RB	_	5	advmod	_	_
+5	like	like	VERB	VB	_	0	root	_	_
+6	the	the	DET	DT	_	7	det	_	_
+7	rain	rain	NOUN	NN	_	5	obj	_	_
+8	.	.	PUNCT	.	_	5	punct	_	_
+
+# sent_id = tiny-4
+# text = A cat and a dog sat on the mat.
+1	A	a	DET	DT	_	2	det	_	_
+2	cat	cat	NOUN	NN	_	6	nsubj	_	_
+3	and	and	CCONJ	CC	_	5	cc	_	_
+4	a	a	DET	DT	_	5	det	_	_
+5	dog	dog	NOUN	NN	_	2	conj	_	_
+6	sat	sit	VERB	VBD	_	0	root	_	_
+7	on	on	ADP	IN	_	9	case	_	_
+8	the	the	DET	DT	_	9	det	_	_
+9	mat	mat	NOUN	NN	_	6	obl	_	_
+10	.	.	PUNCT	.	_	6	punct	_	_
+
+# sent_id = tiny-5
+# text = The rain stopped and the dog ran.
+1	The	the	DET	DT	_	2	det	_	_
+2	rain	rain	NOUN	NN	_	3	nsubj	_	_
+3	stopped	stop	VERB	VBD	_	0	root	_	_
+4	and	and	CCONJ	CC	_	7	cc	_	_
+5	the	the	DET	DT	_	6	det	_	_
+6	dog	dog	NOUN	NN	_	7	nsubj	_	_
+7	ran	run	VERB	VBD	_	3	conj	_	_
+8	.	.	PUNCT	.	_	3	punct	_	_
+
+# sent_id = tiny-6
+# text = Cats like the mat more than dogs do.
+1	Cats	cat	NOUN	NNS	_	2	nsubj	_	_
+2	like	like	VERB	VBP	_	0	root	_	_
+3	the	the	DET	DT	_	4	det	_	_
+4	mat	mat	NOUN	NN	_	2	obj	_	_
+5	more	more	ADV	RBR	_	2	advmod	_	_
+6	than	than	SCONJ	IN	_	8	mark	_	_
+7	dogs	dog	NOUN	NNS	_	8	nsubj	_	_
+8	do	do	AUX	VBP	_	5	advcl	_	_
+9	.	.	PUNCT	.	_	2	punct	_	_

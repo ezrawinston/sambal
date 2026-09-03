@@ -1,0 +1,1122 @@
+{
+  "meta": {
+    "name": "cleft_modifier",
+    "metric": "sum",
+    "comment": "The below prediction is relatively EASY (getting the interaction right) The below prediction is relatively HARD (each mismatch condition has to be more surprising than the corresponding match condition) #Prediction [(7;%np_mismatch%)>(7;%np_match%)]&[[(6;%vp_mismatch%)+(7;%vp_mismatch%)]>[(6;%vp_match%)+(7;%vp_match%)]]",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "intro",
+    "2": "subj",
+    "3": "verb",
+    "4": "modifier",
+    "5": "passive",
+    "6": "verb.1",
+    "7": "matrix_v"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "((7;%np_mismatch%)-(7;%np_match%))+(((6;%vp_mismatch%)+(7;%vp_mismatch%))-((6;%vp_match%)+(7;%vp_match%)))>0"
+    }
+  ],
+  "items": [
+    {
+      "item_number": 33,
+      "conditions": [
+        {
+          "condition_name": "np_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Who"
+            },
+            {
+              "region_number": 2,
+              "content": "he"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "after he found out the horrible news"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "his friend"
+            }
+          ]
+        },
+        {
+          "condition_name": "np_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Who"
+            },
+            {
+              "region_number": 2,
+              "content": "he"
+            },
+            {
+              "region_number": 3,
+              "content": "called"
+            },
+            {
+              "region_number": 4,
+              "content": "after he found out the horrible news"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "his friend"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Who"
+            },
+            {
+              "region_number": 2,
+              "content": "he"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "after he found out the horrible news"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "hug"
+            },
+            {
+              "region_number": 7,
+              "content": "his friend"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Who"
+            },
+            {
+              "region_number": 2,
+              "content": "he"
+            },
+            {
+              "region_number": 3,
+              "content": "called"
+            },
+            {
+              "region_number": 4,
+              "content": "after he found out the horrible news"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "hug"
+            },
+            {
+              "region_number": 7,
+              "content": "his friend"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 39,
+      "conditions": [
+        {
+          "condition_name": "np_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the maid"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "after he cleared the table"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "the glass"
+            }
+          ]
+        },
+        {
+          "condition_name": "np_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the maid"
+            },
+            {
+              "region_number": 3,
+              "content": "broke"
+            },
+            {
+              "region_number": 4,
+              "content": "after he cleared the table"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "the glass"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the maid"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "after he cleared the table"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "empty"
+            },
+            {
+              "region_number": 7,
+              "content": "the glass"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the maid"
+            },
+            {
+              "region_number": 3,
+              "content": "broke"
+            },
+            {
+              "region_number": 4,
+              "content": "after he cleared the table"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "empty"
+            },
+            {
+              "region_number": 7,
+              "content": "the glass"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 2,
+      "conditions": [
+        {
+          "condition_name": "np_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the young man"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "when the weather turned warm in the spring"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "the crops"
+            }
+          ]
+        },
+        {
+          "condition_name": "np_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the young man"
+            },
+            {
+              "region_number": 3,
+              "content": "planted"
+            },
+            {
+              "region_number": 4,
+              "content": "when the weather turned warm in the spring"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "the crops"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the young man"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "when the weather turned warm in the spring"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "plant"
+            },
+            {
+              "region_number": 7,
+              "content": "the crops"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the young man"
+            },
+            {
+              "region_number": 3,
+              "content": "planted"
+            },
+            {
+              "region_number": 4,
+              "content": "when the weather turned warm in the spring"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "plant"
+            },
+            {
+              "region_number": 7,
+              "content": "the crops"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 36,
+      "conditions": [
+        {
+          "condition_name": "np_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Who"
+            },
+            {
+              "region_number": 2,
+              "content": "you"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "when you heard that the building was going to be destroyed"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "the worker"
+            }
+          ]
+        },
+        {
+          "condition_name": "np_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Who"
+            },
+            {
+              "region_number": 2,
+              "content": "you"
+            },
+            {
+              "region_number": 3,
+              "content": "contracted"
+            },
+            {
+              "region_number": 4,
+              "content": "when you heard that the building was going to be destroyed"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "the worker"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Who"
+            },
+            {
+              "region_number": 2,
+              "content": "you"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "when you heard that the building was going to be destroyed"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "hire"
+            },
+            {
+              "region_number": 7,
+              "content": "the worker"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Who"
+            },
+            {
+              "region_number": 2,
+              "content": "you"
+            },
+            {
+              "region_number": 3,
+              "content": "contracted"
+            },
+            {
+              "region_number": 4,
+              "content": "when you heard that the building was going to be destroyed"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "hire"
+            },
+            {
+              "region_number": 7,
+              "content": "the worker"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 13,
+      "conditions": [
+        {
+          "condition_name": "np_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the guards"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "after they discovered the evidence hidden behind the wall"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "the plot"
+            }
+          ]
+        },
+        {
+          "condition_name": "np_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the guards"
+            },
+            {
+              "region_number": 3,
+              "content": "concocted"
+            },
+            {
+              "region_number": 4,
+              "content": "after they discovered the evidence hidden behind the wall"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "the plot"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the guards"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "after they discovered the evidence hidden behind the wall"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "thwart"
+            },
+            {
+              "region_number": 7,
+              "content": "the plot"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the guards"
+            },
+            {
+              "region_number": 3,
+              "content": "concocted"
+            },
+            {
+              "region_number": 4,
+              "content": "after they discovered the evidence hidden behind the wall"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "thwart"
+            },
+            {
+              "region_number": 7,
+              "content": "the plot"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 35,
+      "conditions": [
+        {
+          "condition_name": "np_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "we"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "after we graduated from law school"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "the argument"
+            }
+          ]
+        },
+        {
+          "condition_name": "np_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "we"
+            },
+            {
+              "region_number": 3,
+              "content": "won"
+            },
+            {
+              "region_number": 4,
+              "content": "after we graduated from law school"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "the argument"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "we"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "after we graduated from law school"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "make"
+            },
+            {
+              "region_number": 7,
+              "content": "the argument"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "we"
+            },
+            {
+              "region_number": 3,
+              "content": "won"
+            },
+            {
+              "region_number": 4,
+              "content": "after we graduated from law school"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "make"
+            },
+            {
+              "region_number": 7,
+              "content": "the argument"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 27,
+      "conditions": [
+        {
+          "condition_name": "np_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "he"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "when he found out that many people were asking similar questions"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "the rumor"
+            }
+          ]
+        },
+        {
+          "condition_name": "np_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "he"
+            },
+            {
+              "region_number": 3,
+              "content": "spread"
+            },
+            {
+              "region_number": 4,
+              "content": "when he found out that many people were asking similar questions"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "the rumor"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "he"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "when he found out that many people were asking similar questions"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "confirm"
+            },
+            {
+              "region_number": 7,
+              "content": "the rumor"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "he"
+            },
+            {
+              "region_number": 3,
+              "content": "spread"
+            },
+            {
+              "region_number": 4,
+              "content": "when he found out that many people were asking similar questions"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "confirm"
+            },
+            {
+              "region_number": 7,
+              "content": "the rumor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 15,
+      "conditions": [
+        {
+          "condition_name": "np_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the representatives"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "before talking to the journalists"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "the law"
+            }
+          ]
+        },
+        {
+          "condition_name": "np_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the representatives"
+            },
+            {
+              "region_number": 3,
+              "content": "wrote"
+            },
+            {
+              "region_number": 4,
+              "content": "before talking to the journalists"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": ""
+            },
+            {
+              "region_number": 7,
+              "content": "the law"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_match",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the representatives"
+            },
+            {
+              "region_number": 3,
+              "content": "did"
+            },
+            {
+              "region_number": 4,
+              "content": "before talking to the journalists"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "repeal"
+            },
+            {
+              "region_number": 7,
+              "content": "the law"
+            }
+          ]
+        },
+        {
+          "condition_name": "vp_mismatch",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "What"
+            },
+            {
+              "region_number": 2,
+              "content": "the representatives"
+            },
+            {
+              "region_number": 3,
+              "content": "wrote"
+            },
+            {
+              "region_number": 4,
+              "content": "before talking to the journalists"
+            },
+            {
+              "region_number": 5,
+              "content": "was"
+            },
+            {
+              "region_number": 6,
+              "content": "repeal"
+            },
+            {
+              "region_number": 7,
+              "content": "the law"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

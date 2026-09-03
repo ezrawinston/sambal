@@ -1,0 +1,3 @@
+model,syntax_acc,syntax_margin_dG,semantic_acc,semantic_margin_dK,n_syntax,n_semantic
+baseline (Long),52.0,0.97,100.0,7.38,100,100
+SAMBAL (Long),97.0,5.73,55.0,0.05,100,100

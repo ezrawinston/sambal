@@ -1,0 +1,5 @@
+model,snli,snli_hard
+baseline,67.4,44.3
+SAMBAL,60.1,36.9
+SAMBAL (no ctx. samp.),60.2,37.3
+chance,33.3,33.3

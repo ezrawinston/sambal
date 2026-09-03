@@ -1,0 +1,109 @@
+{
+ "grids": {
+  "lotr": {
+   "lotr_tiny_from_scratch": {
+    "epochs_seen": 99,
+    "final_blimp_fast_best_temp_avg": 54.73880597014925,
+    "final_dev_ppl": 117.49816877459145
+   },
+   "mini_bs128_lr1e-3": {
+    "epochs_seen": 199,
+    "final_blimp_fast_best_temp_avg": 54.156716417910445,
+    "final_dev_ppl": 96.16136339302194
+   },
+   "mini_bs256_lr5e-3": {
+    "epochs_seen": 299,
+    "final_blimp_fast_best_temp_avg": 54.96268656716418,
+    "final_dev_ppl": 645.9498864291784
+   },
+   "mini_bs32_lr1e-3": {
+    "epochs_seen": 149,
+    "final_blimp_fast_best_temp_avg": 55.33582089552239,
+    "final_dev_ppl": 142.16648983341202
+   },
+   "mini_bs32_lr5e-4": {
+    "epochs_seen": 149,
+    "final_blimp_fast_best_temp_avg": 54.35820895522388,
+    "final_dev_ppl": 79.35011276445705
+   },
+   "mini_fullbatch_lr5e-3": {
+    "epochs_seen": 499,
+    "final_blimp_fast_best_temp_avg": 54.708955223880594,
+    "final_dev_ppl": 846.1141315510204
+   },
+   "small_bs256_lr1e-3": {
+    "epochs_seen": 199,
+    "final_blimp_fast_best_temp_avg": 52.865671641791046,
+    "final_dev_ppl": 180.063760830804
+   },
+   "small_bs32_lr1e-4": {
+    "epochs_seen": 99,
+    "final_blimp_fast_best_temp_avg": 53.11940298507463,
+    "final_dev_ppl": 75.06956862379495
+   },
+   "small_bs32_lr5e-4": {
+    "epochs_seen": 99,
+    "final_blimp_fast_best_temp_avg": 53.8134328358209,
+    "final_dev_ppl": 134.62758164139314
+   },
+   "tiny_bs16_lr1e-3": {
+    "epochs_seen": 199,
+    "final_blimp_fast_best_temp_avg": 55.26865671641791,
+    "final_dev_ppl": 58.73073127186317
+   },
+   "tiny_bs256_lr5e-3": {
+    "epochs_seen": 299,
+    "final_blimp_fast_best_temp_avg": 56.02985074626866,
+    "final_dev_ppl": 72.97237660015999
+   },
+   "tiny_bs32_lr1e-3": {
+    "epochs_seen": 199,
+    "final_blimp_fast_best_temp_avg": 54.52985074626866,
+    "final_dev_ppl": 58.51073981516672
+   },
+   "tiny_bs32_lr5e-3": {
+    "epochs_seen": 199,
+    "final_blimp_fast_best_temp_avg": 53.66417910447761,
+    "final_dev_ppl": 70.04917576994642
+   },
+   "tiny_bs32_lr5e-4": {
+    "epochs_seen": 199,
+    "final_blimp_fast_best_temp_avg": 54.16417910447761,
+    "final_dev_ppl": 54.40558273583467
+   },
+   "tiny_bs64_lr1e-3": {
+    "epochs_seen": 149,
+    "final_blimp_fast_best_temp_avg": 54.74626865671642,
+    "final_dev_ppl": 54.871639405567976
+   },
+   "tiny_fullbatch_lr1e-2": {
+    "epochs_seen": 499,
+    "final_blimp_fast_best_temp_avg": 55.07462686567164,
+    "final_dev_ppl": 91.96261633691327
+   }
+  },
+  "pubmed": {
+   "tiny_bs16_lr1e-3": {
+    "blimp_test_best_temp_avg": 55.452238805970154,
+    "test_ppl": 60.07
+   },
+   "tiny_bs32_lr1e-3": {
+    "blimp_test_best_temp_avg": 55.850746268656714,
+    "test_ppl": 60.46
+   },
+   "tiny_bs32_lr5e-3": {
+    "blimp_test_best_temp_avg": 55.74179104477613,
+    "test_ppl": 58.54
+   },
+   "tiny_bs32_lr5e-4": {
+    "blimp_test_best_temp_avg": 55.980597014925365,
+    "test_ppl": 61.39
+   },
+   "tiny_bs64_lr1e-3": {
+    "blimp_test_best_temp_avg": 55.89850746268657,
+    "test_ppl": 59.43
+   }
+  }
+ },
+ "note": "From-scratch training grids on the two small domain corpora (config name encodes model size / batch size / learning rate)."
+}

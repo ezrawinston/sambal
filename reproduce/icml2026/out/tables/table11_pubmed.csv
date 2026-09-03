@@ -1,0 +1,6 @@
+model,pubmed_ppl,blimp_acc
+baseline (Long),40.51,79.24
+baseline (Long) fine-tuned,23.23,72.12
+SAMBAL (Long),255.39,79.34
+SAMBAL (Long) fine-tuned,32.28,70.97
+Best PubMed from-scratch model (tiny_bs32_lr5e-3),58.54,55.74

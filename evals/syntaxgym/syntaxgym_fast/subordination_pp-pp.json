@@ -1,0 +1,549 @@
+{
+  "meta": {
+    "name": "subordination_pp-pp",
+    "metric": "sum",
+    "comment": "Below is the prediction of an interaction (a lower bar). #Prediction [(5;%sub_no-matrix%) - (5;%no-sub_no-matrix%) ] - [(5;%sub_matrix%) - (5;%no-sub_matrix%) ] > 0 Below is Ethan's original prediction -- a higher bar.",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "Subordinate clause 1",
+    "2": "subj_modifier",
+    "3": "Subordinate clause 2",
+    "4": "obj_modifier",
+    "5": "Main clause"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "((5;%sub_no-matrix%) > (5;%no-sub_no-matrix%) ) & ((5;%sub_matrix%) < (5;%no-sub_matrix%) )"
+    }
+  ],
+  "items": [
+    {
+      "item_number": 1,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "As the doctor"
+            },
+            {
+              "region_number": 2,
+              "content": "in a long white lab jacket"
+            },
+            {
+              "region_number": 3,
+              "content": "studied the book"
+            },
+            {
+              "region_number": 4,
+              "content": "about several recent advances in cancer therapy"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The doctor"
+            },
+            {
+              "region_number": 2,
+              "content": "in a long white lab jacket"
+            },
+            {
+              "region_number": 3,
+              "content": "studied the book"
+            },
+            {
+              "region_number": 4,
+              "content": "about several recent advances in cancer therapy"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "As the doctor"
+            },
+            {
+              "region_number": 2,
+              "content": "in a long white lab jacket"
+            },
+            {
+              "region_number": 3,
+              "content": "studied the book"
+            },
+            {
+              "region_number": 4,
+              "content": "about several recent advances in cancer therapy"
+            },
+            {
+              "region_number": 5,
+              "content": ", the nurse walked into the room ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The doctor"
+            },
+            {
+              "region_number": 2,
+              "content": "in a long white lab jacket"
+            },
+            {
+              "region_number": 3,
+              "content": "studied the book"
+            },
+            {
+              "region_number": 4,
+              "content": "about several recent advances in cancer therapy"
+            },
+            {
+              "region_number": 5,
+              "content": ", the nurse walked into the room ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 20,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the tourists"
+            },
+            {
+              "region_number": 2,
+              "content": "from the village far away"
+            },
+            {
+              "region_number": 3,
+              "content": "read the guide"
+            },
+            {
+              "region_number": 4,
+              "content": "on local customs and religious practices"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The tourists"
+            },
+            {
+              "region_number": 2,
+              "content": "from the village far away"
+            },
+            {
+              "region_number": 3,
+              "content": "read the guide"
+            },
+            {
+              "region_number": 4,
+              "content": "on local customs and religious practices"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "While the tourists"
+            },
+            {
+              "region_number": 2,
+              "content": "from the village far away"
+            },
+            {
+              "region_number": 3,
+              "content": "read the guide"
+            },
+            {
+              "region_number": 4,
+              "content": "on local customs and religious practices"
+            },
+            {
+              "region_number": 5,
+              "content": ", the children played in the sand ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The tourists"
+            },
+            {
+              "region_number": 2,
+              "content": "from the village far away"
+            },
+            {
+              "region_number": 3,
+              "content": "read the guide"
+            },
+            {
+              "region_number": 4,
+              "content": "on local customs and religious practices"
+            },
+            {
+              "region_number": 5,
+              "content": ", the children played in the sand ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 11,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Because the architect"
+            },
+            {
+              "region_number": 2,
+              "content": "from the rival firm across town"
+            },
+            {
+              "region_number": 3,
+              "content": "read the plans"
+            },
+            {
+              "region_number": 4,
+              "content": "from the local housing authority"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The architect"
+            },
+            {
+              "region_number": 2,
+              "content": "from the rival firm across town"
+            },
+            {
+              "region_number": 3,
+              "content": "read the plans"
+            },
+            {
+              "region_number": 4,
+              "content": "from the local housing authority"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Because the architect"
+            },
+            {
+              "region_number": 2,
+              "content": "from the rival firm across town"
+            },
+            {
+              "region_number": 3,
+              "content": "read the plans"
+            },
+            {
+              "region_number": 4,
+              "content": "from the local housing authority"
+            },
+            {
+              "region_number": 5,
+              "content": ", the house was built correctly ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The architect"
+            },
+            {
+              "region_number": 2,
+              "content": "from the rival firm across town"
+            },
+            {
+              "region_number": 3,
+              "content": "read the plans"
+            },
+            {
+              "region_number": 4,
+              "content": "from the local housing authority"
+            },
+            {
+              "region_number": 5,
+              "content": ", the house was built correctly ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 16,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Before the assistant"
+            },
+            {
+              "region_number": 2,
+              "content": "from the crowded office down the hall"
+            },
+            {
+              "region_number": 3,
+              "content": "wrote the letter"
+            },
+            {
+              "region_number": 4,
+              "content": "about potential corruption and bribery"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The assistant"
+            },
+            {
+              "region_number": 2,
+              "content": "from the crowded office down the hall"
+            },
+            {
+              "region_number": 3,
+              "content": "wrote the letter"
+            },
+            {
+              "region_number": 4,
+              "content": "about potential corruption and bribery"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Before the assistant"
+            },
+            {
+              "region_number": 2,
+              "content": "from the crowded office down the hall"
+            },
+            {
+              "region_number": 3,
+              "content": "wrote the letter"
+            },
+            {
+              "region_number": 4,
+              "content": "about potential corruption and bribery"
+            },
+            {
+              "region_number": 5,
+              "content": ", she had a cup of coffee ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The assistant"
+            },
+            {
+              "region_number": 2,
+              "content": "from the crowded office down the hall"
+            },
+            {
+              "region_number": 3,
+              "content": "wrote the letter"
+            },
+            {
+              "region_number": 4,
+              "content": "about potential corruption and bribery"
+            },
+            {
+              "region_number": 5,
+              "content": ", she had a cup of coffee ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 4,
+      "conditions": [
+        {
+          "condition_name": "sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "When the general"
+            },
+            {
+              "region_number": 2,
+              "content": "in the green uniform and black shoes"
+            },
+            {
+              "region_number": 3,
+              "content": "entered the camp"
+            },
+            {
+              "region_number": 4,
+              "content": "in the middle of the busy camp"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_no-matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The general"
+            },
+            {
+              "region_number": 2,
+              "content": "in the green uniform and black shoes"
+            },
+            {
+              "region_number": 3,
+              "content": "entered the camp"
+            },
+            {
+              "region_number": 4,
+              "content": "in the middle of the busy camp"
+            },
+            {
+              "region_number": 5,
+              "content": "."
+            }
+          ]
+        },
+        {
+          "condition_name": "sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "When the general"
+            },
+            {
+              "region_number": 2,
+              "content": "in the green uniform and black shoes"
+            },
+            {
+              "region_number": 3,
+              "content": "entered the camp"
+            },
+            {
+              "region_number": 4,
+              "content": "in the middle of the busy camp"
+            },
+            {
+              "region_number": 5,
+              "content": ", the soldiers cheered ."
+            }
+          ]
+        },
+        {
+          "condition_name": "no-sub_matrix",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The general"
+            },
+            {
+              "region_number": 2,
+              "content": "in the green uniform and black shoes"
+            },
+            {
+              "region_number": 3,
+              "content": "entered the camp"
+            },
+            {
+              "region_number": 4,
+              "content": "in the middle of the busy camp"
+            },
+            {
+              "region_number": 5,
+              "content": ", the soldiers cheered ."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

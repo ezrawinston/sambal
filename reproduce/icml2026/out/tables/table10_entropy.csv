@@ -1,0 +1,4 @@
+corpus,H1_plugin_bits_per_word,delta_h2_vs_baseline,word_types
+baseline,10.8314,,90396
+sambal,10.4847,+0.5724,46502
+vocab_filtered,10.1886,-0.0420,23534

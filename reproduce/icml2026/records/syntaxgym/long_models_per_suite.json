@@ -1,0 +1,69 @@
+{
+ "checkpoints": {
+  "baseline": {
+   "best_temp_avg_accuracy": 70.49180269241333,
+   "best_temperature": 2.200000047683716,
+   "per_suite": {
+    "center_embed": 85.71428656578064,
+    "center_embed_mod": 75.0,
+    "cleft": 97.50000238418579,
+    "cleft_modifier": 97.50000238418579,
+    "fgd_hierarchy": 20.83333283662796,
+    "fgd_object": 66.66666865348816,
+    "fgd_pp": 37.5,
+    "fgd_subject": 37.5,
+    "npi_orc_any": 86.84210777282715,
+    "npi_orc_ever": 94.73684430122375,
+    "npi_src_any": 65.78947305679321,
+    "npi_src_ever": 100.0,
+    "number_orc": 47.36842215061188,
+    "number_prep": 63.15789222717285,
+    "number_src": 68.42105388641357,
+    "reflexive_orc_fem": 15.789473056793213,
+    "reflexive_orc_masc": 31.578946113586426,
+    "reflexive_prep_fem": 5.263157933950424,
+    "reflexive_prep_masc": 57.894736528396606,
+    "reflexive_src_fem": 26.31579041481018,
+    "reflexive_src_masc": 68.42105388641357,
+    "subordination": 100.0,
+    "subordination_orc-orc": 100.0,
+    "subordination_pp-pp": 100.0,
+    "subordination_src-src": 95.652174949646
+   },
+   "temp_1_avg_accuracy": 69.0014898777008
+  },
+  "sambal": {
+   "best_temp_avg_accuracy": 66.02086424827576,
+   "best_temperature": 2.0,
+   "per_suite": {
+    "center_embed": 64.28571343421936,
+    "center_embed_mod": 57.14285969734192,
+    "cleft": 100.0,
+    "cleft_modifier": 94.9999988079071,
+    "fgd_hierarchy": 10.41666641831398,
+    "fgd_object": 79.16666865348816,
+    "fgd_pp": 54.16666865348816,
+    "fgd_subject": 45.83333432674408,
+    "npi_orc_any": 89.47368264198303,
+    "npi_orc_ever": 94.73684430122375,
+    "npi_src_any": 84.21052694320679,
+    "npi_src_ever": 97.36841917037964,
+    "number_orc": 68.42105388641357,
+    "number_prep": 84.21052694320679,
+    "number_src": 57.894736528396606,
+    "reflexive_orc_fem": 0.0,
+    "reflexive_orc_masc": 0.0,
+    "reflexive_prep_fem": 0.0,
+    "reflexive_prep_masc": 5.263157933950424,
+    "reflexive_src_fem": 0.0,
+    "reflexive_src_masc": 0.0,
+    "subordination": 95.652174949646,
+    "subordination_orc-orc": 100.0,
+    "subordination_pp-pp": 95.652174949646,
+    "subordination_src-src": 95.652174949646
+   },
+   "temp_1_avg_accuracy": 63.93442749977112
+  }
+ },
+ "note": "SyntaxGym TEST evaluation of the two long-regime checkpoints (25 core suites), produced by the batch SyntaxGym scorer (evals/eval_syntaxgym_ema_batch.py). Bases: per_suite holds per-suite accuracies at temperature 1.0 (the only per-suite basis the evaluator exposes); best_temp_avg_accuracy and temp_1_avg_accuracy are item-weighted pools over all 671 suite predictions, and best_temperature is the argmax of that pooled average. Weights: the baseline entry is evaluated from the raw (non-EMA) baseline checkpoint - raw weights were noticed to perform better on SyntaxGym for the baseline model, and the paper reports those; the SAMBAL entry (like every non-SyntaxGym result) uses EMA weights."
+}

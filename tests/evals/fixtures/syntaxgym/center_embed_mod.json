@@ -1,0 +1,160 @@
+{
+ "meta": {
+  "name": "center_embed_mod",
+  "metric": "sum",
+  "comment": "tiny fixture",
+  "reference": "",
+  "author": ""
+ },
+ "region_meta": {},
+ "predictions": [
+  {
+   "type": "formula",
+   "formula": "( (5;%plaus%) + (6;%plaus%) ) < ( (5;%implaus%) + (6;%implaus%) )"
+  }
+ ],
+ "items": [
+  {
+   "item_number": 1,
+   "conditions": [
+    {
+     "condition_name": "plaus",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "letter"
+      },
+      {
+       "region_number": 3,
+       "content": "that the"
+      },
+      {
+       "region_number": 4,
+       "content": "farmer"
+      },
+      {
+       "region_number": 5,
+       "content": "wrote"
+      },
+      {
+       "region_number": 6,
+       "content": "arrived"
+      },
+      {
+       "region_number": 7,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "implaus",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "letter"
+      },
+      {
+       "region_number": 3,
+       "content": "that the"
+      },
+      {
+       "region_number": 4,
+       "content": "farmer"
+      },
+      {
+       "region_number": 5,
+       "content": "arrived"
+      },
+      {
+       "region_number": 6,
+       "content": "wrote"
+      },
+      {
+       "region_number": 7,
+       "content": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item_number": 2,
+   "conditions": [
+    {
+     "condition_name": "plaus",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "letter"
+      },
+      {
+       "region_number": 3,
+       "content": "that the"
+      },
+      {
+       "region_number": 4,
+       "content": "teacher"
+      },
+      {
+       "region_number": 5,
+       "content": "wrote"
+      },
+      {
+       "region_number": 6,
+       "content": "arrived"
+      },
+      {
+       "region_number": 7,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "implaus",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "The"
+      },
+      {
+       "region_number": 2,
+       "content": "letter"
+      },
+      {
+       "region_number": 3,
+       "content": "that the"
+      },
+      {
+       "region_number": 4,
+       "content": "teacher"
+      },
+      {
+       "region_number": 5,
+       "content": "arrived"
+      },
+      {
+       "region_number": 6,
+       "content": "wrote"
+      },
+      {
+       "region_number": 7,
+       "content": "."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2872 @@
+{
+ "meta": {
+  "copy": "swap_probe",
+  "numpy": "1.26.4",
+  "platform": "macOS-15.7.9-x86_64-i386-64bit",
+  "python": "3.12.11",
+  "tiny_model_sha256": "cb5af179b88306082c1a9108bd9cfcd66cdc37b943c4f873aaadd215f5c873c3",
+  "torch": "2.2.2",
+  "written": "2026-09-03T06:08:55Z"
+ },
+ "values": {
+  "n_items": 10,
+  "n_single": 0,
+  "pll": [
+   {
+    "all": -64.4720154,
+    "positions_0_2": -18.3218193,
+    "sentence": "The cat sat on the mat."
+   },
+   {
+    "all": -75.7470627,
+    "positions_0_2": -18.2234955,
+    "sentence": "Katherine can't help herself."
+   },
+   {
+    "all": -28.9866753,
+    "positions_0_2": -18.9410706,
+    "sentence": "Go home."
+   },
+   {
+    "all": -82.2892227,
+    "positions_0_2": -18.8202477,
+    "sentence": "Where did the students who arrived late sit?"
+   },
+   {
+    "all": -143.609375,
+    "positions_0_2": -18.2714348,
+    "sentence": "The painting that the artist painted deteriorated, sadly."
+   },
+   {
+    "all": -139.280106,
+    "positions_0_2": -18.2719078,
+    "sentence": "Sam's friends don't know it's raining; they left anyway."
+   }
+  ],
+  "protocols": {
+   "all4": {
+    "grammar_summary": {
+     "by_type": {
+      "1": {
+       "accuracy": 1.0,
+       "mean_margin": 0.797528267,
+       "n": 1
+      },
+      "10": {
+       "accuracy": 0.0,
+       "mean_margin": -0.133910179,
+       "n": 1
+      },
+      "2": {
+       "accuracy": 0.0,
+       "mean_margin": -2.8454361,
+       "n": 1
+      },
+      "3": {
+       "accuracy": 0.0,
+       "mean_margin": -0.563127518,
+       "n": 1
+      },
+      "4": {
+       "accuracy": 1.0,
+       "mean_margin": 3.06839466,
+       "n": 1
+      },
+      "5": {
+       "accuracy": 1.0,
+       "mean_margin": 3.32180691,
+       "n": 1
+      },
+      "6": {
+       "accuracy": 1.0,
+       "mean_margin": 1.24615383,
+       "n": 1
+      },
+      "7": {
+       "accuracy": 1.0,
+       "mean_margin": 0.601520538,
+       "n": 1
+      },
+      "8": {
+       "accuracy": 0.0,
+       "mean_margin": -0.522754669,
+       "n": 1
+      },
+      "9": {
+       "accuracy": 1.0,
+       "mean_margin": 0.598914146,
+       "n": 1
+      }
+     },
+     "overall": {
+      "accuracy": 0.6,
+      "mean_margin": 0.556908989,
+      "n": 10
+     }
+    },
+    "knowledge_summary": {
+     "by_type": {
+      "1": {
+       "accuracy": 0.0,
+       "mean_margin": -0.126821518,
+       "n": 1
+      },
+      "10": {
+       "accuracy": 1.0,
+       "mean_margin": 0.0571861267,
+       "n": 1
+      },
+      "2": {
+       "accuracy": 1.0,
+       "mean_margin": 0.267724991,
+       "n": 1
+      },
+      "3": {
+       "accuracy": 0.0,
+       "mean_margin": -0.037979126,
+       "n": 1
+      },
+      "4": {
+       "accuracy": 0.0,
+       "mean_margin": -0.00291442871,
+       "n": 1
+      },
+      "5": {
+       "accuracy": 0.0,
+       "mean_margin": -0.0321140289,
+       "n": 1
+      },
+      "6": {
+       "accuracy": 0.0,
+       "mean_margin": -0.208340645,
+       "n": 1
+      },
+      "7": {
+       "accuracy": 0.0,
+       "mean_margin": -0.116254807,
+       "n": 1
+      },
+      "8": {
+       "accuracy": 0.0,
+       "mean_margin": -0.16459465,
+       "n": 1
+      },
+      "9": {
+       "accuracy": 0.0,
+       "mean_margin": -0.108939171,
+       "n": 1
+      }
+     },
+     "overall": {
+      "accuracy": 0.2,
+      "mean_margin": -0.0473047256,
+      "n": 10
+     }
+    },
+    "rows": [
+     {
+      "good": "The boy sang the song and ate the bread.",
+      "grammar_cases": [
+       {
+        "bad": "The boy song the sang and bread the ate.",
+        "case_index": 0,
+        "good": "The boy sang the song and ate the bread.",
+        "margin": -0.260780334,
+        "score_bad": -55.8590164,
+        "score_good": -56.1197968,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       },
+       {
+        "bad": "The boy bread the sang and song the ate.",
+        "case_index": 1,
+        "good": "The boy sang the bread and ate the song.",
+        "margin": 1.05874634,
+        "score_bad": -56.7570343,
+        "score_good": -55.698288,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       },
+       {
+        "bad": "The boy bread the ate and song the sang.",
+        "case_index": 2,
+        "good": "The boy ate the bread and sang the song.",
+        "margin": 1.78256226,
+        "score_bad": -56.5693436,
+        "score_good": -54.7867813,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       },
+       {
+        "bad": "The boy song the ate and bread the sang.",
+        "case_index": 3,
+        "good": "The boy ate the song and sang the bread.",
+        "margin": 0.609584808,
+        "score_bad": -56.0139275,
+        "score_good": -55.4043427,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       }
+      ],
+      "grammar_margin": 0.797528267,
+      "grammar_margin_cb": 1.78256226,
+      "grammar_margin_primary": -0.260780334,
+      "grammar_margin_swapped": 1.05874634,
+      "grammar_margin_swapped_cb": 0.609584808,
+      "grammar_mode": "all4",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": -0.126821518,
+      "knowledge_margin_cb": -0.00287246704,
+      "knowledge_margin_primary": -0.250770569,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -18.6402321,
+      "knowledge_score_swapped": -18.3894615,
+      "knowledge_scored_positions_good": [5, 10],
+      "knowledge_scored_positions_good_cb": [5, 10],
+      "knowledge_scored_positions_swapped": [5, 10],
+      "knowledge_scored_positions_swapped_cb": [5, 10],
+      "knowledge_type": "1",
+      "note": "",
+      "swapped": "The boy sang the bread and ate the song.",
+      "x1": "sang",
+      "x2": "ate",
+      "y1": "song",
+      "y2": "bread"
+     },
+     {
+      "good": "The boy drank the coffee and wore the hat.",
+      "grammar_cases": [
+       {
+        "bad": "The boy coffee the drank and hat the wore.",
+        "case_index": 0,
+        "good": "The boy drank the coffee and wore the hat.",
+        "margin": -3.47216415,
+        "score_bad": -52.5065002,
+        "score_good": -55.9786644,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       },
+       {
+        "bad": "The boy hat the drank and coffee the wore.",
+        "case_index": 1,
+        "good": "The boy drank the hat and wore the coffee.",
+        "margin": -4.09662628,
+        "score_bad": -52.3508682,
+        "score_good": -56.4474945,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       },
+       {
+        "bad": "The boy hat the wore and coffee the drank.",
+        "case_index": 2,
+        "good": "The boy wore the hat and drank the coffee.",
+        "margin": -1.81688309,
+        "score_bad": -52.7940025,
+        "score_good": -54.6108856,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       },
+       {
+        "bad": "The boy coffee the wore and hat the drank.",
+        "case_index": 3,
+        "good": "The boy wore the coffee and drank the hat.",
+        "margin": -1.99607086,
+        "score_bad": -52.7782898,
+        "score_good": -54.7743607,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       }
+      ],
+      "grammar_margin": -2.8454361,
+      "grammar_margin_cb": -1.81688309,
+      "grammar_margin_primary": -3.47216415,
+      "grammar_margin_swapped": -4.09662628,
+      "grammar_margin_swapped_cb": -1.99607086,
+      "grammar_mode": "all4",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": 0.267724991,
+      "knowledge_margin_cb": -0.118011475,
+      "knowledge_margin_primary": 0.653461456,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -18.9406586,
+      "knowledge_score_swapped": -19.59412,
+      "knowledge_scored_positions_good": [5, 10],
+      "knowledge_scored_positions_good_cb": [5, 10],
+      "knowledge_scored_positions_swapped": [5, 10],
+      "knowledge_scored_positions_swapped_cb": [5, 10],
+      "knowledge_type": "2",
+      "note": "",
+      "swapped": "The boy drank the hat and wore the coffee.",
+      "x1": "drank",
+      "x2": "wore",
+      "y1": "coffee",
+      "y2": "hat"
+     },
+     {
+      "good": "The boy flew the plane and played the game.",
+      "grammar_cases": [
+       {
+        "bad": "The boy plane the flew and game the played.",
+        "case_index": 0,
+        "good": "The boy flew the plane and played the game.",
+        "margin": -0.745994568,
+        "score_bad": -45.6067352,
+        "score_good": -46.3527298,
+        "scored_positions_bad": [2, 4, 5, 7, 9],
+        "scored_positions_good": [2, 3, 5, 7, 9]
+       },
+       {
+        "bad": "The boy game the flew and plane the played.",
+        "case_index": 1,
+        "good": "The boy flew the game and played the plane.",
+        "margin": 0.202575684,
+        "score_bad": -46.8203773,
+        "score_good": -46.6178017,
+        "scored_positions_bad": [2, 4, 5, 7, 9],
+        "scored_positions_good": [2, 3, 5, 7, 9]
+       },
+       {
+        "bad": "The boy game the played and plane the flew.",
+        "case_index": 2,
+        "good": "The boy played the game and flew the plane.",
+        "margin": 0.013168335,
+        "score_bad": -47.5281219,
+        "score_good": -47.5149536,
+        "scored_positions_bad": [2, 4, 6, 8, 9],
+        "scored_positions_good": [2, 4, 6, 7, 9]
+       },
+       {
+        "bad": "The boy plane the played and game the flew.",
+        "case_index": 3,
+        "good": "The boy played the plane and flew the game.",
+        "margin": -1.72225952,
+        "score_bad": -45.9510651,
+        "score_good": -47.6733246,
+        "scored_positions_bad": [2, 4, 6, 8, 9],
+        "scored_positions_good": [2, 4, 6, 7, 9]
+       }
+      ],
+      "grammar_margin": -0.563127518,
+      "grammar_margin_cb": 0.013168335,
+      "grammar_margin_primary": -0.745994568,
+      "grammar_margin_swapped": 0.202575684,
+      "grammar_margin_swapped_cb": -1.72225952,
+      "grammar_mode": "all4",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.037979126,
+      "knowledge_margin_cb": -0.0659980774,
+      "knowledge_margin_primary": -0.00996017456,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -18.7665176,
+      "knowledge_score_swapped": -18.7565575,
+      "knowledge_scored_positions_good": [5, 9],
+      "knowledge_scored_positions_good_cb": [4, 9],
+      "knowledge_scored_positions_swapped": [5, 9],
+      "knowledge_scored_positions_swapped_cb": [4, 9],
+      "knowledge_type": "3",
+      "note": "",
+      "swapped": "The boy flew the game and played the plane.",
+      "x1": "flew",
+      "x2": "played",
+      "y1": "plane",
+      "y2": "game"
+     },
+     {
+      "good": "The boy played the piano and read the books.",
+      "grammar_cases": [
+       {
+        "bad": "The boy piano the played and books the read.",
+        "case_index": 0,
+        "good": "The boy played the piano and read the books.",
+        "margin": 3.3611145,
+        "score_bad": -46.7651367,
+        "score_good": -43.4040222,
+        "scored_positions_bad": [2, 3, 5, 7, 9],
+        "scored_positions_good": [2, 4, 5, 7, 9]
+       },
+       {
+        "bad": "The boy books the played and piano the read.",
+        "case_index": 1,
+        "good": "The boy played the books and read the piano.",
+        "margin": 3.78792953,
+        "score_bad": -47.6820946,
+        "score_good": -43.894165,
+        "scored_positions_bad": [2, 4, 6, 7, 9],
+        "scored_positions_good": [2, 4, 6, 8, 9]
+       },
+       {
+        "bad": "The boy books the read and piano the played.",
+        "case_index": 2,
+        "good": "The boy read the books and played the piano.",
+        "margin": 2.58763123,
+        "score_bad": -46.5665207,
+        "score_good": -43.9788895,
+        "scored_positions_bad": [2, 4, 6, 7, 9],
+        "scored_positions_good": [2, 4, 6, 8, 9]
+       },
+       {
+        "bad": "The boy piano the read and books the played.",
+        "case_index": 3,
+        "good": "The boy read the piano and played the books.",
+        "margin": 2.53690338,
+        "score_bad": -47.0392227,
+        "score_good": -44.5023193,
+        "scored_positions_bad": [2, 3, 5, 7, 9],
+        "scored_positions_good": [2, 4, 5, 7, 9]
+       }
+      ],
+      "grammar_margin": 3.06839466,
+      "grammar_margin_cb": 2.58763123,
+      "grammar_margin_primary": 3.3611145,
+      "grammar_margin_swapped": 3.78792953,
+      "grammar_margin_swapped_cb": 2.53690338,
+      "grammar_mode": "all4",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": -0.00291442871,
+      "knowledge_margin_cb": -0.0971393585,
+      "knowledge_margin_primary": 0.0913105011,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -25.548624,
+      "knowledge_score_swapped": -25.6399345,
+      "knowledge_scored_positions_good": [4, 5, 9],
+      "knowledge_scored_positions_good_cb": [4, 8, 9],
+      "knowledge_scored_positions_swapped": [4, 8, 9],
+      "knowledge_scored_positions_swapped_cb": [4, 5, 9],
+      "knowledge_type": "4",
+      "note": "",
+      "swapped": "The boy played the books and read the piano.",
+      "x1": "played",
+      "x2": "read",
+      "y1": "piano",
+      "y2": "books"
+     },
+     {
+      "good": "The boy wrote the letter and ate the bagel.",
+      "grammar_cases": [
+       {
+        "bad": "The boy letter the wrote and bagel the ate.",
+        "case_index": 0,
+        "good": "The boy wrote the letter and ate the bagel.",
+        "margin": 4.46600342,
+        "score_bad": -57.85569,
+        "score_good": -53.3896866,
+        "scored_positions_bad": [2, 4, 6, 7, 9, 10],
+        "scored_positions_good": [2, 4, 6, 7, 9, 10]
+       },
+       {
+        "bad": "The boy bagel the wrote and letter the ate.",
+        "case_index": 1,
+        "good": "The boy wrote the bagel and ate the letter.",
+        "margin": 3.07417679,
+        "score_bad": -57.0620346,
+        "score_good": -53.9878578,
+        "scored_positions_bad": [2, 3, 5, 7, 9, 10],
+        "scored_positions_good": [2, 4, 5, 7, 8, 10]
+       },
+       {
+        "bad": "The boy bagel the ate and letter the wrote.",
+        "case_index": 2,
+        "good": "The boy ate the bagel and wrote the letter.",
+        "margin": 2.50939178,
+        "score_bad": -57.6686096,
+        "score_good": -55.1592178,
+        "scored_positions_bad": [2, 3, 5, 6, 8, 10],
+        "scored_positions_good": [2, 3, 5, 6, 8, 10]
+       },
+       {
+        "bad": "The boy letter the ate and bagel the wrote.",
+        "case_index": 3,
+        "good": "The boy ate the letter and wrote the bagel.",
+        "margin": 3.23765564,
+        "score_bad": -57.6143951,
+        "score_good": -54.3767395,
+        "scored_positions_bad": [2, 4, 5, 7, 8, 10],
+        "scored_positions_good": [2, 3, 5, 7, 9, 10]
+       }
+      ],
+      "grammar_margin": 3.32180691,
+      "grammar_margin_cb": 2.50939178,
+      "grammar_margin_primary": 4.46600342,
+      "grammar_margin_swapped": 3.07417679,
+      "grammar_margin_swapped_cb": 3.23765564,
+      "grammar_mode": "all4",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": -0.0321140289,
+      "knowledge_margin_cb": -0.396656036,
+      "knowledge_margin_primary": 0.332427979,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -26.7544899,
+      "knowledge_score_swapped": -27.0869179,
+      "knowledge_scored_positions_good": [4, 9, 10],
+      "knowledge_scored_positions_good_cb": [5, 6, 10],
+      "knowledge_scored_positions_swapped": [4, 5, 10],
+      "knowledge_scored_positions_swapped_cb": [5, 9, 10],
+      "knowledge_type": "5",
+      "note": "",
+      "swapped": "The boy wrote the bagel and ate the letter.",
+      "x1": "wrote",
+      "x2": "ate",
+      "y1": "letter",
+      "y2": "bagel"
+     },
+     {
+      "good": "The boy ran the race and opened the door.",
+      "grammar_cases": [
+       {
+        "bad": "The boy race the ran and door the opened.",
+        "case_index": 0,
+        "good": "The boy ran the race and opened the door.",
+        "margin": 0.045753479,
+        "score_bad": -37.7731323,
+        "score_good": -37.7273788,
+        "scored_positions_bad": [2, 4, 6, 8],
+        "scored_positions_good": [2, 4, 6, 8]
+       },
+       {
+        "bad": "The boy door the ran and race the opened.",
+        "case_index": 1,
+        "good": "The boy ran the door and opened the race.",
+        "margin": 2.35161972,
+        "score_bad": -39.3730736,
+        "score_good": -37.0214539,
+        "scored_positions_bad": [2, 4, 6, 8],
+        "scored_positions_good": [2, 4, 6, 8]
+       },
+       {
+        "bad": "The boy door the opened and race the ran.",
+        "case_index": 2,
+        "good": "The boy opened the door and ran the race.",
+        "margin": 2.50708389,
+        "score_bad": -39.4963646,
+        "score_good": -36.9892807,
+        "scored_positions_bad": [2, 4, 6, 8],
+        "scored_positions_good": [2, 4, 6, 8]
+       },
+       {
+        "bad": "The boy race the opened and door the ran.",
+        "case_index": 3,
+        "good": "The boy opened the race and ran the door.",
+        "margin": 0.0801582336,
+        "score_bad": -37.2761459,
+        "score_good": -37.1959877,
+        "scored_positions_bad": [2, 4, 6, 8],
+        "scored_positions_good": [2, 4, 6, 8]
+       }
+      ],
+      "grammar_margin": 1.24615383,
+      "grammar_margin_cb": 2.50708389,
+      "grammar_margin_primary": 0.045753479,
+      "grammar_margin_swapped": 2.35161972,
+      "grammar_margin_swapped_cb": 0.0801582336,
+      "grammar_mode": "all4",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": -0.208340645,
+      "knowledge_margin_cb": 0.386238098,
+      "knowledge_margin_primary": -0.802919388,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -19.9139423,
+      "knowledge_score_swapped": -19.1110229,
+      "knowledge_scored_positions_good": [4, 8],
+      "knowledge_scored_positions_good_cb": [4, 8],
+      "knowledge_scored_positions_swapped": [4, 8],
+      "knowledge_scored_positions_swapped_cb": [4, 8],
+      "knowledge_type": "6",
+      "note": "",
+      "swapped": "The boy ran the door and opened the race.",
+      "x1": "ran",
+      "x2": "opened",
+      "y1": "race",
+      "y2": "door"
+     },
+     {
+      "good": "The boy kicked the ball and rode the bike.",
+      "grammar_cases": [
+       {
+        "bad": "The boy ball the kicked and bike the rode.",
+        "case_index": 0,
+        "good": "The boy kicked the ball and rode the bike.",
+        "margin": 0.746044159,
+        "score_bad": -55.5494499,
+        "score_good": -54.8034058,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       },
+       {
+        "bad": "The boy bike the kicked and ball the rode.",
+        "case_index": 1,
+        "good": "The boy kicked the bike and rode the ball.",
+        "margin": 1.13549423,
+        "score_bad": -55.1448441,
+        "score_good": -54.0093498,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       },
+       {
+        "bad": "The boy bike the rode and ball the kicked.",
+        "case_index": 2,
+        "good": "The boy rode the bike and kicked the ball.",
+        "margin": 0.250431061,
+        "score_bad": -55.2296944,
+        "score_good": -54.9792633,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       },
+       {
+        "bad": "The boy ball the rode and bike the kicked.",
+        "case_index": 3,
+        "good": "The boy rode the ball and kicked the bike.",
+        "margin": 0.274112701,
+        "score_bad": -56.0078201,
+        "score_good": -55.7337074,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       }
+      ],
+      "grammar_margin": 0.601520538,
+      "grammar_margin_cb": 0.250431061,
+      "grammar_margin_primary": 0.746044159,
+      "grammar_margin_swapped": 1.13549423,
+      "grammar_margin_swapped_cb": 0.274112701,
+      "grammar_mode": "all4",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": -0.116254807,
+      "knowledge_margin_cb": 0.740919113,
+      "knowledge_margin_primary": -0.973428726,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -19.0276737,
+      "knowledge_score_swapped": -18.054245,
+      "knowledge_scored_positions_good": [5, 10],
+      "knowledge_scored_positions_good_cb": [5, 10],
+      "knowledge_scored_positions_swapped": [5, 10],
+      "knowledge_scored_positions_swapped_cb": [5, 10],
+      "knowledge_type": "7",
+      "note": "",
+      "swapped": "The boy kicked the bike and rode the ball.",
+      "x1": "kicked",
+      "x2": "rode",
+      "y1": "ball",
+      "y2": "bike"
+     },
+     {
+      "good": "The boy climbs the mountain and breaks the glass.",
+      "grammar_cases": [
+       {
+        "bad": "The boy mountain the climbs and glass the breaks.",
+        "case_index": 0,
+        "good": "The boy climbs the mountain and breaks the glass.",
+        "margin": -1.12889481,
+        "score_bad": -46.8290138,
+        "score_good": -47.9579086,
+        "scored_positions_bad": [2, 4, 5, 7, 9],
+        "scored_positions_good": [2, 3, 5, 7, 9]
+       },
+       {
+        "bad": "The boy glass the climbs and mountain the breaks.",
+        "case_index": 1,
+        "good": "The boy climbs the glass and breaks the mountain.",
+        "margin": -1.49666977,
+        "score_bad": -46.0511703,
+        "score_good": -47.5478401,
+        "scored_positions_bad": [2, 4, 5, 7, 9],
+        "scored_positions_good": [2, 3, 5, 7, 9]
+       },
+       {
+        "bad": "The boy glass the breaks and mountain the climbs.",
+        "case_index": 2,
+        "good": "The boy breaks the glass and climbs the mountain.",
+        "margin": -0.24987793,
+        "score_bad": -46.315239,
+        "score_good": -46.5651169,
+        "scored_positions_bad": [2, 4, 6, 8, 9],
+        "scored_positions_good": [2, 4, 6, 7, 9]
+       },
+       {
+        "bad": "The boy mountain the breaks and glass the climbs.",
+        "case_index": 3,
+        "good": "The boy breaks the mountain and climbs the glass.",
+        "margin": 0.784423828,
+        "score_bad": -47.2339363,
+        "score_good": -46.4495125,
+        "scored_positions_bad": [2, 4, 6, 8, 9],
+        "scored_positions_good": [2, 4, 6, 7, 9]
+       }
+      ],
+      "grammar_margin": -0.522754669,
+      "grammar_margin_cb": -0.24987793,
+      "grammar_margin_primary": -1.12889481,
+      "grammar_margin_swapped": -1.49666977,
+      "grammar_margin_swapped_cb": 0.784423828,
+      "grammar_mode": "all4",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.16459465,
+      "knowledge_margin_cb": -0.12348175,
+      "knowledge_margin_primary": -0.20570755,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -17.5982819,
+      "knowledge_score_swapped": -17.3925743,
+      "knowledge_scored_positions_good": [5, 9],
+      "knowledge_scored_positions_good_cb": [4, 9],
+      "knowledge_scored_positions_swapped": [5, 9],
+      "knowledge_scored_positions_swapped_cb": [4, 9],
+      "knowledge_type": "8",
+      "note": "",
+      "swapped": "The boy climbs the glass and breaks the mountain.",
+      "x1": "climbs",
+      "x2": "breaks",
+      "y1": "mountain",
+      "y2": "glass"
+     },
+     {
+      "good": "The boy sails the boat and catches the mouse.",
+      "grammar_cases": [
+       {
+        "bad": "The boy boat the sails and mouse the catches.",
+        "case_index": 0,
+        "good": "The boy sails the boat and catches the mouse.",
+        "margin": -0.731117249,
+        "score_bad": -61.9305573,
+        "score_good": -62.6616745,
+        "scored_positions_bad": [2, 4, 5, 7, 8, 10, 11],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10, 11]
+       },
+       {
+        "bad": "The boy mouse the sails and boat the catches.",
+        "case_index": 1,
+        "good": "The boy sails the mouse and catches the boat.",
+        "margin": 0.78155899,
+        "score_bad": -63.922924,
+        "score_good": -63.1413651,
+        "scored_positions_bad": [2, 3, 5, 6, 8, 10, 11],
+        "scored_positions_good": [2, 3, 5, 6, 8, 9, 11]
+       },
+       {
+        "bad": "The boy mouse the catches and boat the sails.",
+        "case_index": 2,
+        "good": "The boy catches the mouse and sails the boat.",
+        "margin": 2.51376343,
+        "score_bad": -64.036644,
+        "score_good": -61.5228806,
+        "scored_positions_bad": [2, 3, 5, 6, 8, 10, 11],
+        "scored_positions_good": [2, 3, 5, 6, 8, 9, 11]
+       },
+       {
+        "bad": "The boy boat the catches and mouse the sails.",
+        "case_index": 3,
+        "good": "The boy catches the boat and sails the mouse.",
+        "margin": -0.168548584,
+        "score_bad": -61.537365,
+        "score_good": -61.7059135,
+        "scored_positions_bad": [2, 4, 5, 7, 8, 10, 11],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10, 11]
+       }
+      ],
+      "grammar_margin": 0.598914146,
+      "grammar_margin_cb": 2.51376343,
+      "grammar_margin_primary": -0.731117249,
+      "grammar_margin_swapped": 0.78155899,
+      "grammar_margin_swapped_cb": -0.168548584,
+      "grammar_mode": "all4",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": -0.108939171,
+      "knowledge_margin_cb": -0.106693268,
+      "knowledge_margin_primary": -0.111185074,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -26.6029186,
+      "knowledge_score_swapped": -26.4917336,
+      "knowledge_scored_positions_good": [5, 10, 11],
+      "knowledge_scored_positions_good_cb": [5, 6, 11],
+      "knowledge_scored_positions_swapped": [5, 6, 11],
+      "knowledge_scored_positions_swapped_cb": [5, 10, 11],
+      "knowledge_type": "9",
+      "note": "",
+      "swapped": "The boy sails the mouse and catches the boat.",
+      "x1": "sails",
+      "x2": "catches",
+      "y1": "boat",
+      "y2": "mouse"
+     },
+     {
+      "good": "The boy wears the shoes and cleans the room.",
+      "grammar_cases": [
+       {
+        "bad": "The boy shoes the wears and room the cleans.",
+        "case_index": 0,
+        "good": "The boy wears the shoes and cleans the room.",
+        "margin": 0.594116211,
+        "score_bad": -54.9205704,
+        "score_good": -54.3264542,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       },
+       {
+        "bad": "The boy room the wears and shoes the cleans.",
+        "case_index": 1,
+        "good": "The boy wears the room and cleans the shoes.",
+        "margin": -1.94631195,
+        "score_bad": -52.7748337,
+        "score_good": -54.7211456,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       },
+       {
+        "bad": "The boy room the cleans and shoes the wears.",
+        "case_index": 2,
+        "good": "The boy cleans the room and wears the shoes.",
+        "margin": -0.747612,
+        "score_bad": -53.0884552,
+        "score_good": -53.8360672,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       },
+       {
+        "bad": "The boy shoes the cleans and room the wears.",
+        "case_index": 3,
+        "good": "The boy cleans the shoes and wears the room.",
+        "margin": 1.56416702,
+        "score_bad": -54.9692001,
+        "score_good": -53.4050331,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       }
+      ],
+      "grammar_margin": -0.133910179,
+      "grammar_margin_cb": -0.747612,
+      "grammar_margin_primary": 0.594116211,
+      "grammar_margin_swapped": -1.94631195,
+      "grammar_margin_swapped_cb": 1.56416702,
+      "grammar_mode": "all4",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": 0.0571861267,
+      "knowledge_margin_cb": -0.374652863,
+      "knowledge_margin_primary": 0.489025116,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -17.6495018,
+      "knowledge_score_swapped": -18.1385269,
+      "knowledge_scored_positions_good": [5, 10],
+      "knowledge_scored_positions_good_cb": [5, 10],
+      "knowledge_scored_positions_swapped": [5, 10],
+      "knowledge_scored_positions_swapped_cb": [5, 10],
+      "knowledge_type": "10",
+      "note": "",
+      "swapped": "The boy wears the room and cleans the shoes.",
+      "x1": "wears",
+      "x2": "cleans",
+      "y1": "shoes",
+      "y2": "room"
+     }
+    ]
+   },
+   "default": {
+    "grammar_summary": {
+     "by_type": {
+      "1": {
+       "accuracy": 0.0,
+       "mean_margin": -0.260780334,
+       "n": 1
+      },
+      "10": {
+       "accuracy": 1.0,
+       "mean_margin": 0.594116211,
+       "n": 1
+      },
+      "2": {
+       "accuracy": 0.0,
+       "mean_margin": -3.47216415,
+       "n": 1
+      },
+      "3": {
+       "accuracy": 0.0,
+       "mean_margin": -0.745994568,
+       "n": 1
+      },
+      "4": {
+       "accuracy": 1.0,
+       "mean_margin": 3.3611145,
+       "n": 1
+      },
+      "5": {
+       "accuracy": 1.0,
+       "mean_margin": 4.46600342,
+       "n": 1
+      },
+      "6": {
+       "accuracy": 1.0,
+       "mean_margin": 0.045753479,
+       "n": 1
+      },
+      "7": {
+       "accuracy": 1.0,
+       "mean_margin": 0.746044159,
+       "n": 1
+      },
+      "8": {
+       "accuracy": 0.0,
+       "mean_margin": -1.12889481,
+       "n": 1
+      },
+      "9": {
+       "accuracy": 0.0,
+       "mean_margin": -0.731117249,
+       "n": 1
+      }
+     },
+     "overall": {
+      "accuracy": 0.5,
+      "mean_margin": 0.287408066,
+      "n": 10
+     }
+    },
+    "knowledge_summary": {
+     "by_type": {
+      "1": {
+       "accuracy": 0.0,
+       "mean_margin": -0.250770569,
+       "n": 1
+      },
+      "10": {
+       "accuracy": 1.0,
+       "mean_margin": 0.489025116,
+       "n": 1
+      },
+      "2": {
+       "accuracy": 1.0,
+       "mean_margin": 0.653461456,
+       "n": 1
+      },
+      "3": {
+       "accuracy": 0.0,
+       "mean_margin": -0.00996017456,
+       "n": 1
+      },
+      "4": {
+       "accuracy": 1.0,
+       "mean_margin": 0.0913105011,
+       "n": 1
+      },
+      "5": {
+       "accuracy": 1.0,
+       "mean_margin": 0.332427979,
+       "n": 1
+      },
+      "6": {
+       "accuracy": 0.0,
+       "mean_margin": -0.802919388,
+       "n": 1
+      },
+      "7": {
+       "accuracy": 0.0,
+       "mean_margin": -0.973428726,
+       "n": 1
+      },
+      "8": {
+       "accuracy": 0.0,
+       "mean_margin": -0.20570755,
+       "n": 1
+      },
+      "9": {
+       "accuracy": 0.0,
+       "mean_margin": -0.111185074,
+       "n": 1
+      }
+     },
+     "overall": {
+      "accuracy": 0.4,
+      "mean_margin": -0.0787746429,
+      "n": 10
+     }
+    },
+    "rows": [
+     {
+      "good": "The boy sang the song and ate the bread.",
+      "grammar_cases": [
+       {
+        "bad": "The boy song the sang and bread the ate.",
+        "case_index": 0,
+        "good": "The boy sang the song and ate the bread.",
+        "margin": -0.260780334,
+        "score_bad": -55.8590164,
+        "score_good": -56.1197968,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       }
+      ],
+      "grammar_margin": -0.260780334,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": -0.260780334,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "primary",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.250770569,
+      "knowledge_margin_cb": null,
+      "knowledge_margin_primary": -0.250770569,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -18.6402321,
+      "knowledge_score_swapped": -18.3894615,
+      "knowledge_scored_positions_good": [5, 10],
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": [5, 10],
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "1",
+      "note": "",
+      "swapped": "The boy sang the bread and ate the song.",
+      "x1": "sang",
+      "x2": "ate",
+      "y1": "song",
+      "y2": "bread"
+     },
+     {
+      "good": "The boy drank the coffee and wore the hat.",
+      "grammar_cases": [
+       {
+        "bad": "The boy coffee the drank and hat the wore.",
+        "case_index": 0,
+        "good": "The boy drank the coffee and wore the hat.",
+        "margin": -3.47216415,
+        "score_bad": -52.5065002,
+        "score_good": -55.9786644,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       }
+      ],
+      "grammar_margin": -3.47216415,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": -3.47216415,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "primary",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": 0.653461456,
+      "knowledge_margin_cb": null,
+      "knowledge_margin_primary": 0.653461456,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -18.9406586,
+      "knowledge_score_swapped": -19.59412,
+      "knowledge_scored_positions_good": [5, 10],
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": [5, 10],
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "2",
+      "note": "",
+      "swapped": "The boy drank the hat and wore the coffee.",
+      "x1": "drank",
+      "x2": "wore",
+      "y1": "coffee",
+      "y2": "hat"
+     },
+     {
+      "good": "The boy flew the plane and played the game.",
+      "grammar_cases": [
+       {
+        "bad": "The boy plane the flew and game the played.",
+        "case_index": 0,
+        "good": "The boy flew the plane and played the game.",
+        "margin": -0.745994568,
+        "score_bad": -45.6067352,
+        "score_good": -46.3527298,
+        "scored_positions_bad": [2, 4, 5, 7, 9],
+        "scored_positions_good": [2, 3, 5, 7, 9]
+       }
+      ],
+      "grammar_margin": -0.745994568,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": -0.745994568,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "primary",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.00996017456,
+      "knowledge_margin_cb": null,
+      "knowledge_margin_primary": -0.00996017456,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -18.7665176,
+      "knowledge_score_swapped": -18.7565575,
+      "knowledge_scored_positions_good": [5, 9],
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": [5, 9],
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "3",
+      "note": "",
+      "swapped": "The boy flew the game and played the plane.",
+      "x1": "flew",
+      "x2": "played",
+      "y1": "plane",
+      "y2": "game"
+     },
+     {
+      "good": "The boy played the piano and read the books.",
+      "grammar_cases": [
+       {
+        "bad": "The boy piano the played and books the read.",
+        "case_index": 0,
+        "good": "The boy played the piano and read the books.",
+        "margin": 3.3611145,
+        "score_bad": -46.7651367,
+        "score_good": -43.4040222,
+        "scored_positions_bad": [2, 3, 5, 7, 9],
+        "scored_positions_good": [2, 4, 5, 7, 9]
+       }
+      ],
+      "grammar_margin": 3.3611145,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": 3.3611145,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "primary",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": 0.0913105011,
+      "knowledge_margin_cb": null,
+      "knowledge_margin_primary": 0.0913105011,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -25.548624,
+      "knowledge_score_swapped": -25.6399345,
+      "knowledge_scored_positions_good": [4, 5, 9],
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": [4, 8, 9],
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "4",
+      "note": "",
+      "swapped": "The boy played the books and read the piano.",
+      "x1": "played",
+      "x2": "read",
+      "y1": "piano",
+      "y2": "books"
+     },
+     {
+      "good": "The boy wrote the letter and ate the bagel.",
+      "grammar_cases": [
+       {
+        "bad": "The boy letter the wrote and bagel the ate.",
+        "case_index": 0,
+        "good": "The boy wrote the letter and ate the bagel.",
+        "margin": 4.46600342,
+        "score_bad": -57.85569,
+        "score_good": -53.3896866,
+        "scored_positions_bad": [2, 4, 6, 7, 9, 10],
+        "scored_positions_good": [2, 4, 6, 7, 9, 10]
+       }
+      ],
+      "grammar_margin": 4.46600342,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": 4.46600342,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "primary",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": 0.332427979,
+      "knowledge_margin_cb": null,
+      "knowledge_margin_primary": 0.332427979,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -26.7544899,
+      "knowledge_score_swapped": -27.0869179,
+      "knowledge_scored_positions_good": [4, 9, 10],
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": [4, 5, 10],
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "5",
+      "note": "",
+      "swapped": "The boy wrote the bagel and ate the letter.",
+      "x1": "wrote",
+      "x2": "ate",
+      "y1": "letter",
+      "y2": "bagel"
+     },
+     {
+      "good": "The boy ran the race and opened the door.",
+      "grammar_cases": [
+       {
+        "bad": "The boy race the ran and door the opened.",
+        "case_index": 0,
+        "good": "The boy ran the race and opened the door.",
+        "margin": 0.045753479,
+        "score_bad": -37.7731323,
+        "score_good": -37.7273788,
+        "scored_positions_bad": [2, 4, 6, 8],
+        "scored_positions_good": [2, 4, 6, 8]
+       }
+      ],
+      "grammar_margin": 0.045753479,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": 0.045753479,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "primary",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": -0.802919388,
+      "knowledge_margin_cb": null,
+      "knowledge_margin_primary": -0.802919388,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -19.9139423,
+      "knowledge_score_swapped": -19.1110229,
+      "knowledge_scored_positions_good": [4, 8],
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": [4, 8],
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "6",
+      "note": "",
+      "swapped": "The boy ran the door and opened the race.",
+      "x1": "ran",
+      "x2": "opened",
+      "y1": "race",
+      "y2": "door"
+     },
+     {
+      "good": "The boy kicked the ball and rode the bike.",
+      "grammar_cases": [
+       {
+        "bad": "The boy ball the kicked and bike the rode.",
+        "case_index": 0,
+        "good": "The boy kicked the ball and rode the bike.",
+        "margin": 0.746044159,
+        "score_bad": -55.5494499,
+        "score_good": -54.8034058,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       }
+      ],
+      "grammar_margin": 0.746044159,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": 0.746044159,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "primary",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": -0.973428726,
+      "knowledge_margin_cb": null,
+      "knowledge_margin_primary": -0.973428726,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -19.0276737,
+      "knowledge_score_swapped": -18.054245,
+      "knowledge_scored_positions_good": [5, 10],
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": [5, 10],
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "7",
+      "note": "",
+      "swapped": "The boy kicked the bike and rode the ball.",
+      "x1": "kicked",
+      "x2": "rode",
+      "y1": "ball",
+      "y2": "bike"
+     },
+     {
+      "good": "The boy climbs the mountain and breaks the glass.",
+      "grammar_cases": [
+       {
+        "bad": "The boy mountain the climbs and glass the breaks.",
+        "case_index": 0,
+        "good": "The boy climbs the mountain and breaks the glass.",
+        "margin": -1.12889481,
+        "score_bad": -46.8290138,
+        "score_good": -47.9579086,
+        "scored_positions_bad": [2, 4, 5, 7, 9],
+        "scored_positions_good": [2, 3, 5, 7, 9]
+       }
+      ],
+      "grammar_margin": -1.12889481,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": -1.12889481,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "primary",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.20570755,
+      "knowledge_margin_cb": null,
+      "knowledge_margin_primary": -0.20570755,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -17.5982819,
+      "knowledge_score_swapped": -17.3925743,
+      "knowledge_scored_positions_good": [5, 9],
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": [5, 9],
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "8",
+      "note": "",
+      "swapped": "The boy climbs the glass and breaks the mountain.",
+      "x1": "climbs",
+      "x2": "breaks",
+      "y1": "mountain",
+      "y2": "glass"
+     },
+     {
+      "good": "The boy sails the boat and catches the mouse.",
+      "grammar_cases": [
+       {
+        "bad": "The boy boat the sails and mouse the catches.",
+        "case_index": 0,
+        "good": "The boy sails the boat and catches the mouse.",
+        "margin": -0.731117249,
+        "score_bad": -61.9305573,
+        "score_good": -62.6616745,
+        "scored_positions_bad": [2, 4, 5, 7, 8, 10, 11],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10, 11]
+       }
+      ],
+      "grammar_margin": -0.731117249,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": -0.731117249,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "primary",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.111185074,
+      "knowledge_margin_cb": null,
+      "knowledge_margin_primary": -0.111185074,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -26.6029186,
+      "knowledge_score_swapped": -26.4917336,
+      "knowledge_scored_positions_good": [5, 10, 11],
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": [5, 6, 11],
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "9",
+      "note": "",
+      "swapped": "The boy sails the mouse and catches the boat.",
+      "x1": "sails",
+      "x2": "catches",
+      "y1": "boat",
+      "y2": "mouse"
+     },
+     {
+      "good": "The boy wears the shoes and cleans the room.",
+      "grammar_cases": [
+       {
+        "bad": "The boy shoes the wears and room the cleans.",
+        "case_index": 0,
+        "good": "The boy wears the shoes and cleans the room.",
+        "margin": 0.594116211,
+        "score_bad": -54.9205704,
+        "score_good": -54.3264542,
+        "scored_positions_bad": [2, 4, 5, 7, 9, 10],
+        "scored_positions_good": [2, 3, 5, 7, 8, 10]
+       }
+      ],
+      "grammar_margin": 0.594116211,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": 0.594116211,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "primary",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": 0.489025116,
+      "knowledge_margin_cb": null,
+      "knowledge_margin_primary": 0.489025116,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -17.6495018,
+      "knowledge_score_swapped": -18.1385269,
+      "knowledge_scored_positions_good": [5, 10],
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": [5, 10],
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "10",
+      "note": "",
+      "swapped": "The boy wears the room and cleans the shoes.",
+      "x1": "wears",
+      "x2": "cleans",
+      "y1": "shoes",
+      "y2": "room"
+     }
+    ]
+   },
+   "paper": {
+    "grammar_summary": {
+     "by_type": {
+      "1": {
+       "accuracy": 0.0,
+       "mean_margin": -17.7734365,
+       "n": 1
+      },
+      "10": {
+       "accuracy": 0.0,
+       "mean_margin": -17.8934021,
+       "n": 1
+      },
+      "2": {
+       "accuracy": 0.0,
+       "mean_margin": -20.0888634,
+       "n": 1
+      },
+      "3": {
+       "accuracy": 0.0,
+       "mean_margin": -14.6861396,
+       "n": 1
+      },
+      "4": {
+       "accuracy": 0.0,
+       "mean_margin": -6.70695686,
+       "n": 1
+      },
+      "5": {
+       "accuracy": 0.0,
+       "mean_margin": -11.704586,
+       "n": 1
+      },
+      "6": {
+       "accuracy": 0.0,
+       "mean_margin": -9.13862324,
+       "n": 1
+      },
+      "7": {
+       "accuracy": 0.0,
+       "mean_margin": -17.8028154,
+       "n": 1
+      },
+      "8": {
+       "accuracy": 0.0,
+       "mean_margin": -13.8500977,
+       "n": 1
+      },
+      "9": {
+       "accuracy": 0.0,
+       "mean_margin": -16.6552114,
+       "n": 1
+      }
+     },
+     "overall": {
+      "accuracy": 0.0,
+      "mean_margin": -14.6300132,
+      "n": 10
+     }
+    },
+    "knowledge_summary": {
+     "by_type": {
+      "1": {
+       "accuracy": 0.0,
+       "mean_margin": -0.126821518,
+       "n": 1
+      },
+      "10": {
+       "accuracy": 1.0,
+       "mean_margin": 0.0571861267,
+       "n": 1
+      },
+      "2": {
+       "accuracy": 1.0,
+       "mean_margin": 0.267724991,
+       "n": 1
+      },
+      "3": {
+       "accuracy": 0.0,
+       "mean_margin": -0.037979126,
+       "n": 1
+      },
+      "4": {
+       "accuracy": 0.0,
+       "mean_margin": -0.00291442871,
+       "n": 1
+      },
+      "5": {
+       "accuracy": 0.0,
+       "mean_margin": -0.0321140289,
+       "n": 1
+      },
+      "6": {
+       "accuracy": 0.0,
+       "mean_margin": -0.208340645,
+       "n": 1
+      },
+      "7": {
+       "accuracy": 0.0,
+       "mean_margin": -0.116254807,
+       "n": 1
+      },
+      "8": {
+       "accuracy": 0.0,
+       "mean_margin": -0.16459465,
+       "n": 1
+      },
+      "9": {
+       "accuracy": 0.0,
+       "mean_margin": -0.108939171,
+       "n": 1
+      }
+     },
+     "overall": {
+      "accuracy": 0.2,
+      "mean_margin": -0.0473047256,
+      "n": 10
+     }
+    },
+    "rows": [
+     {
+      "good": "The boy sang the song and ate the bread.",
+      "grammar_cases": [
+       {
+        "case_index": 0,
+        "score": -55.698288,
+        "scored_positions": [2, 3, 5, 7, 8, 10],
+        "sentence": "The boy sang the bread and ate the song.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 1,
+        "score": -55.4043427,
+        "scored_positions": [2, 3, 5, 7, 8, 10],
+        "sentence": "The boy ate the song and sang the bread.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 2,
+        "score": -37.2092972,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy song the sang and bread the sang.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 3,
+        "score": -38.1308556,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy song the ate and bread the ate.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 4,
+        "score": -37.2319412,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy bread the sang and song the sang.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 5,
+        "score": -38.5394211,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy bread the ate and song the ate.",
+        "type": "ungrammatical"
+       }
+      ],
+      "grammar_margin": -17.7734365,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": null,
+      "grammar_margin_swapped": -55.698288,
+      "grammar_margin_swapped_cb": -55.4043427,
+      "grammar_mode": "nonsense_gram",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.126821518,
+      "knowledge_margin_cb": -0.00287246704,
+      "knowledge_margin_primary": -0.250770569,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -18.6402321,
+      "knowledge_score_swapped": -18.3894615,
+      "knowledge_scored_positions_good": [5, 10],
+      "knowledge_scored_positions_good_cb": [5, 10],
+      "knowledge_scored_positions_swapped": [5, 10],
+      "knowledge_scored_positions_swapped_cb": [5, 10],
+      "knowledge_type": "1",
+      "note": "",
+      "swapped": "The boy sang the bread and ate the song.",
+      "x1": "sang",
+      "x2": "ate",
+      "y1": "song",
+      "y2": "bread"
+     },
+     {
+      "good": "The boy drank the coffee and wore the hat.",
+      "grammar_cases": [
+       {
+        "case_index": 0,
+        "score": -56.4474945,
+        "scored_positions": [2, 3, 5, 7, 8, 10],
+        "sentence": "The boy drank the hat and wore the coffee.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 1,
+        "score": -54.7743607,
+        "scored_positions": [2, 3, 5, 7, 8, 10],
+        "sentence": "The boy wore the coffee and drank the hat.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 2,
+        "score": -35.858532,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy coffee the drank and hat the drank.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 3,
+        "score": -35.2119102,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy coffee the wore and hat the wore.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 4,
+        "score": -35.4194946,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy hat the drank and coffee the drank.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 5,
+        "score": -35.59832,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy hat the wore and coffee the wore.",
+        "type": "ungrammatical"
+       }
+      ],
+      "grammar_margin": -20.0888634,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": null,
+      "grammar_margin_swapped": -56.4474945,
+      "grammar_margin_swapped_cb": -54.7743607,
+      "grammar_mode": "nonsense_gram",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": 0.267724991,
+      "knowledge_margin_cb": -0.118011475,
+      "knowledge_margin_primary": 0.653461456,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -18.9406586,
+      "knowledge_score_swapped": -19.59412,
+      "knowledge_scored_positions_good": [5, 10],
+      "knowledge_scored_positions_good_cb": [5, 10],
+      "knowledge_scored_positions_swapped": [5, 10],
+      "knowledge_scored_positions_swapped_cb": [5, 10],
+      "knowledge_type": "2",
+      "note": "",
+      "swapped": "The boy drank the hat and wore the coffee.",
+      "x1": "drank",
+      "x2": "wore",
+      "y1": "coffee",
+      "y2": "hat"
+     },
+     {
+      "good": "The boy flew the plane and played the game.",
+      "grammar_cases": [
+       {
+        "case_index": 0,
+        "score": -46.6178017,
+        "scored_positions": [2, 3, 5, 7, 9],
+        "sentence": "The boy flew the game and played the plane.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 1,
+        "score": -47.6733246,
+        "scored_positions": [2, 4, 6, 7, 9],
+        "sentence": "The boy played the plane and flew the game.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 2,
+        "score": -36.3413658,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy plane the flew and game the flew.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 3,
+        "score": -27.5024929,
+        "scored_positions": [2, 4, 6],
+        "sentence": "The boy plane the played and game the played.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 4,
+        "score": -37.2644043,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy game the flew and plane the flew.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 5,
+        "score": -28.7294312,
+        "scored_positions": [2, 4, 6],
+        "sentence": "The boy game the played and plane the played.",
+        "type": "ungrammatical"
+       }
+      ],
+      "grammar_margin": -14.6861396,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": null,
+      "grammar_margin_swapped": -46.6178017,
+      "grammar_margin_swapped_cb": -47.6733246,
+      "grammar_mode": "nonsense_gram",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.037979126,
+      "knowledge_margin_cb": -0.0659980774,
+      "knowledge_margin_primary": -0.00996017456,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -18.7665176,
+      "knowledge_score_swapped": -18.7565575,
+      "knowledge_scored_positions_good": [5, 9],
+      "knowledge_scored_positions_good_cb": [4, 9],
+      "knowledge_scored_positions_swapped": [5, 9],
+      "knowledge_scored_positions_swapped_cb": [4, 9],
+      "knowledge_type": "3",
+      "note": "",
+      "swapped": "The boy flew the game and played the plane.",
+      "x1": "flew",
+      "x2": "played",
+      "y1": "plane",
+      "y2": "game"
+     },
+     {
+      "good": "The boy played the piano and read the books.",
+      "grammar_cases": [
+       {
+        "case_index": 0,
+        "score": -43.894165,
+        "scored_positions": [2, 4, 6, 8, 9],
+        "sentence": "The boy played the books and read the piano.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 1,
+        "score": -44.5023193,
+        "scored_positions": [2, 4, 5, 7, 9],
+        "sentence": "The boy read the piano and played the books.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 2,
+        "score": -36.8581123,
+        "scored_positions": [2, 3, 5, 7],
+        "sentence": "The boy piano the played and books the played.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 3,
+        "score": -37.8309822,
+        "scored_positions": [2, 3, 5, 7],
+        "sentence": "The boy piano the read and books the read.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 4,
+        "score": -36.8518143,
+        "scored_positions": [2, 4, 6, 7],
+        "sentence": "The boy books the played and piano the played.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 5,
+        "score": -38.4242325,
+        "scored_positions": [2, 4, 6, 7],
+        "sentence": "The boy books the read and piano the read.",
+        "type": "ungrammatical"
+       }
+      ],
+      "grammar_margin": -6.70695686,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": null,
+      "grammar_margin_swapped": -43.894165,
+      "grammar_margin_swapped_cb": -44.5023193,
+      "grammar_mode": "nonsense_gram",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.00291442871,
+      "knowledge_margin_cb": -0.0971393585,
+      "knowledge_margin_primary": 0.0913105011,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -25.548624,
+      "knowledge_score_swapped": -25.6399345,
+      "knowledge_scored_positions_good": [4, 5, 9],
+      "knowledge_scored_positions_good_cb": [4, 8, 9],
+      "knowledge_scored_positions_swapped": [4, 8, 9],
+      "knowledge_scored_positions_swapped_cb": [4, 5, 9],
+      "knowledge_type": "4",
+      "note": "",
+      "swapped": "The boy played the books and read the piano.",
+      "x1": "played",
+      "x2": "read",
+      "y1": "piano",
+      "y2": "books"
+     },
+     {
+      "good": "The boy wrote the letter and ate the bagel.",
+      "grammar_cases": [
+       {
+        "case_index": 0,
+        "score": -53.9878578,
+        "scored_positions": [2, 4, 5, 7, 8, 10],
+        "sentence": "The boy wrote the bagel and ate the letter.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 1,
+        "score": -54.3767395,
+        "scored_positions": [2, 3, 5, 7, 9, 10],
+        "sentence": "The boy ate the letter and wrote the bagel.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 2,
+        "score": -36.4663467,
+        "scored_positions": [2, 4, 6, 7],
+        "sentence": "The boy letter the wrote and bagel the wrote.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 3,
+        "score": -48.4386559,
+        "scored_positions": [2, 4, 5, 7, 8],
+        "sentence": "The boy letter the ate and bagel the ate.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 4,
+        "score": -36.8181915,
+        "scored_positions": [2, 3, 5, 7],
+        "sentence": "The boy bagel the wrote and letter the wrote.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 5,
+        "score": -48.1876564,
+        "scored_positions": [2, 3, 5, 6, 8],
+        "sentence": "The boy bagel the ate and letter the ate.",
+        "type": "ungrammatical"
+       }
+      ],
+      "grammar_margin": -11.704586,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": null,
+      "grammar_margin_swapped": -53.9878578,
+      "grammar_margin_swapped_cb": -54.3767395,
+      "grammar_mode": "nonsense_gram",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.0321140289,
+      "knowledge_margin_cb": -0.396656036,
+      "knowledge_margin_primary": 0.332427979,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -26.7544899,
+      "knowledge_score_swapped": -27.0869179,
+      "knowledge_scored_positions_good": [4, 9, 10],
+      "knowledge_scored_positions_good_cb": [5, 6, 10],
+      "knowledge_scored_positions_swapped": [4, 5, 10],
+      "knowledge_scored_positions_swapped_cb": [5, 9, 10],
+      "knowledge_type": "5",
+      "note": "",
+      "swapped": "The boy wrote the bagel and ate the letter.",
+      "x1": "wrote",
+      "x2": "ate",
+      "y1": "letter",
+      "y2": "bagel"
+     },
+     {
+      "good": "The boy ran the race and opened the door.",
+      "grammar_cases": [
+       {
+        "case_index": 0,
+        "score": -37.0214539,
+        "scored_positions": [2, 4, 6, 8],
+        "sentence": "The boy ran the door and opened the race.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 1,
+        "score": -37.1959877,
+        "scored_positions": [2, 4, 6, 8],
+        "sentence": "The boy opened the race and ran the door.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 2,
+        "score": -26.9342804,
+        "scored_positions": [2, 4, 6],
+        "sentence": "The boy race the ran and door the ran.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 3,
+        "score": -27.3384094,
+        "scored_positions": [2, 4, 6],
+        "sentence": "The boy race the opened and door the opened.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 4,
+        "score": -28.2091026,
+        "scored_positions": [2, 4, 6],
+        "sentence": "The boy door the ran and race the ran.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 5,
+        "score": -29.3985977,
+        "scored_positions": [2, 4, 6],
+        "sentence": "The boy door the opened and race the opened.",
+        "type": "ungrammatical"
+       }
+      ],
+      "grammar_margin": -9.13862324,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": null,
+      "grammar_margin_swapped": -37.0214539,
+      "grammar_margin_swapped_cb": -37.1959877,
+      "grammar_mode": "nonsense_gram",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.208340645,
+      "knowledge_margin_cb": 0.386238098,
+      "knowledge_margin_primary": -0.802919388,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -19.9139423,
+      "knowledge_score_swapped": -19.1110229,
+      "knowledge_scored_positions_good": [4, 8],
+      "knowledge_scored_positions_good_cb": [4, 8],
+      "knowledge_scored_positions_swapped": [4, 8],
+      "knowledge_scored_positions_swapped_cb": [4, 8],
+      "knowledge_type": "6",
+      "note": "",
+      "swapped": "The boy ran the door and opened the race.",
+      "x1": "ran",
+      "x2": "opened",
+      "y1": "race",
+      "y2": "door"
+     },
+     {
+      "good": "The boy kicked the ball and rode the bike.",
+      "grammar_cases": [
+       {
+        "case_index": 0,
+        "score": -54.0093498,
+        "scored_positions": [2, 3, 5, 7, 8, 10],
+        "sentence": "The boy kicked the bike and rode the ball.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 1,
+        "score": -55.7337074,
+        "scored_positions": [2, 3, 5, 7, 8, 10],
+        "sentence": "The boy rode the ball and kicked the bike.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 2,
+        "score": -37.1704102,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy ball the kicked and bike the kicked.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 3,
+        "score": -37.0714035,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy ball the rode and bike the rode.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 4,
+        "score": -37.540226,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy bike the kicked and ball the kicked.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 5,
+        "score": -36.4928131,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy bike the rode and ball the rode.",
+        "type": "ungrammatical"
+       }
+      ],
+      "grammar_margin": -17.8028154,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": null,
+      "grammar_margin_swapped": -54.0093498,
+      "grammar_margin_swapped_cb": -55.7337074,
+      "grammar_mode": "nonsense_gram",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.116254807,
+      "knowledge_margin_cb": 0.740919113,
+      "knowledge_margin_primary": -0.973428726,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -19.0276737,
+      "knowledge_score_swapped": -18.054245,
+      "knowledge_scored_positions_good": [5, 10],
+      "knowledge_scored_positions_good_cb": [5, 10],
+      "knowledge_scored_positions_swapped": [5, 10],
+      "knowledge_scored_positions_swapped_cb": [5, 10],
+      "knowledge_type": "7",
+      "note": "",
+      "swapped": "The boy kicked the bike and rode the ball.",
+      "x1": "kicked",
+      "x2": "rode",
+      "y1": "ball",
+      "y2": "bike"
+     },
+     {
+      "good": "The boy climbs the mountain and breaks the glass.",
+      "grammar_cases": [
+       {
+        "case_index": 0,
+        "score": -47.5478401,
+        "scored_positions": [2, 3, 5, 7, 9],
+        "sentence": "The boy climbs the glass and breaks the mountain.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 1,
+        "score": -46.4495125,
+        "scored_positions": [2, 4, 6, 7, 9],
+        "sentence": "The boy breaks the mountain and climbs the glass.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 2,
+        "score": -39.6364441,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy mountain the climbs and glass the climbs.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 3,
+        "score": -27.8164139,
+        "scored_positions": [2, 4, 6],
+        "sentence": "The boy mountain the breaks and glass the breaks.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 4,
+        "score": -38.1902809,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy glass the climbs and mountain the climbs.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 5,
+        "score": -26.9511757,
+        "scored_positions": [2, 4, 6],
+        "sentence": "The boy glass the breaks and mountain the breaks.",
+        "type": "ungrammatical"
+       }
+      ],
+      "grammar_margin": -13.8500977,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": null,
+      "grammar_margin_swapped": -47.5478401,
+      "grammar_margin_swapped_cb": -46.4495125,
+      "grammar_mode": "nonsense_gram",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.16459465,
+      "knowledge_margin_cb": -0.12348175,
+      "knowledge_margin_primary": -0.20570755,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -17.5982819,
+      "knowledge_score_swapped": -17.3925743,
+      "knowledge_scored_positions_good": [5, 9],
+      "knowledge_scored_positions_good_cb": [4, 9],
+      "knowledge_scored_positions_swapped": [5, 9],
+      "knowledge_scored_positions_swapped_cb": [4, 9],
+      "knowledge_type": "8",
+      "note": "",
+      "swapped": "The boy climbs the glass and breaks the mountain.",
+      "x1": "climbs",
+      "x2": "breaks",
+      "y1": "mountain",
+      "y2": "glass"
+     },
+     {
+      "good": "The boy sails the boat and catches the mouse.",
+      "grammar_cases": [
+       {
+        "case_index": 0,
+        "score": -63.1413651,
+        "scored_positions": [2, 3, 5, 6, 8, 9, 11],
+        "sentence": "The boy sails the mouse and catches the boat.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 1,
+        "score": -61.7059135,
+        "scored_positions": [2, 3, 5, 7, 8, 10, 11],
+        "sentence": "The boy catches the boat and sails the mouse.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 2,
+        "score": -44.4551163,
+        "scored_positions": [2, 4, 5, 7, 8],
+        "sentence": "The boy boat the sails and mouse the sails.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 3,
+        "score": -46.0297852,
+        "scored_positions": [2, 4, 5, 7, 8],
+        "sentence": "The boy boat the catches and mouse the catches.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 4,
+        "score": -45.3925209,
+        "scored_positions": [2, 3, 5, 6, 8],
+        "sentence": "The boy mouse the sails and boat the sails.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 5,
+        "score": -47.1962891,
+        "scored_positions": [2, 3, 5, 6, 8],
+        "sentence": "The boy mouse the catches and boat the catches.",
+        "type": "ungrammatical"
+       }
+      ],
+      "grammar_margin": -16.6552114,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": null,
+      "grammar_margin_swapped": -63.1413651,
+      "grammar_margin_swapped_cb": -61.7059135,
+      "grammar_mode": "nonsense_gram",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.108939171,
+      "knowledge_margin_cb": -0.106693268,
+      "knowledge_margin_primary": -0.111185074,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -26.6029186,
+      "knowledge_score_swapped": -26.4917336,
+      "knowledge_scored_positions_good": [5, 10, 11],
+      "knowledge_scored_positions_good_cb": [5, 6, 11],
+      "knowledge_scored_positions_swapped": [5, 6, 11],
+      "knowledge_scored_positions_swapped_cb": [5, 10, 11],
+      "knowledge_type": "9",
+      "note": "",
+      "swapped": "The boy sails the mouse and catches the boat.",
+      "x1": "sails",
+      "x2": "catches",
+      "y1": "boat",
+      "y2": "mouse"
+     },
+     {
+      "good": "The boy wears the shoes and cleans the room.",
+      "grammar_cases": [
+       {
+        "case_index": 0,
+        "score": -54.7211456,
+        "scored_positions": [2, 3, 5, 7, 8, 10],
+        "sentence": "The boy wears the room and cleans the shoes.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 1,
+        "score": -53.4050331,
+        "scored_positions": [2, 3, 5, 7, 8, 10],
+        "sentence": "The boy cleans the shoes and wears the room.",
+        "type": "grammatical_nonsense"
+       },
+       {
+        "case_index": 2,
+        "score": -36.2385635,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy shoes the wears and room the wears.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 3,
+        "score": -37.9957275,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy shoes the cleans and room the cleans.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 4,
+        "score": -34.658699,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy room the wears and shoes the wears.",
+        "type": "ungrammatical"
+       },
+       {
+        "case_index": 5,
+        "score": -35.785759,
+        "scored_positions": [2, 4, 5, 7],
+        "sentence": "The boy room the cleans and shoes the cleans.",
+        "type": "ungrammatical"
+       }
+      ],
+      "grammar_margin": -17.8934021,
+      "grammar_margin_cb": null,
+      "grammar_margin_primary": null,
+      "grammar_margin_swapped": -54.7211456,
+      "grammar_margin_swapped_cb": -53.4050331,
+      "grammar_mode": "nonsense_gram",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": 0.0571861267,
+      "knowledge_margin_cb": -0.374652863,
+      "knowledge_margin_primary": 0.489025116,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -17.6495018,
+      "knowledge_score_swapped": -18.1385269,
+      "knowledge_scored_positions_good": [5, 10],
+      "knowledge_scored_positions_good_cb": [5, 10],
+      "knowledge_scored_positions_swapped": [5, 10],
+      "knowledge_scored_positions_swapped_cb": [5, 10],
+      "knowledge_type": "10",
+      "note": "",
+      "swapped": "The boy wears the room and cleans the shoes.",
+      "x1": "wears",
+      "x2": "cleans",
+      "y1": "shoes",
+      "y2": "room"
+     }
+    ]
+   },
+   "whole_sentence_sem2": {
+    "grammar_summary": {
+     "by_type": {
+      "1": {
+       "accuracy": 1.0,
+       "mean_margin": 2.36866379,
+       "n": 1
+      },
+      "10": {
+       "accuracy": 0.0,
+       "mean_margin": -0.790840149,
+       "n": 1
+      },
+      "2": {
+       "accuracy": 0.0,
+       "mean_margin": -3.1965065,
+       "n": 1
+      },
+      "3": {
+       "accuracy": 0.0,
+       "mean_margin": -1.06375885,
+       "n": 1
+      },
+      "4": {
+       "accuracy": 1.0,
+       "mean_margin": 3.24479294,
+       "n": 1
+      },
+      "5": {
+       "accuracy": 1.0,
+       "mean_margin": 3.53720474,
+       "n": 1
+      },
+      "6": {
+       "accuracy": 1.0,
+       "mean_margin": 3.74777985,
+       "n": 1
+      },
+      "7": {
+       "accuracy": 1.0,
+       "mean_margin": 2.1023674,
+       "n": 1
+      },
+      "8": {
+       "accuracy": 0.0,
+       "mean_margin": -0.149742126,
+       "n": 1
+      },
+      "9": {
+       "accuracy": 1.0,
+       "mean_margin": 1.37156677,
+       "n": 1
+      }
+     },
+     "overall": {
+      "accuracy": 0.6,
+      "mean_margin": 1.11715279,
+      "n": 10
+     }
+    },
+    "knowledge_summary": {
+     "by_type": {
+      "1": {
+       "accuracy": 1.0,
+       "mean_margin": 0.000942230225,
+       "n": 1
+      },
+      "10": {
+       "accuracy": 1.0,
+       "mean_margin": 0.193862915,
+       "n": 1
+      },
+      "2": {
+       "accuracy": 0.0,
+       "mean_margin": -0.0320930481,
+       "n": 1
+      },
+      "3": {
+       "accuracy": 1.0,
+       "mean_margin": 0.258956909,
+       "n": 1
+      },
+      "4": {
+       "accuracy": 1.0,
+       "mean_margin": 0.447929382,
+       "n": 1
+      },
+      "5": {
+       "accuracy": 1.0,
+       "mean_margin": 0.0602264404,
+       "n": 1
+      },
+      "6": {
+       "accuracy": 0.0,
+       "mean_margin": -0.647033691,
+       "n": 1
+      },
+      "7": {
+       "accuracy": 1.0,
+       "mean_margin": 0.0603904724,
+       "n": 1
+      },
+      "8": {
+       "accuracy": 0.0,
+       "mean_margin": -0.190658569,
+       "n": 1
+      },
+      "9": {
+       "accuracy": 1.0,
+       "mean_margin": 0.181793213,
+       "n": 1
+      }
+     },
+     "overall": {
+      "accuracy": 0.7,
+      "mean_margin": 0.0334316254,
+      "n": 10
+     }
+    },
+    "rows": [
+     {
+      "good": "The boy sang the song and ate the bread.",
+      "grammar_cases": [
+       {
+        "bad": "The boy song the sang and bread the ate.",
+        "case_index": 0,
+        "good": "The boy sang the song and ate the bread.",
+        "margin": -0.0939254761,
+        "score_bad": -111.609604,
+        "score_good": -111.703529,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       },
+       {
+        "bad": "The boy bread the ate and song the sang.",
+        "case_index": 1,
+        "good": "The boy ate the bread and sang the song.",
+        "margin": 4.83125305,
+        "score_bad": -114.651222,
+        "score_good": -109.819969,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       }
+      ],
+      "grammar_margin": 2.36866379,
+      "grammar_margin_cb": 4.83125305,
+      "grammar_margin_primary": -0.0939254761,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "sem2",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": 0.000942230225,
+      "knowledge_margin_cb": 1.96156311,
+      "knowledge_margin_primary": -1.95967865,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -111.703529,
+      "knowledge_score_swapped": -109.743851,
+      "knowledge_scored_positions_good": null,
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": null,
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "1",
+      "note": "",
+      "swapped": "The boy sang the bread and ate the song.",
+      "x1": "sang",
+      "x2": "ate",
+      "y1": "song",
+      "y2": "bread"
+     },
+     {
+      "good": "The boy drank the coffee and wore the hat.",
+      "grammar_cases": [
+       {
+        "bad": "The boy coffee the drank and hat the wore.",
+        "case_index": 0,
+        "good": "The boy drank the coffee and wore the hat.",
+        "margin": -5.324646,
+        "score_bad": -107.568802,
+        "score_good": -112.893448,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       },
+       {
+        "bad": "The boy hat the wore and coffee the drank.",
+        "case_index": 1,
+        "good": "The boy wore the hat and drank the coffee.",
+        "margin": -1.068367,
+        "score_bad": -108.512581,
+        "score_good": -109.580948,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       }
+      ],
+      "grammar_margin": -3.1965065,
+      "grammar_margin_cb": -1.068367,
+      "grammar_margin_primary": -5.324646,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "sem2",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.0320930481,
+      "knowledge_margin_cb": 1.68440247,
+      "knowledge_margin_primary": -1.74858856,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -112.893448,
+      "knowledge_score_swapped": -111.144859,
+      "knowledge_scored_positions_good": null,
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": null,
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "2",
+      "note": "",
+      "swapped": "The boy drank the hat and wore the coffee.",
+      "x1": "drank",
+      "x2": "wore",
+      "y1": "coffee",
+      "y2": "hat"
+     },
+     {
+      "good": "The boy flew the plane and played the game.",
+      "grammar_cases": [
+       {
+        "bad": "The boy plane the flew and game the played.",
+        "case_index": 0,
+        "good": "The boy flew the plane and played the game.",
+        "margin": -1.83511353,
+        "score_bad": -101.553749,
+        "score_good": -103.388863,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       },
+       {
+        "bad": "The boy game the played and plane the flew.",
+        "case_index": 1,
+        "good": "The boy played the game and flew the plane.",
+        "margin": -0.292404175,
+        "score_bad": -101.490555,
+        "score_good": -101.782959,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       }
+      ],
+      "grammar_margin": -1.06375885,
+      "grammar_margin_cb": -0.292404175,
+      "grammar_margin_primary": -1.83511353,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "sem2",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": 0.258956909,
+      "knowledge_margin_cb": 2.28340149,
+      "knowledge_margin_primary": -1.76548767,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -103.388863,
+      "knowledge_score_swapped": -101.623375,
+      "knowledge_scored_positions_good": null,
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": null,
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "3",
+      "note": "",
+      "swapped": "The boy flew the game and played the plane.",
+      "x1": "flew",
+      "x2": "played",
+      "y1": "plane",
+      "y2": "game"
+     },
+     {
+      "good": "The boy played the piano and read the books.",
+      "grammar_cases": [
+       {
+        "bad": "The boy piano the played and books the read.",
+        "case_index": 0,
+        "good": "The boy played the piano and read the books.",
+        "margin": 4.11122894,
+        "score_bad": -102.679535,
+        "score_good": -98.568306,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       },
+       {
+        "bad": "The boy books the read and piano the played.",
+        "case_index": 1,
+        "good": "The boy read the books and played the piano.",
+        "margin": 2.37835693,
+        "score_bad": -101.55648,
+        "score_good": -99.1781235,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       }
+      ],
+      "grammar_margin": 3.24479294,
+      "grammar_margin_cb": 2.37835693,
+      "grammar_margin_primary": 4.11122894,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "sem2",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": 0.447929382,
+      "knowledge_margin_cb": 0.272117615,
+      "knowledge_margin_primary": 0.62374115,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -98.568306,
+      "knowledge_score_swapped": -99.1920471,
+      "knowledge_scored_positions_good": null,
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": null,
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "4",
+      "note": "",
+      "swapped": "The boy played the books and read the piano.",
+      "x1": "played",
+      "x2": "read",
+      "y1": "piano",
+      "y2": "books"
+     },
+     {
+      "good": "The boy wrote the letter and ate the bagel.",
+      "grammar_cases": [
+       {
+        "bad": "The boy letter the wrote and bagel the ate.",
+        "case_index": 0,
+        "good": "The boy wrote the letter and ate the bagel.",
+        "margin": 4.67469788,
+        "score_bad": -114.172272,
+        "score_good": -109.497574,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       },
+       {
+        "bad": "The boy bagel the ate and letter the wrote.",
+        "case_index": 1,
+        "good": "The boy ate the bagel and wrote the letter.",
+        "margin": 2.39971161,
+        "score_bad": -112.942993,
+        "score_good": -110.543282,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       }
+      ],
+      "grammar_margin": 3.53720474,
+      "grammar_margin_cb": 2.39971161,
+      "grammar_margin_primary": 4.67469788,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "sem2",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": 0.0602264404,
+      "knowledge_margin_cb": 0.740196228,
+      "knowledge_margin_primary": -0.619743347,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -109.497574,
+      "knowledge_score_swapped": -108.877831,
+      "knowledge_scored_positions_good": null,
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": null,
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "5",
+      "note": "",
+      "swapped": "The boy wrote the bagel and ate the letter.",
+      "x1": "wrote",
+      "x2": "ate",
+      "y1": "letter",
+      "y2": "bagel"
+     },
+     {
+      "good": "The boy ran the race and opened the door.",
+      "grammar_cases": [
+       {
+        "bad": "The boy race the ran and door the opened.",
+        "case_index": 0,
+        "good": "The boy ran the race and opened the door.",
+        "margin": 2.23962402,
+        "score_bad": -95.2889023,
+        "score_good": -93.0492783,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       },
+       {
+        "bad": "The boy door the opened and race the ran.",
+        "case_index": 1,
+        "good": "The boy opened the door and ran the race.",
+        "margin": 5.25593567,
+        "score_bad": -96.9901047,
+        "score_good": -91.734169,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       }
+      ],
+      "grammar_margin": 3.74777985,
+      "grammar_margin_cb": 5.25593567,
+      "grammar_margin_primary": 2.23962402,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "sem2",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": -0.647033691,
+      "knowledge_margin_cb": 0.163230896,
+      "knowledge_margin_primary": -1.45729828,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -93.0492783,
+      "knowledge_score_swapped": -91.59198,
+      "knowledge_scored_positions_good": null,
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": null,
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "6",
+      "note": "",
+      "swapped": "The boy ran the door and opened the race.",
+      "x1": "ran",
+      "x2": "opened",
+      "y1": "race",
+      "y2": "door"
+     },
+     {
+      "good": "The boy kicked the ball and rode the bike.",
+      "grammar_cases": [
+       {
+        "bad": "The boy ball the kicked and bike the rode.",
+        "case_index": 0,
+        "good": "The boy kicked the ball and rode the bike.",
+        "margin": 1.67163086,
+        "score_bad": -111.428421,
+        "score_good": -109.75679,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       },
+       {
+        "bad": "The boy bike the rode and ball the kicked.",
+        "case_index": 1,
+        "good": "The boy rode the bike and kicked the ball.",
+        "margin": 2.53310394,
+        "score_bad": -112.082047,
+        "score_good": -109.548943,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       }
+      ],
+      "grammar_margin": 2.1023674,
+      "grammar_margin_cb": 2.53310394,
+      "grammar_margin_primary": 1.67163086,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "sem2",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": 0.0603904724,
+      "knowledge_margin_cb": 1.32103729,
+      "knowledge_margin_primary": -1.20025635,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -109.75679,
+      "knowledge_score_swapped": -108.556534,
+      "knowledge_scored_positions_good": null,
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": null,
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "7",
+      "note": "",
+      "swapped": "The boy kicked the bike and rode the ball.",
+      "x1": "kicked",
+      "x2": "rode",
+      "y1": "ball",
+      "y2": "bike"
+     },
+     {
+      "good": "The boy climbs the mountain and breaks the glass.",
+      "grammar_cases": [
+       {
+        "bad": "The boy mountain the climbs and glass the breaks.",
+        "case_index": 0,
+        "good": "The boy climbs the mountain and breaks the glass.",
+        "margin": -0.162628174,
+        "score_bad": -104.650467,
+        "score_good": -104.813095,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       },
+       {
+        "bad": "The boy glass the breaks and mountain the climbs.",
+        "case_index": 1,
+        "good": "The boy breaks the glass and climbs the mountain.",
+        "margin": -0.136856079,
+        "score_bad": -101.914467,
+        "score_good": -102.051323,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       }
+      ],
+      "grammar_margin": -0.149742126,
+      "grammar_margin_cb": -0.136856079,
+      "grammar_margin_primary": -0.162628174,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "sem2",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": -0.190658569,
+      "knowledge_margin_cb": 1.08506775,
+      "knowledge_margin_primary": -1.46638489,
+      "knowledge_prefers_good": false,
+      "knowledge_score_good": -104.813095,
+      "knowledge_score_swapped": -103.34671,
+      "knowledge_scored_positions_good": null,
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": null,
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "8",
+      "note": "",
+      "swapped": "The boy climbs the glass and breaks the mountain.",
+      "x1": "climbs",
+      "x2": "breaks",
+      "y1": "mountain",
+      "y2": "glass"
+     },
+     {
+      "good": "The boy sails the boat and catches the mouse.",
+      "grammar_cases": [
+       {
+        "bad": "The boy boat the sails and mouse the catches.",
+        "case_index": 0,
+        "good": "The boy sails the boat and catches the mouse.",
+        "margin": -1.31835938,
+        "score_bad": -116.16378,
+        "score_good": -117.48214,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       },
+       {
+        "bad": "The boy mouse the catches and boat the sails.",
+        "case_index": 1,
+        "good": "The boy catches the mouse and sails the boat.",
+        "margin": 4.06149292,
+        "score_bad": -120.054901,
+        "score_good": -115.993408,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       }
+      ],
+      "grammar_margin": 1.37156677,
+      "grammar_margin_cb": 4.06149292,
+      "grammar_margin_primary": -1.31835938,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "sem2",
+      "grammar_prefers_good": true,
+      "has_grammar": true,
+      "knowledge_margin": 0.181793213,
+      "knowledge_margin_cb": 0.0897674561,
+      "knowledge_margin_primary": 0.27381897,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -117.48214,
+      "knowledge_score_swapped": -117.755959,
+      "knowledge_scored_positions_good": null,
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": null,
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "9",
+      "note": "",
+      "swapped": "The boy sails the mouse and catches the boat.",
+      "x1": "sails",
+      "x2": "catches",
+      "y1": "boat",
+      "y2": "mouse"
+     },
+     {
+      "good": "The boy wears the shoes and cleans the room.",
+      "grammar_cases": [
+       {
+        "bad": "The boy shoes the wears and room the cleans.",
+        "case_index": 0,
+        "good": "The boy wears the shoes and cleans the room.",
+        "margin": -0.726005554,
+        "score_bad": -110.893555,
+        "score_good": -111.61956,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       },
+       {
+        "bad": "The boy room the cleans and shoes the wears.",
+        "case_index": 1,
+        "good": "The boy cleans the room and wears the shoes.",
+        "margin": -0.855674744,
+        "score_bad": -110.559639,
+        "score_good": -111.415314,
+        "scored_positions_bad": null,
+        "scored_positions_good": null
+       }
+      ],
+      "grammar_margin": -0.790840149,
+      "grammar_margin_cb": -0.855674744,
+      "grammar_margin_primary": -0.726005554,
+      "grammar_margin_swapped": null,
+      "grammar_margin_swapped_cb": null,
+      "grammar_mode": "sem2",
+      "grammar_prefers_good": false,
+      "has_grammar": true,
+      "knowledge_margin": 0.193862915,
+      "knowledge_margin_cb": -0.454956055,
+      "knowledge_margin_primary": 0.842681885,
+      "knowledge_prefers_good": true,
+      "knowledge_score_good": -111.61956,
+      "knowledge_score_swapped": -112.462242,
+      "knowledge_scored_positions_good": null,
+      "knowledge_scored_positions_good_cb": null,
+      "knowledge_scored_positions_swapped": null,
+      "knowledge_scored_positions_swapped_cb": null,
+      "knowledge_type": "10",
+      "note": "",
+      "swapped": "The boy wears the room and cleans the shoes.",
+      "x1": "wears",
+      "x2": "cleans",
+      "y1": "shoes",
+      "y2": "room"
+     }
+    ]
+   }
+  },
+  "single_pair": {
+   "rows": [],
+   "summary": {
+    "by_type": {},
+    "overall": {
+     "accuracy": {
+      "__float__": "nan"
+     },
+     "mean_margin": {
+      "__float__": "nan"
+     },
+     "n": 0
+    }
+   }
+  }
+ }
+}

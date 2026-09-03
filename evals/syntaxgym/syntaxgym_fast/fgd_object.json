@@ -1,0 +1,792 @@
+{
+  "meta": {
+    "name": "fgd_object",
+    "metric": "sum",
+    "comment": "The below prediction is about the OBJECT position",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "prefix",
+    "2": "comp",
+    "3": "np1",
+    "4": "verb",
+    "5": "np2",
+    "6": "prep",
+    "7": "np3",
+    "8": "end"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "((5;%what_nogap%) > (5;%that_nogap%) ) & ((6;%what_gap%) < (6;%that_gap%) ) "
+    }
+  ],
+  "items": [
+    {
+      "item_number": 23,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "My sister told me"
+            },
+            {
+              "region_number": 2,
+              "content": "what"
+            },
+            {
+              "region_number": 3,
+              "content": "the newspaper"
+            },
+            {
+              "region_number": 4,
+              "content": "published"
+            },
+            {
+              "region_number": 5,
+              "content": "a long story"
+            },
+            {
+              "region_number": 6,
+              "content": "about"
+            },
+            {
+              "region_number": 7,
+              "content": "the mayor"
+            },
+            {
+              "region_number": 8,
+              "content": "last month"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "My sister told me"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the newspaper"
+            },
+            {
+              "region_number": 4,
+              "content": "published"
+            },
+            {
+              "region_number": 5,
+              "content": "a long story"
+            },
+            {
+              "region_number": 6,
+              "content": "about"
+            },
+            {
+              "region_number": 7,
+              "content": "the mayor"
+            },
+            {
+              "region_number": 8,
+              "content": "last month"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "My sister told me"
+            },
+            {
+              "region_number": 2,
+              "content": "what"
+            },
+            {
+              "region_number": 3,
+              "content": "the newspaper"
+            },
+            {
+              "region_number": 4,
+              "content": "published"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "about"
+            },
+            {
+              "region_number": 7,
+              "content": "the mayor"
+            },
+            {
+              "region_number": 8,
+              "content": "last month"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "My sister told me"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the newspaper"
+            },
+            {
+              "region_number": 4,
+              "content": "published"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "about"
+            },
+            {
+              "region_number": 7,
+              "content": "the mayor"
+            },
+            {
+              "region_number": 8,
+              "content": "last month"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 14,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Our friend knew"
+            },
+            {
+              "region_number": 2,
+              "content": "what"
+            },
+            {
+              "region_number": 3,
+              "content": "the gossip column"
+            },
+            {
+              "region_number": 4,
+              "content": "revealed"
+            },
+            {
+              "region_number": 5,
+              "content": "family secrets"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": "the whole town"
+            },
+            {
+              "region_number": 8,
+              "content": "yesterday"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Our friend knew"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the gossip column"
+            },
+            {
+              "region_number": 4,
+              "content": "revealed"
+            },
+            {
+              "region_number": 5,
+              "content": "family secrets"
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": "the whole town"
+            },
+            {
+              "region_number": 8,
+              "content": "yesterday"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Our friend knew"
+            },
+            {
+              "region_number": 2,
+              "content": "what"
+            },
+            {
+              "region_number": 3,
+              "content": "the gossip column"
+            },
+            {
+              "region_number": 4,
+              "content": "revealed"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": "the whole town"
+            },
+            {
+              "region_number": 8,
+              "content": "yesterday"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "Our friend knew"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the gossip column"
+            },
+            {
+              "region_number": 4,
+              "content": "revealed"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "to"
+            },
+            {
+              "region_number": 7,
+              "content": "the whole town"
+            },
+            {
+              "region_number": 8,
+              "content": "yesterday"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 11,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The newspaper reported"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": "the suspect"
+            },
+            {
+              "region_number": 4,
+              "content": "killed"
+            },
+            {
+              "region_number": 5,
+              "content": "the witness"
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": "a gun"
+            },
+            {
+              "region_number": 8,
+              "content": "in the middle of the night"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The newspaper reported"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the suspect"
+            },
+            {
+              "region_number": 4,
+              "content": "killed"
+            },
+            {
+              "region_number": 5,
+              "content": "the witness"
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": "a gun"
+            },
+            {
+              "region_number": 8,
+              "content": "in the middle of the night"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The newspaper reported"
+            },
+            {
+              "region_number": 2,
+              "content": "who"
+            },
+            {
+              "region_number": 3,
+              "content": "the suspect"
+            },
+            {
+              "region_number": 4,
+              "content": "killed"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": "a gun"
+            },
+            {
+              "region_number": 8,
+              "content": "in the middle of the night"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The newspaper reported"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the suspect"
+            },
+            {
+              "region_number": 4,
+              "content": "killed"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": "a gun"
+            },
+            {
+              "region_number": 8,
+              "content": "in the middle of the night"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 9,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I do not know"
+            },
+            {
+              "region_number": 2,
+              "content": "what"
+            },
+            {
+              "region_number": 3,
+              "content": "her rival"
+            },
+            {
+              "region_number": 4,
+              "content": "derailed"
+            },
+            {
+              "region_number": 5,
+              "content": "the performance"
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": "a cruel plan"
+            },
+            {
+              "region_number": 8,
+              "content": "last week"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I do not know"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "her rival"
+            },
+            {
+              "region_number": 4,
+              "content": "derailed"
+            },
+            {
+              "region_number": 5,
+              "content": "the performance"
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": "a cruel plan"
+            },
+            {
+              "region_number": 8,
+              "content": "last week"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I do not know"
+            },
+            {
+              "region_number": 2,
+              "content": "what"
+            },
+            {
+              "region_number": 3,
+              "content": "her rival"
+            },
+            {
+              "region_number": 4,
+              "content": "derailed"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": "a cruel plan"
+            },
+            {
+              "region_number": 8,
+              "content": "last week"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "I do not know"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "her rival"
+            },
+            {
+              "region_number": 4,
+              "content": "derailed"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "with"
+            },
+            {
+              "region_number": 7,
+              "content": "a cruel plan"
+            },
+            {
+              "region_number": 8,
+              "content": "last week"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 5,
+      "conditions": [
+        {
+          "condition_name": "what_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "She told me"
+            },
+            {
+              "region_number": 2,
+              "content": "what"
+            },
+            {
+              "region_number": 3,
+              "content": "the star student"
+            },
+            {
+              "region_number": 4,
+              "content": "stole"
+            },
+            {
+              "region_number": 5,
+              "content": "answers to the test"
+            },
+            {
+              "region_number": 6,
+              "content": "from"
+            },
+            {
+              "region_number": 7,
+              "content": "the history teacher"
+            },
+            {
+              "region_number": 8,
+              "content": "last year"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_nogap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "She told me"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the star student"
+            },
+            {
+              "region_number": 4,
+              "content": "stole"
+            },
+            {
+              "region_number": 5,
+              "content": "answers to the test"
+            },
+            {
+              "region_number": 6,
+              "content": "from"
+            },
+            {
+              "region_number": 7,
+              "content": "the history teacher"
+            },
+            {
+              "region_number": 8,
+              "content": "last year"
+            }
+          ]
+        },
+        {
+          "condition_name": "what_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "She told me"
+            },
+            {
+              "region_number": 2,
+              "content": "what"
+            },
+            {
+              "region_number": 3,
+              "content": "the star student"
+            },
+            {
+              "region_number": 4,
+              "content": "stole"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "from"
+            },
+            {
+              "region_number": 7,
+              "content": "the history teacher"
+            },
+            {
+              "region_number": 8,
+              "content": "last year"
+            }
+          ]
+        },
+        {
+          "condition_name": "that_gap",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "She told me"
+            },
+            {
+              "region_number": 2,
+              "content": "that"
+            },
+            {
+              "region_number": 3,
+              "content": "the star student"
+            },
+            {
+              "region_number": 4,
+              "content": "stole"
+            },
+            {
+              "region_number": 5,
+              "content": ""
+            },
+            {
+              "region_number": 6,
+              "content": "from"
+            },
+            {
+              "region_number": 7,
+              "content": "the history teacher"
+            },
+            {
+              "region_number": 8,
+              "content": "last year"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,574 @@
+{
+  "meta": {
+    "name": "reflexive_prep_fem",
+    "metric": "sum",
+    "comment": "",
+    "reference": "",
+    "author": ""
+  },
+  "region_meta": {
+    "1": "intro",
+    "2": "np_sing",
+    "3": "prep",
+    "4": "the",
+    "5": "prep_np",
+    "6": "matrix_v",
+    "7": "reflexive"
+  },
+  "predictions": [
+    {
+      "type": "formula",
+      "formula": "( (7;%match_sing%) < (7;%mismatch_sing%) ) & ( (7;%match_plural%) < (7;%mismatch_plural%) )"
+    }
+  ],
+  "items": [
+    {
+      "item_number": 18,
+      "conditions": [
+        {
+          "condition_name": "match_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "secretary"
+            },
+            {
+              "region_number": 3,
+              "content": "across from"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "officers"
+            },
+            {
+              "region_number": 6,
+              "content": "embarrassed"
+            },
+            {
+              "region_number": 7,
+              "content": "herself"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "secretary"
+            },
+            {
+              "region_number": 3,
+              "content": "across from"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "officers"
+            },
+            {
+              "region_number": 6,
+              "content": "embarrassed"
+            },
+            {
+              "region_number": 7,
+              "content": "themselves"
+            }
+          ]
+        },
+        {
+          "condition_name": "match_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "secretaries"
+            },
+            {
+              "region_number": 3,
+              "content": "across from"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "officer"
+            },
+            {
+              "region_number": 6,
+              "content": "embarrassed"
+            },
+            {
+              "region_number": 7,
+              "content": "themselves"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "secretaries"
+            },
+            {
+              "region_number": 3,
+              "content": "across from"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "officer"
+            },
+            {
+              "region_number": 6,
+              "content": "embarrassed"
+            },
+            {
+              "region_number": 7,
+              "content": "herself"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 1,
+      "conditions": [
+        {
+          "condition_name": "match_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "author"
+            },
+            {
+              "region_number": 3,
+              "content": "next to"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "senators"
+            },
+            {
+              "region_number": 6,
+              "content": "hurt"
+            },
+            {
+              "region_number": 7,
+              "content": "herself"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "author"
+            },
+            {
+              "region_number": 3,
+              "content": "next to"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "senators"
+            },
+            {
+              "region_number": 6,
+              "content": "hurt"
+            },
+            {
+              "region_number": 7,
+              "content": "themselves"
+            }
+          ]
+        },
+        {
+          "condition_name": "match_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "authors"
+            },
+            {
+              "region_number": 3,
+              "content": "next to"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "senator"
+            },
+            {
+              "region_number": 6,
+              "content": "hurt"
+            },
+            {
+              "region_number": 7,
+              "content": "themselves"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "authors"
+            },
+            {
+              "region_number": 3,
+              "content": "next to"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "senator"
+            },
+            {
+              "region_number": 6,
+              "content": "hurt"
+            },
+            {
+              "region_number": 7,
+              "content": "herself"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 4,
+      "conditions": [
+        {
+          "condition_name": "match_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "farmer"
+            },
+            {
+              "region_number": 3,
+              "content": "near"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "clerks"
+            },
+            {
+              "region_number": 6,
+              "content": "embarrassed"
+            },
+            {
+              "region_number": 7,
+              "content": "herself"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "farmer"
+            },
+            {
+              "region_number": 3,
+              "content": "near"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "clerks"
+            },
+            {
+              "region_number": 6,
+              "content": "embarrassed"
+            },
+            {
+              "region_number": 7,
+              "content": "themselves"
+            }
+          ]
+        },
+        {
+          "condition_name": "match_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "farmers"
+            },
+            {
+              "region_number": 3,
+              "content": "near"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "clerk"
+            },
+            {
+              "region_number": 6,
+              "content": "embarrassed"
+            },
+            {
+              "region_number": 7,
+              "content": "themselves"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "farmers"
+            },
+            {
+              "region_number": 3,
+              "content": "near"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "clerk"
+            },
+            {
+              "region_number": 6,
+              "content": "embarrassed"
+            },
+            {
+              "region_number": 7,
+              "content": "herself"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_number": 9,
+      "conditions": [
+        {
+          "condition_name": "match_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "senator"
+            },
+            {
+              "region_number": 3,
+              "content": "in front of"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "actors"
+            },
+            {
+              "region_number": 6,
+              "content": "injured"
+            },
+            {
+              "region_number": 7,
+              "content": "herself"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_sing",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "senator"
+            },
+            {
+              "region_number": 3,
+              "content": "in front of"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "actors"
+            },
+            {
+              "region_number": 6,
+              "content": "injured"
+            },
+            {
+              "region_number": 7,
+              "content": "themselves"
+            }
+          ]
+        },
+        {
+          "condition_name": "match_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "senators"
+            },
+            {
+              "region_number": 3,
+              "content": "in front of"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "actor"
+            },
+            {
+              "region_number": 6,
+              "content": "injured"
+            },
+            {
+              "region_number": 7,
+              "content": "themselves"
+            }
+          ]
+        },
+        {
+          "condition_name": "mismatch_plural",
+          "regions": [
+            {
+              "region_number": 1,
+              "content": "The"
+            },
+            {
+              "region_number": 2,
+              "content": "senators"
+            },
+            {
+              "region_number": 3,
+              "content": "in front of"
+            },
+            {
+              "region_number": 4,
+              "content": "the"
+            },
+            {
+              "region_number": 5,
+              "content": "actor"
+            },
+            {
+              "region_number": 6,
+              "content": "injured"
+            },
+            {
+              "region_number": 7,
+              "content": "herself"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

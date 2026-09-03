@@ -1,0 +1,7 @@
+ablation,blimp_mean,blimp_sd
+SAMBAL (Short),71.19,0.75
+no to-inf,70.65,0.30
+no gender,70.47,0.24
+no UD-roundtrip,70.38,0.42
+no humanness,69.86,0.86
+no context buckets,66.42,0.78

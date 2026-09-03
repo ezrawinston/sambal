@@ -1,0 +1,25 @@
+{
+ "budget_word_tokens": 4896578,
+ "estimator": "plug-in",
+ "note": "Word-token n-gram entropies at the matched budget (the vocab-filtered corpus's full length); h(n) values are conditional block entropies H(n)-H(n-1).",
+ "corpora": {
+  "baseline": {
+   "word_types": 90396,
+   "H1_plugin": 10.831394750461069,
+   "h2_plugin": 7.196255730290641,
+   "h3_plugin": 3.1087951405589003
+  },
+  "sambal": {
+   "word_types": 46502,
+   "H1_plugin": 10.484715165307877,
+   "h2_plugin": 7.768647107062682,
+   "h3_plugin": 3.2351208540239433
+  },
+  "vocab_filtered": {
+   "word_types": 23534,
+   "H1_plugin": 10.188600836661191,
+   "h2_plugin": 7.154261563659304,
+   "h3_plugin": 3.4520776287816908
+  }
+ }
+}

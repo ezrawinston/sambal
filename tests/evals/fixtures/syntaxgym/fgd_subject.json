@@ -1,0 +1,388 @@
+{
+ "meta": {
+  "name": "fgd_subject",
+  "metric": "sum",
+  "comment": "tiny fixture",
+  "reference": "",
+  "author": ""
+ },
+ "region_meta": {},
+ "predictions": [
+  {
+   "type": "formula",
+   "formula": "((7;%what_gap%) - (7;%that_gap%)) < ((7;%what_nogap%) - (7;%that_nogap%))"
+  }
+ ],
+ "items": [
+  {
+   "item_number": 1,
+   "conditions": [
+    {
+     "condition_name": "what_gap",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "I know"
+      },
+      {
+       "region_number": 2,
+       "content": "what"
+      },
+      {
+       "region_number": 3,
+       "content": "the"
+      },
+      {
+       "region_number": 4,
+       "content": "farmer"
+      },
+      {
+       "region_number": 5,
+       "content": "sent"
+      },
+      {
+       "region_number": 6,
+       "content": ""
+      },
+      {
+       "region_number": 7,
+       "content": "to the"
+      },
+      {
+       "region_number": 8,
+       "content": "pilot"
+      },
+      {
+       "region_number": 9,
+       "content": "yesterday"
+      },
+      {
+       "region_number": 10,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "that_gap",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "I know"
+      },
+      {
+       "region_number": 2,
+       "content": "that"
+      },
+      {
+       "region_number": 3,
+       "content": "the"
+      },
+      {
+       "region_number": 4,
+       "content": "farmer"
+      },
+      {
+       "region_number": 5,
+       "content": "sent"
+      },
+      {
+       "region_number": 6,
+       "content": ""
+      },
+      {
+       "region_number": 7,
+       "content": "to the"
+      },
+      {
+       "region_number": 8,
+       "content": "pilot"
+      },
+      {
+       "region_number": 9,
+       "content": "yesterday"
+      },
+      {
+       "region_number": 10,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "what_nogap",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "I know"
+      },
+      {
+       "region_number": 2,
+       "content": "what"
+      },
+      {
+       "region_number": 3,
+       "content": "the"
+      },
+      {
+       "region_number": 4,
+       "content": "farmer"
+      },
+      {
+       "region_number": 5,
+       "content": "sent"
+      },
+      {
+       "region_number": 6,
+       "content": "the letter"
+      },
+      {
+       "region_number": 7,
+       "content": "to the"
+      },
+      {
+       "region_number": 8,
+       "content": "pilot"
+      },
+      {
+       "region_number": 9,
+       "content": "yesterday"
+      },
+      {
+       "region_number": 10,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "that_nogap",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "I know"
+      },
+      {
+       "region_number": 2,
+       "content": "that"
+      },
+      {
+       "region_number": 3,
+       "content": "the"
+      },
+      {
+       "region_number": 4,
+       "content": "farmer"
+      },
+      {
+       "region_number": 5,
+       "content": "sent"
+      },
+      {
+       "region_number": 6,
+       "content": "the letter"
+      },
+      {
+       "region_number": 7,
+       "content": "to the"
+      },
+      {
+       "region_number": 8,
+       "content": "pilot"
+      },
+      {
+       "region_number": 9,
+       "content": "yesterday"
+      },
+      {
+       "region_number": 10,
+       "content": "."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "item_number": 2,
+   "conditions": [
+    {
+     "condition_name": "what_gap",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "I know"
+      },
+      {
+       "region_number": 2,
+       "content": "what"
+      },
+      {
+       "region_number": 3,
+       "content": "the"
+      },
+      {
+       "region_number": 4,
+       "content": "senator"
+      },
+      {
+       "region_number": 5,
+       "content": "sent"
+      },
+      {
+       "region_number": 6,
+       "content": ""
+      },
+      {
+       "region_number": 7,
+       "content": "to the"
+      },
+      {
+       "region_number": 8,
+       "content": "farmer"
+      },
+      {
+       "region_number": 9,
+       "content": "yesterday"
+      },
+      {
+       "region_number": 10,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "that_gap",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "I know"
+      },
+      {
+       "region_number": 2,
+       "content": "that"
+      },
+      {
+       "region_number": 3,
+       "content": "the"
+      },
+      {
+       "region_number": 4,
+       "content": "senator"
+      },
+      {
+       "region_number": 5,
+       "content": "sent"
+      },
+      {
+       "region_number": 6,
+       "content": ""
+      },
+      {
+       "region_number": 7,
+       "content": "to the"
+      },
+      {
+       "region_number": 8,
+       "content": "farmer"
+      },
+      {
+       "region_number": 9,
+       "content": "yesterday"
+      },
+      {
+       "region_number": 10,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "what_nogap",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "I know"
+      },
+      {
+       "region_number": 2,
+       "content": "what"
+      },
+      {
+       "region_number": 3,
+       "content": "the"
+      },
+      {
+       "region_number": 4,
+       "content": "senator"
+      },
+      {
+       "region_number": 5,
+       "content": "sent"
+      },
+      {
+       "region_number": 6,
+       "content": "the letter"
+      },
+      {
+       "region_number": 7,
+       "content": "to the"
+      },
+      {
+       "region_number": 8,
+       "content": "farmer"
+      },
+      {
+       "region_number": 9,
+       "content": "yesterday"
+      },
+      {
+       "region_number": 10,
+       "content": "."
+      }
+     ]
+    },
+    {
+     "condition_name": "that_nogap",
+     "regions": [
+      {
+       "region_number": 1,
+       "content": "I know"
+      },
+      {
+       "region_number": 2,
+       "content": "that"
+      },
+      {
+       "region_number": 3,
+       "content": "the"
+      },
+      {
+       "region_number": 4,
+       "content": "senator"
+      },
+      {
+       "region_number": 5,
+       "content": "sent"
+      },
+      {
+       "region_number": 6,
+       "content": "the letter"
+      },
+      {
+       "region_number": 7,
+       "content": "to the"
+      },
+      {
+       "region_number": 8,
+       "content": "farmer"
+      },
+      {
+       "region_number": 9,
+       "content": "yesterday"
+      },
+      {
+       "region_number": 10,
+       "content": "."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

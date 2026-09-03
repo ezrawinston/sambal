@@ -1,0 +1,6 @@
+model,lotr_ppl,blimp_acc
+baseline (Long),64.60,79.24
+baseline (Long) fine-tuned,29.15,72.36
+SAMBAL (Long),190.36,79.34
+SAMBAL (Long) fine-tuned,36.29,71.48
+Best LoTR from-scratch model (tiny_bs32_lr5e-4),54.41,54.16
