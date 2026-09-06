@@ -93,11 +93,13 @@ class Config:
     # and VerbNet verb index) using allowed_lemmas membership.
     prefilter_pools_by_allowed_vocab: bool = True
 
-    # --- allowed_lemmas disk caching (optional) ---
-    # Path to cache allowed_lemmas and allowed_propn_lemmas after construction.
-    # If file exists, loads from cache; otherwise builds and saves.
-    # Speeds up init when allowed_vocab is large and unchanged between runs.
-    allowed_lemmas_cache_path: Optional[str] = None
+    # --- start-up caches ---
+    # Persist the expensive start-up products (allowed lemmas, the context
+    # bucket table, the filtered countability pools, the warmed per-tag pools)
+    # under the resources cache directory and read them back on later starts.
+    # Off: build everything in memory, read nothing, write nothing.
+    startup_caches: bool = True
+
     # --- name-pool split (optional) ---
     # Keep full given-name pools for recognition, but optionally use a filtered
     # (allowed_lemmas-gated) pool for substitution to avoid sampling failures.

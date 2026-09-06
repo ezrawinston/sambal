@@ -10,7 +10,7 @@ __pycache__/
 # (see sambal/resources/MANIFEST.md)
 sambal/resources/*.pkl
 !sambal/resources/lemma_stats_top_25k.pkl
-sambal/resources/filtered_pools.json
+sambal/resources/_augmenter_cache/
 
 # data payloads (fetch/build scripts and manifests stay in git)
 data/**/*.jsonl

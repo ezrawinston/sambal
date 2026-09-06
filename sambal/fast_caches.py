@@ -73,6 +73,10 @@ _BUCKET_LEMMAS_AT_ATTR = "_bucket_lemmas_at_cache"
 _CHAIN_MEMO_ATTR = "_chain_memo_cache"
 _INSTALLED_MARK = "_fast_caches_installed"
 
+# Fixed filename of the eager warm's on-disk cache, inside the Augmenter's
+# cache directory.
+_FAST_CACHE_FILE = "fast_caches.pkl"
+
 # Names of the fast caches we track. Extends `core._AUG_LEMMA_CACHES`
 # semantically but the periodic clear in `_clear_aug_caches` does NOT touch
 # them (they're row-invariant). Listed here for explicit reset via
@@ -112,7 +116,9 @@ def install_fast_caches(aug, *, eager: bool = True,
     frozensets for every tag in ``common_tags`` upfront. This pays the
     universe-walk cost once at install time (~5-10 minutes total for
     ~16 tags on a typical corpus vocabulary) instead of paying it lazily
-    during the first few hundred docs of a shard.
+    during the first few hundred docs of a shard. The warmed frozensets are
+    then kept on disk keyed on the config that produced them, so later
+    processes reload them instead of walking the universe again.
 
     For long-running stage-2 workers, the upfront cost is amortized cheaply
     against 80K+ docs. For unit tests or short ad-hoc runs that want to
@@ -169,7 +175,61 @@ def install_fast_caches(aug, *, eager: bool = True,
     setattr(aug, _INSTALLED_MARK, True)
 
     if eager:
-        warm_allowed_by_tag(aug, common_tags, verbose=verbose)
+        _warm_or_load(aug, common_tags, verbose=verbose)
+
+
+def _warm_or_load(aug, tags, *, verbose: bool = False) -> None:
+    """Fill the per-tag frozensets from disk when the config matches, else warm
+    and save.
+
+    The key and the cache directory come from the Augmenter (see the start-up
+    cache block in ``engine``); an object that supplies neither — a test stub —
+    simply warms.
+
+    The warm also fills ``aug._inflect_cache`` on the way; a cache hit leaves it
+    empty, which costs nothing worth persisting. ``_inflect_cache`` is one of
+    ``core._AUG_LEMMA_CACHES``, which ``core._clear_aug_caches`` empties every
+    ``CACHE_CLEAR_EVERY_N`` examples, so a hit only starts the process in the
+    state it reaches after its first periodic clear.
+    """
+    if not getattr(getattr(aug, "cfg", None), "startup_caches", True):
+        warm_allowed_by_tag(aug, tags, verbose=verbose)
+        return
+    try:
+        from .engine import _read_keyed_cache, _write_keyed_cache
+        path = aug._cache_path(_FAST_CACHE_FILE)
+        key = aug._fast_caches_cache_key(tags)
+    except Exception as e:
+        print(f"[cache] tag pools: no cache key available "
+              f"({type(e).__name__}); warming", flush=True)
+        warm_allowed_by_tag(aug, tags, verbose=verbose)
+        return
+
+    payload = _read_keyed_cache(path, key, kind="tag pools",
+                                required=("allowed", "broad"))
+    if payload is not None:
+        try:
+            allowed = {t: frozenset(payload["allowed"][t]) for t in tags}
+            broad = {t: frozenset(payload["broad"][t]) for t in tags}
+        except (KeyError, TypeError) as e:
+            # A payload under the right key that does not cover every warmed
+            # tag is as broken as an unreadable file, and just as worth a line.
+            print(f"[cache] tag pools: cached tags do not cover this warm "
+                  f"({type(e).__name__}); rebuilding", flush=True)
+            allowed = None
+        if allowed is not None:
+            getattr(aug, _ALLOWED_BY_TAG_ATTR).update(allowed)
+            getattr(aug, _ALLOWED_BROAD_BY_TAG_ATTR).update(broad)
+            if verbose:
+                print(f"[install_fast_caches] {len(tags)} tag pools from cache",
+                      flush=True)
+            return
+
+    warm_allowed_by_tag(aug, tags, verbose=verbose)
+    _write_keyed_cache(path, key, {
+        "allowed": {t: aug._allowed_by_tag(t) for t in tags},
+        "broad": {t: aug._allowed_broad_by_tag(t) for t in tags},
+    }, kind="tag pools")
 
 
 def warm_allowed_by_tag(aug, tags=_COMMON_PTB_TAGS, *,

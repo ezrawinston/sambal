@@ -60,7 +60,9 @@ python -m sambal.stats_merge ${SAMBAL_DATA_DIR:-data}/babycosmofine 'stats_shard
 
 ## 3.4 Ablated corpus
 
-24 shards, seed = shard id, GPU parse per shard:
+24 shards, seed = shard id, GPU parse per shard. The engine's first start-up on a
+machine takes several minutes to build its caches
+(`sambal/resources/_augmenter_cache/`).
 
 ```bash
 for i in $(seq 0 23); do

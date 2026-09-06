@@ -333,6 +333,12 @@ def build_runtime(config_path: str | None):
         filter_substitution_names_by_allowed_vocab=True,
     )
     cfg_defaults.update(overrides.get("config", {}))
+    # The collector reads the parse, the protection sets and the function-word
+    # test; it never samples. So the context gate, whose table is built from
+    # the file this collector produces, stays off, and the start-up caches are
+    # neither read nor written.
+    cfg_defaults["ctx_lemma_gate"] = "off"
+    cfg_defaults["startup_caches"] = False
     cfg = Config(**cfg_defaults)
     return args, resources, cfg
 

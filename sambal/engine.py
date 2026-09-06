@@ -41,6 +41,7 @@ from spacy.language import Language
 # Morphological realization
 import inflect
 import hashlib
+import pickle
 from functools import lru_cache
 
 # ----------------------- Extracted modules -----------------------
@@ -129,6 +130,274 @@ def _dedupe_preserve_order(items: Iterable[str]) -> List[str]:
         seen.add(x)
         out.append(x)
     return out
+
+
+# ----------------- Config-keyed start-up caches -----------------
+#
+# Four expensive start-up products are kept on disk under
+# `<noun_bucket_dir>/_augmenter_cache/` (see `Augmenter._cache_dir`), one fixed
+# filename per kind. Every file carries the key it was built under; on a
+# mismatch the value is rebuilt and the file atomically replaced, so the
+# directory holds at most one file per kind and never grows.
+#
+# A key is a sha256 over an explicit dependency list: a per-cache
+# CODE_VERSION, the config fields the value depends on, a
+# `(basename, size, mtime_ns)` signature for each source file it reads, and the
+# versions of the libraries whose output it embeds. Deliberately absent: `seed`,
+# the debug flags, `require_gpu`, and the directory part of any path — the
+# shards of one run differ in seed and may sit under different roots, and they
+# must all hit the same cache.
+#
+# Concurrency: a batch of workers starting together can all miss. Each writes a
+# private temporary file and `os.replace`s it into position, so the last writer
+# wins with equivalent content and no reader ever observes a partial file. No
+# locking.
+
+_CACHE_ALLOWED_LEMMAS_FILE = "allowed_lemmas.pkl"
+_CACHE_CTX_BUCKETS_FILE = "ctx_buckets.pkl"
+_CACHE_FAST_CACHES_FILE = "fast_caches.pkl"
+_CACHE_FILTERED_POOLS_FILE = "filtered_pools.json"
+
+# Bump the matching CODE_VERSION whenever the code that produces a value
+# changes what it produces.
+_ALLOWED_LEMMAS_CODE_VERSION = "allowed_lemmas.1"
+_CTX_BUCKETS_CODE_VERSION = "ctx_buckets.1"
+_FAST_CACHES_CODE_VERSION = "fast_caches.1"
+_FILTERED_POOLS_CODE_VERSION = "filtered_pools.1"
+
+# The dependency list of each cache, in key order. Every entry names something
+# the cached value is read out of, and can be followed to the code path that
+# reads it.
+
+# `_build_allowed_lemmas`: allowed_lemmas + allowed_propn_lemmas.
+_ALLOWED_LEMMAS_DEPENDENCIES = (
+    "code_version",           # _ALLOWED_LEMMAS_CODE_VERSION
+    "allowed_vocab_file",     # ResourcePaths.allowed_vocab_path -> allowed_vocab
+    "allow_all_vocab_file",   # ResourcePaths.allow_all_vocab_path -> allowed_vocab
+    "min_vocab_freq",         # Config: the count a vocab line must reach to enter
+    "lemminflect_version",    # every surface is mapped through lemminflect.getLemma,
+                              # whose lemma table is library data
+)
+
+# `_load_ctx_lemma_buckets`: the finished bucket -> lemma-counter table.
+_CTX_BUCKETS_DEPENDENCIES = (
+    "code_version",              # covers the inversion and `_ctx_backoff_chain`,
+                                 # which shapes the merged keys and reads no config
+    "ctx_lemma_stats_file",      # ResourcePaths.ctx_lemma_stats_path
+    "ctx_lemma_gate_min_count",  # Config: prunes lemmas below it, once on the
+                                 # strict buckets and again on the merged ones
+)
+# Not dependencies: `ctx_lemma_gate` (the mode decides how the finished table is
+# sampled, not how it is built) and the `ctx_backoff_*` acceptance thresholds
+# (read per lookup in `_ctx_bucket_level_stats`, never while building).
+
+# `_apply_filtered_countability_pools`: the countability pools after the
+# single-token filter.
+_FILTERED_POOLS_DEPENDENCIES = (
+    "code_version",
+    "countability_files",  # mass.txt, count.txt, both.txt, pluralia_tantum.txt
+                           # under noun_bucket_dir, read by CountabilityPools.from_dir
+    "pos_model",           # Config.spacy_pos_model — the pipe the filter runs on
+    "pos_model_version",   # that pipeline's version: the filter keeps a word iff
+                           # its tokenizer yields exactly one token
+    "spacy_version",
+)
+
+# `fast_caches.install_fast_caches(eager=True)`: `_allowed_by_tag_cache` and
+# `_allowed_broad_by_tag_cache` for the warmed tags.
+_FAST_CACHES_DEPENDENCIES = (
+    "code_version",
+    "tags",                   # the warmed tags; the payload covers exactly these
+    "allowed_vocab_file",     # allowed_vocab is the NNP/NNPS surface gate and the
+                              # source of allowed_lemmas / allowed_propn_lemmas
+    "allow_all_vocab_file",
+    "min_vocab_freq",
+    "lemminflect_version",    # allowed_lemmas, and the inflection table `_realize`
+                              # asks first
+    "inflect_version",        # `_realize`'s plural fallback when lemminflect is silent
+    "npi_file",               # `_npi_unigrams` rejects the lemma and its realization
+    "function_words_file",    # `_is_functionish_lemma`
+    "licensors_file",         # `_is_functionish_lemma`
+    "countability_files",     # the broad noun pool is the countability union ...
+    "pos_model",              # ... as left by the single-token filter, hence the
+    "pos_model_version",      #     same three entries as the pools cache
+    "spacy_version",
+    "prefilter_pools_by_allowed_vocab",  # Config: narrows the countability pools and
+                                         # the VerbNet index before the broad pools
+                                         # are formed
+    # The entries above derive the value from its sources. The five below are
+    # content digests of the in-memory objects the warm actually reads, taken
+    # at key time. They are here because the prefilter that produces the pools
+    # swallows its own exceptions, so a degraded pool would otherwise be
+    # published under a key identical to a healthy one and reused. Digesting
+    # the inputs makes the key a function of what was really warmed.
+    "allowed_lemmas_digest",             # the universe for every non-PROPN tag
+    "allowed_propn_lemmas_digest",       # half the universe for NNP / NNPS
+    "allowed_vocab_digest",              # the other half, and the PROPN surface gate
+    "broad_noun_pool_singular_digest",   # countability union behind NN / NNP
+    "broad_noun_pool_plural_digest",     # countability union behind NNS / NNPS
+    "broad_verb_pool_digest",  # the broad verb pool is the union of the VerbNet
+                               # index, which ships as corpus data with no version
+                               # string, so the pool itself is the dependency
+)
+
+_COUNTABILITY_SOURCE_FILES = ("mass.txt", "count.txt", "both.txt", "pluralia_tantum.txt")
+
+
+def _file_signature(path) -> Optional[list]:
+    """`[basename, size, mtime_ns]` for a cache key.
+
+    The directory part is dropped on purpose: the same tree copied to another
+    root must hit the same cache. A file that is absent signs as its name alone.
+    """
+    if not path:
+        return None
+    name = os.path.basename(str(path))
+    try:
+        st = os.stat(path)
+    except OSError:
+        return [name, None, None]
+    return [name, st.st_size, st.st_mtime_ns]
+
+
+_PACKAGE_VERSION_CACHE: Dict[str, str] = {}
+
+
+def _package_version(name: str) -> str:
+    """Installed version of `name`, or "unknown".
+
+    A version that cannot be read drops a real dependency out of the key, so
+    say so once per process rather than letting it pass in silence.
+    """
+    if name in _PACKAGE_VERSION_CACHE:
+        return _PACKAGE_VERSION_CACHE[name]
+    try:
+        from importlib.metadata import version
+        out = version(name)
+    except Exception as e:
+        print(f"[cache] cannot read the installed version of {name} "
+              f"({type(e).__name__}); it drops out of the cache keys", flush=True)
+        out = "unknown"
+    _PACKAGE_VERSION_CACHE[name] = out
+    return out
+
+
+def _string_set_digest(items: Iterable[str]) -> str:
+    """Order-independent digest of a collection of strings."""
+    h = hashlib.sha256()
+    for s in sorted(items):
+        h.update(s.encode("utf-8", "surrogatepass"))
+        h.update(b"\x00")
+    return h.hexdigest()
+
+
+def _keyed_cache_digest(parts: list) -> str:
+    """Cache key from a dependency list. Named apart from the unrelated
+    `Augmenter._cache_key` method so neither can be reached by mistake."""
+    return hashlib.sha256(
+        json.dumps(parts, sort_keys=True, default=repr).encode("utf-8")
+    ).hexdigest()
+
+
+_CACHE_TMP_PREFIX = "_tmp."
+_CACHE_TMP_SUFFIX = ".tmp"
+
+
+def _read_keyed_cache(path: str, key: str, *, kind: str, as_json: bool = False,
+                      required: Tuple[str, ...] = ()):
+    """Payload of the cache at `path` if it was built under `key`, else None.
+
+    Every rejection says why in one line: a file that cannot be read, an
+    envelope that is not the expected one, a payload that is not a dict or is
+    missing a field it must carry, and a key that belongs to another config
+    (which is the usual reason a start-up suddenly rebuilds for minutes).
+    Nothing is used partially and nothing raises.
+    """
+    if not os.path.exists(path):
+        return None
+    try:
+        if as_json:
+            with open(path, "r", encoding="utf-8") as f:
+                obj = json.load(f)
+        else:
+            with open(path, "rb") as f:
+                obj = pickle.load(f)
+        if not isinstance(obj, dict) or "key" not in obj or "payload" not in obj:
+            raise ValueError("unexpected cache envelope")
+        if obj["key"] != key:
+            print(f"[cache] {kind}: {os.path.basename(path)} was built for a "
+                  f"different config; rebuilding", flush=True)
+            return None
+        payload = obj["payload"]
+        if not isinstance(payload, dict):
+            raise ValueError(f"payload is {type(payload).__name__}, not a dict")
+        missing = [f for f in required if f not in payload]
+        if missing:
+            raise ValueError(f"payload is missing {missing}")
+        return payload
+    except Exception as e:
+        print(f"[cache] {kind}: cannot use {os.path.basename(path)} "
+              f"({type(e).__name__}); rebuilding", flush=True)
+        return None
+
+
+def _sweep_cache_tmp(cache_dir: str) -> None:
+    """Drop temporary files a killed writer left behind.
+
+    A process that dies between the write and the replace leaves one; nothing
+    else ever reads them, so the only cost of keeping them would be disk.
+    """
+    try:
+        for name in os.listdir(cache_dir):
+            if name.startswith(_CACHE_TMP_PREFIX) and name.endswith(_CACHE_TMP_SUFFIX):
+                try:
+                    os.unlink(os.path.join(cache_dir, name))
+                except OSError:
+                    pass
+    except OSError:
+        pass
+
+
+def _write_keyed_cache(path: str, key: str, payload, *, kind: str,
+                       as_json: bool = False) -> None:
+    """Publish `payload` under `key`, replacing whatever the file held.
+
+    The write goes to a temporary file in the same directory, created by
+    `tempfile.mkstemp` so two writers on different hosts sharing the directory
+    cannot pick the same name, and lands with `os.replace`. That is what makes
+    concurrent start-ups safe (see the note above).
+    """
+    import tempfile
+
+    cache_dir = os.path.dirname(path) or "."
+    tmp = None
+    try:
+        os.makedirs(cache_dir, exist_ok=True)
+        _sweep_cache_tmp(cache_dir)
+        fd, tmp = tempfile.mkstemp(
+            dir=cache_dir,
+            prefix=f"{_CACHE_TMP_PREFIX}{os.path.basename(path)}.",
+            suffix=_CACHE_TMP_SUFFIX,
+        )
+        if as_json:
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                json.dump({"key": key, "payload": payload}, f, ensure_ascii=False)
+        else:
+            with os.fdopen(fd, "wb") as f:
+                pickle.dump({"key": key, "payload": payload}, f,
+                            protocol=pickle.HIGHEST_PROTOCOL)
+        # mkstemp opens 0600; a cache directory shared by several accounts
+        # needs the mode a plain open() would have given.
+        os.chmod(tmp, 0o644)
+        os.replace(tmp, path)
+    except Exception as e:
+        print(f"[cache] {kind}: cannot write {os.path.basename(path)} "
+              f"({type(e).__name__})", flush=True)
+        if tmp:
+            try:
+                os.unlink(tmp)
+            except OSError:
+                pass
 
 
 # ----------------- Augmenter -----------------
@@ -476,52 +745,7 @@ class Augmenter:
                     out.add(w.lower())
             return out
 
-        cache_dir = Path(self.paths.noun_bucket_dir)
-        cache_dir.mkdir(parents=True, exist_ok=True)
-        cache_file = cache_dir / "filtered_pools.json"
-        _src_names = ["mass.txt", "count.txt", "both.txt", "pluralia_tantum.txt"]
-        # _mtimes = {}
-        # for _n in _src_names:
-        #     _p = cache_dir / _n
-        #     _mtimes[_n] = (_p.stat().st_mtime if _p.exists() else None)
-
-        loaded_from_cache = False
-        if cache_file.exists():
-            try:
-                with cache_file.open("r", encoding="utf-8") as _cf:
-                    _obj = json.load(_cf)
-                if (
-                        _obj.get("spacy_model") == pos_model_name
-                        # and _obj.get("source_mtimes") == _mtimes
-                ):
-                    self.countability.mass = set(_obj.get("mass", []))
-                    self.countability.count = set(_obj.get("count", []))
-                    self.countability.both = set(_obj.get("both", []))
-                    self.countability.plural_only = set(_obj.get("plural_only", []))
-                    self.countability.mass_capable = set(_obj.get("mass_capable", []))
-                    self.countability.count_capable = set(_obj.get("count_capable", []))
-                    loaded_from_cache = True
-                    dbg("[buckets] loaded filtered pools from cache")
-            except Exception:
-                loaded_from_cache = False
-
-        if not loaded_from_cache:
-            self.countability.filter(_batch_filter_nouns)
-            _obj = {
-                "spacy_model": self.cfg.spacy_model,
-                # "source_mtimes": _mtimes,
-                "mass": sorted(self.countability.mass),
-                "count": sorted(self.countability.count),
-                "both": sorted(self.countability.both),
-                "plural_only": sorted(self.countability.plural_only),
-                "mass_capable": sorted(self.countability.mass_capable),
-                "count_capable": sorted(self.countability.count_capable),
-            }
-            tmp_path = cache_file.with_suffix(".json.tmp")
-            with tmp_path.open("w", encoding="utf-8") as _cf:
-                json.dump(_obj, _cf, ensure_ascii=False)
-            os.replace(tmp_path, cache_file)
-            dbg(f"[buckets] wrote filtered pools cache → {cache_file}")
+        self._apply_filtered_countability_pools(_batch_filter_nouns)
 
         # --- Adverb whitelist (fast, one-time) ---
         self._adv_rb_whitelist: Set[str] = set()
@@ -844,8 +1068,17 @@ class Augmenter:
         return out
 
     def _load_ctx_lemma_buckets(self, path: str) -> Dict[Tuple[Any, ...], Counter]:
-        import pickle, gzip
+        import gzip
         from collections import defaultdict
+
+        # The finished table is what the gate reads; the statistics object it
+        # was inverted from is a local. Cached under `_CTX_BUCKETS_DEPENDENCIES`.
+        cache_path = self._cache_path(_CACHE_CTX_BUCKETS_FILE)
+        cache_key = self._ctx_buckets_cache_key(path)
+        cached = self._startup_cache_read(cache_path, cache_key, kind="ctx buckets")
+        if cached is not None:
+            dbg(f"[ctx] loaded {len(cached)} buckets from cache")
+            return cached
 
         def _open(p: str):
             return gzip.open(p, "rb") if p.endswith(".gz") else open(p, "rb")
@@ -864,7 +1097,9 @@ class Augmenter:
                     if c2:
                         pruned[b] = c2
                 base = pruned
-            return self._build_ctx_backoff_buckets(base)
+            out = self._build_ctx_backoff_buckets(base)
+            self._startup_cache_write(cache_path, cache_key, out, kind="ctx buckets")
+            return out
 
         # Stats are {lemma: Counter(bucket)} — invert to {bucket: Counter(lemma)}
         if not isinstance(obj, dict):
@@ -1632,28 +1867,28 @@ class Augmenter:
         - allowed_propn_lemmas: proper-only lemmas (non-lowercase tokens whose
           lowercase form is not present in allowed_vocab), for PROPN contexts
 
-        If allowed_lemmas_cache_path is set, attempts to load from cache first,
-        and saves to cache after building.
+        The result is cached on disk under `_ALLOWED_LEMMAS_DEPENDENCIES`.
         """
-        import pickle
         from lemminflect import getLemma
-
-        cache_path = self.cfg.allowed_lemmas_cache_path
-
-        # Try to load from cache
-        if cache_path and os.path.exists(cache_path):
-            with open(cache_path, "rb") as f:
-                cached = pickle.load(f)
-            self.allowed_lemmas = cached.get("allowed_lemmas")
-            self.allowed_propn_lemmas = cached.get("allowed_propn_lemmas")
-            dbg(f"[init] loaded allowed_lemmas from cache: {cache_path} "
-                      f"({len(self.allowed_lemmas or [])} common, {len(self.allowed_propn_lemmas or [])} proper)")
-            return
 
         av = self.allowed_vocab
         if not av:
             self.allowed_lemmas = None
             self.allowed_propn_lemmas = None
+            return
+
+        cache_path = self._cache_path(_CACHE_ALLOWED_LEMMAS_FILE)
+        cache_key = self._allowed_lemmas_cache_key()
+        cached = self._startup_cache_read(cache_path, cache_key, kind="allowed lemmas",
+                                   required=("allowed_lemmas", "allowed_propn_lemmas"))
+        if cached is not None:
+            # The payload holds sorted sequences and both branches build their
+            # sets from one, so a hit and a miss agree on iteration order too.
+            self.allowed_lemmas = set(cached["allowed_lemmas"])
+            self.allowed_propn_lemmas = set(cached["allowed_propn_lemmas"])
+            dbg(f"[init] loaded allowed_lemmas from cache "
+                f"({len(self.allowed_lemmas)} common, "
+                f"{len(self.allowed_propn_lemmas)} proper)")
             return
 
         lemmas: Set[str] = set()
@@ -1695,23 +1930,18 @@ class Augmenter:
                 except Exception:
                     pass
 
-        self.allowed_lemmas = lemmas
-        self.allowed_propn_lemmas = propn_lemmas
+        lemmas_sorted = sorted(lemmas)
+        propn_sorted = sorted(propn_lemmas)
+        self.allowed_lemmas = set(lemmas_sorted)
+        self.allowed_propn_lemmas = set(propn_sorted)
 
         dbg(f"[init] built allowed_lemmas: {len(av)} surfaces -> {len(lemmas)} common lemmas "
                   f"+ {len(propn_lemmas)} proper lemmas")
 
-        # Save to cache if path specified
-        if cache_path:
-            cache_dir = os.path.dirname(cache_path)
-            if cache_dir:
-                os.makedirs(cache_dir, exist_ok=True)
-            with open(cache_path, "wb") as f:
-                pickle.dump({
-                    "allowed_lemmas": self.allowed_lemmas,
-                    "allowed_propn_lemmas": self.allowed_propn_lemmas,
-                }, f)
-                dbg(f"[init] saved allowed_lemmas to cache: {cache_path}")
+        self._startup_cache_write(cache_path, cache_key, {
+            "allowed_lemmas": lemmas_sorted,
+            "allowed_propn_lemmas": propn_sorted,
+        }, kind="allowed lemmas")
 
     def _build_allowed_vocab_hint_index(self) -> None:
         """Build a casefolded allowed-lemma index for exact prefiltering."""
@@ -2022,6 +2252,129 @@ class Augmenter:
         path = os.path.join(os.getcwd(), "_augmenter_cache")
         os.makedirs(path, exist_ok=True)
         return path
+
+    # ---------- Keys for the start-up caches ----------
+    # Each method spells out one of the dependency lists declared at module
+    # level, in the same order.
+
+    def _cache_path(self, filename: str) -> str:
+        if not self._startup_caches_on():
+            # Never touch the directory when caching is off; the path is only
+            # named, never read or written.
+            base = self.paths.noun_bucket_dir or os.getcwd()
+            return os.path.join(base, "_augmenter_cache", filename)
+        return os.path.join(self._cache_dir(), filename)
+
+    def _startup_caches_on(self) -> bool:
+        return bool(getattr(self.cfg, "startup_caches", True))
+
+    def _startup_cache_read(self, path: str, key: str, **kwargs):
+        """`_read_keyed_cache`, or None without touching disk when
+        `cfg.startup_caches` is off."""
+        if not self._startup_caches_on():
+            return None
+        return _read_keyed_cache(path, key, **kwargs)
+
+    def _startup_cache_write(self, path: str, key: str, payload, **kwargs) -> bool:
+        """`_write_keyed_cache` unless `cfg.startup_caches` is off. True when
+        a file was written."""
+        if not self._startup_caches_on():
+            return False
+        _write_keyed_cache(path, key, payload, **kwargs)
+        return True
+
+    def _countability_source_signatures(self) -> list:
+        base = self.paths.noun_bucket_dir or ""
+        return [_file_signature(os.path.join(base, name))
+                for name in _COUNTABILITY_SOURCE_FILES]
+
+    def _pos_model_signature(self) -> list:
+        """Name and pipeline version of the POS pipe, plus the spaCy version."""
+        import spacy
+        meta = getattr(self._nlp_pos, "meta", None) or {}
+        return [self.cfg.spacy_pos_model, meta.get("version"), spacy.__version__]
+
+    def _allowed_lemmas_cache_key(self) -> str:
+        return _keyed_cache_digest([
+            _ALLOWED_LEMMAS_CODE_VERSION,
+            _file_signature(self.paths.allowed_vocab_path),
+            _file_signature(self.paths.allow_all_vocab_path),
+            self.cfg.min_vocab_freq,
+            _package_version("lemminflect"),
+        ])
+
+    def _ctx_buckets_cache_key(self, stats_path: str) -> str:
+        return _keyed_cache_digest([
+            _CTX_BUCKETS_CODE_VERSION,
+            _file_signature(stats_path),
+            self.cfg.ctx_lemma_gate_min_count,
+        ])
+
+    def _filtered_pools_cache_key(self) -> str:
+        return _keyed_cache_digest([
+            _FILTERED_POOLS_CODE_VERSION,
+            self._countability_source_signatures(),
+            self._pos_model_signature(),
+        ])
+
+    def _fast_caches_cache_key(self, tags) -> str:
+        from .core import _broad_noun_pools, _broad_verb_pool
+        noun_pools = _broad_noun_pools(self) or {}
+        return _keyed_cache_digest([
+            _FAST_CACHES_CODE_VERSION,
+            sorted(tags),
+            _file_signature(self.paths.allowed_vocab_path),
+            _file_signature(self.paths.allow_all_vocab_path),
+            self.cfg.min_vocab_freq,
+            _package_version("lemminflect"),
+            _package_version("inflect"),
+            _file_signature(self.paths.npi_path),
+            _file_signature(self.paths.function_words_path),
+            _file_signature(self.paths.licensors_path),
+            self._countability_source_signatures(),
+            self._pos_model_signature(),
+            bool(self.cfg.prefilter_pools_by_allowed_vocab),
+            _string_set_digest(self.allowed_lemmas or frozenset()),
+            _string_set_digest(self.allowed_propn_lemmas or frozenset()),
+            _string_set_digest(self.allowed_vocab or frozenset()),
+            _string_set_digest(noun_pools.get("singular") or frozenset()),
+            _string_set_digest(noun_pools.get("plural") or frozenset()),
+            _string_set_digest(_broad_verb_pool(self) or frozenset()),
+        ])
+
+    # ---------- Countability pools, filtered through the POS pipe ----------
+    def _apply_filtered_countability_pools(self, batch_filter) -> bool:
+        """Narrow the countability pools with `batch_filter`, via the cache.
+
+        Returns True when the pools came from the cache.
+        """
+        path = self._cache_path(_CACHE_FILTERED_POOLS_FILE)
+        key = self._filtered_pools_cache_key()
+        fields = ("mass", "count", "both", "plural_only",
+                  "mass_capable", "count_capable")
+
+        cached = self._startup_cache_read(path, key, kind="filtered pools", as_json=True,
+                                   required=fields)
+        if cached is not None:
+            for field in fields:
+                setattr(self.countability, field, set(sorted(cached[field])))
+            dbg("[buckets] loaded filtered pools from cache")
+            return True
+
+        self.countability.filter(batch_filter)
+        # These pools become candidate sequences downstream, and a set iterates
+        # in insertion order-dependent slot order. Filling both branches from a
+        # sorted sequence makes a hit and a miss structurally identical, not
+        # merely equal.
+        for field in fields:
+            setattr(self.countability, field, set(sorted(getattr(self.countability, field))))
+        if self._startup_cache_write(
+            path, key,
+            {field: sorted(getattr(self.countability, field)) for field in fields},
+            kind="filtered pools", as_json=True,
+        ):
+            dbg(f"[buckets] wrote filtered pools cache -> {path}")
+        return False
 
     def _cache_key(self, kind: str, sources: list[str]) -> str:
         code_ver = "v1_human_adj_common"
